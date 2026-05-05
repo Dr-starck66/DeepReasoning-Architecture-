@@ -1,0 +1,6 @@
+{
+  "name": "DeepReasoning UI",
+  "description": "LLM Inference API and Chat UI unifying DeepSeek reasoning and Anthropic Claude.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
