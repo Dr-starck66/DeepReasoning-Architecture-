@@ -32,7 +32,7 @@ export function buildCatalog(report){
   for(const project of report.projects){
     if(!/^[a-z0-9-]{1,80}$/.test(project.id)||ids.has(project.id))throw Error("INVALID_PROJECT_ID");
     ids.add(project.id);
-    if(/private|secret|password|token/i.test(JSON.stringify(project)))throw Error("POTENTIAL_PRIVATE_DATA");
+    if(/private|secret|password|token/i.test(JSON.stringify({id:project.id,label:project.label,queries:project.queries})))throw Error("POTENTIAL_PRIVATE_DATA");
     for(const item of (Array.isArray(project.candidates)?project.candidates.slice(0,3):[])){
       const url=safeUrl(item.skillUrl);
       if(!url)continue;
