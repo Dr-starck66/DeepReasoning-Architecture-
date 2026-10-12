@@ -80,6 +80,9 @@ jobs:
     needs: discover-and-test
     if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'schedule')
     runs-on: ubuntu-latest
+    concurrency:
+      group: universal-skills-main-evidence-publishing
+      cancel-in-progress: false
     timeout-minutes: 5
     permissions:
       contents: write
@@ -104,5 +107,7 @@ jobs:
             echo "Catalog unchanged"
           else
             git commit -m "docs: refresh evidence-based universal skills catalog [skip ci]"
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
