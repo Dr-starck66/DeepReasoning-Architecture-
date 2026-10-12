@@ -34,6 +34,12 @@
       "queries": [
         "international trade export compliance",
         "supply chain logistics"
+      ],
+      "exclude": [
+        "pharmacy",
+        "hospital",
+        "patient",
+        "medical"
       ]
     },
     {
@@ -47,7 +53,8 @@
       "exclude": [
         "polymarket",
         "crypto",
-        "web3"
+        "web3",
+        "anti-slop"
       ]
     },
     {
@@ -98,6 +105,9 @@
         "archaeology",
         "historical records research",
         "geospatial mapping"
+      ],
+      "exclude": [
+        "offensive-osint"
       ]
     },
     {
