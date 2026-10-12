@@ -1,6 +1,6 @@
 # UNIVERSAL SKILL INTELLIGENCE Ω — catalogue public
 
-Dernier relevé : **2026-10-12T19:25:44.741Z**.
+Dernier relevé : **2026-10-12T19:40:45.041Z**.
 
 **Périmètre :** recherches par catégories publiques : développement, médias, export, recherche, patrimoine et projets futurs.
 **Preuve :** appels au registre skills.sh. **Aucun skill n'est installé, homologué ou garanti.**
