@@ -49,7 +49,7 @@ test("automatically onboards future public repos, excludes private, and audits e
  assert.doesNotMatch(renderFleet(r),/secret-project/);
 });
 test("network failure affects only corresponding project proof, never produces false PASS",async()=>{
- const f=async url=>String(url).endsWith("/betgpt-railway/git/trees/main")?{ok:false,status:404}:fake(url);
+ const f=async url=>String(url).includes("/betgpt-railway/git/trees/main?recursive=1")?{ok:false,status:404}:fake(url);
  const r=await auditFleet(catalog,{fetcher:f,clock:()=>"2026-10-12T19:00:00.000Z"});
  assert.equal(r.status,"PARTIAL");
  assert.equal(r.summary.unverified,1);
@@ -58,7 +58,7 @@ test("network failure affects only corresponding project proof, never produces f
 test("transient 503 is retried before recording the final project result",async()=>{
  let attempts=0;
  const f=async url=>{
-  if(String(url).endsWith("/betgpt-railway/git/trees/main")&&attempts++===0)return {ok:false,status:503};
+  if(String(url).includes("/betgpt-railway/git/trees/main?recursive=1")&&attempts++===0)return {ok:false,status:503};
   return fake(url);
  };
  const r=await auditFleet(catalog,{fetcher:f,wait:async()=>{},clock:()=>"2026-10-12T19:00:00.000Z"});
