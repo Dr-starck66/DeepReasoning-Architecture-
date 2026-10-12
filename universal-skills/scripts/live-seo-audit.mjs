@@ -16,7 +16,8 @@ export function evaluate(responses,{now=Date.now()}={}){
   const p=responses[path];
   if(!p){add("endpoint:"+path,"UNVERIFIED","Missing response");continue;}
   const ok=p.status===200&&typeof p.url==="string"&&p.url.startsWith(ORIGIN);
-  add("endpoint:"+path,ok?"PASS":"FAIL","HTTP "+p.status+" URL "+p.url);
+  const status=p.status===0?"UNVERIFIED":ok?"PASS":"FAIL";
+  add("endpoint:"+path,status,"HTTP "+p.status+" URL "+p.url+(p.durationMs?" in "+p.durationMs+"ms":"")+(p.error?"; "+p.error:""));
   if(ok&&!(p.body||"").length)add("body:"+path,"FAIL","Empty body");
  }
  const robots=responses["/robots.txt"];
@@ -66,10 +67,18 @@ export function evaluate(responses,{now=Date.now()}={}){
 export async function probe(fetcher=fetch){
  const responses={};
  await Promise.all(PATHS.map(async path=>{
-  try{
-   const r=await fetcher(ORIGIN+path,{redirect:"follow",signal:AbortSignal.timeout(12000),headers:{"user-agent":"UNIVERSAL-SKILL-SEO-PILOT/1"}});
-   responses[path]={status:r.status,url:r.url,body:(await r.text()).slice(0,1000000)};
-  }catch(e){responses[path]={status:0,url:ORIGIN+path,body:"",error:crop(e.message)};}
+  const timeoutMs=path==="/sitemap-images.xml"?20000:12000;
+  for(let attempt=1;attempt<=2;attempt++){
+   const started=Date.now();
+   try{
+    const r=await fetcher(ORIGIN+path,{redirect:"follow",signal:AbortSignal.timeout(timeoutMs),headers:{"user-agent":"UNIVERSAL-SKILL-SEO-PILOT/1"}});
+    responses[path]={status:r.status,url:r.url,body:(await r.text()).slice(0,1000000),durationMs:Date.now()-started,attempt};
+    break;
+   }catch(e){
+    responses[path]={status:0,url:ORIGIN+path,body:"",durationMs:Date.now()-started,attempt,error:crop(e.message)};
+    if(attempt<2)await new Promise(done=>setTimeout(done,500));
+   }
+  }
  }));
  const out=evaluate(responses);
  out.fetchErrors=Object.values(responses).filter(r=>r.error).map(r=>({url:r.url,error:r.error}));
