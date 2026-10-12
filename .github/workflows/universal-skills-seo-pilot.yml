@@ -40,3 +40,28 @@ jobs:
           path: universal-skills/artifacts/seo-pilot/
           if-no-files-found: warn
           retention-days: 14
+  publish-proof:
+    needs: live-seo-proof
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'schedule')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: universal-skills-betgpt-seo
+          path: universal-skills/seo-health
+      - name: Validate evidence files and commit latest state
+        run: |
+          test -s universal-skills/seo-health/report.json
+          test -s universal-skills/seo-health/report.md
+          node -e "const x=require('./universal-skills/seo-health/report.json');if(x.schema!=='universal-skills/seo-pilot-v1'||x.status==='FAIL')process.exit(1)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add universal-skills/seo-health/report.json universal-skills/seo-health/report.md
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: refresh BetGPT SEO audit proof [skip ci]"
+            git push origin HEAD:main
+          fi
