@@ -1,0 +1,71 @@
+name: UNIVERSAL SKILLS Omega — per-project fleet audits
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'universal-skills/scripts/fleet-audit*'
+      - '.github/workflows/universal-skills-fleet.yml'
+  pull_request:
+    paths:
+      - 'universal-skills/scripts/fleet-audit*'
+      - '.github/workflows/universal-skills-fleet.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * 1'
+permissions:
+  contents: read
+jobs:
+  audit-public-projects:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: universal-skills
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate fleet auditor and adversarial proofs
+        run: |
+          node --check scripts/fleet-audit.mjs
+          node --test scripts/fleet-audit.test.mjs
+      - name: Live audit of EVERY current public repository plus future discoveries
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/fleet-audit.mjs reports/latest.json reports/fleet.json FLEET.md
+      - name: Archive per-project reports even when audit cannot complete
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: universal-skill-fleet-evidence
+          path: |
+            universal-skills/reports/fleet.json
+            universal-skills/FLEET.md
+          if-no-files-found: warn
+          retention-days: 14
+  publish:
+    needs: audit-public-projects
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'schedule')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: universal-skill-fleet-evidence
+          path: universal-skills
+      - name: Commit evidence-based fleet report
+        run: |
+          test -s universal-skills/reports/fleet.json
+          test -s universal-skills/FLEET.md
+          node -e "const x=require('./universal-skills/reports/fleet.json'); if(x.schema!=='universal-skills/fleet-v1'||x.projects.length!==x.summary.publicRepositories) process.exit(1)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add universal-skills/reports/fleet.json universal-skills/FLEET.md
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: refresh per-project fleet evidence [skip ci]"
+            git push origin HEAD:main
+          fi
