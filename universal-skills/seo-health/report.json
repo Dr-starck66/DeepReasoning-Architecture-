@@ -1,0 +1,132 @@
+{
+  "schema": "universal-skills/seo-pilot-v1",
+  "at": "2026-10-12T19:46:04.939Z",
+  "origin": "https://betgpt.live",
+  "skillSource": {
+    "repository": "coreyhaines31/marketingskills",
+    "commit": "1efedbc5148b54b2f0f6c6c9fe0be62e151c7fff",
+    "skill": "seo-audit",
+    "license": "MIT",
+    "mode": "checklist-only; no external code run"
+  },
+  "scope": "HTTP-only audit, not Google indexing, Discover entry, site speed or schema proof",
+  "checks": [
+    {
+      "id": "endpoint:/",
+      "status": "PASS",
+      "detail": "HTTP 200 URL https://betgpt.live/ in 5428ms"
+    },
+    {
+      "id": "endpoint:/actualites",
+      "status": "PASS",
+      "detail": "HTTP 200 URL https://betgpt.live/actualites in 619ms"
+    },
+    {
+      "id": "endpoint:/robots.txt",
+      "status": "PASS",
+      "detail": "HTTP 200 URL https://betgpt.live/robots.txt in 5117ms"
+    },
+    {
+      "id": "endpoint:/sitemap.xml",
+      "status": "PASS",
+      "detail": "HTTP 200 URL https://betgpt.live/sitemap.xml in 9876ms"
+    },
+    {
+      "id": "endpoint:/news-sitemap.xml",
+      "status": "PASS",
+      "detail": "HTTP 200 URL https://betgpt.live/news-sitemap.xml in 5099ms"
+    },
+    {
+      "id": "endpoint:/sitemap-images.xml",
+      "status": "PASS",
+      "detail": "HTTP 200 URL https://betgpt.live/sitemap-images.xml in 9708ms"
+    },
+    {
+      "id": "robots-not-global-block",
+      "status": "PASS",
+      "detail": "Global disallow"
+    },
+    {
+      "id": "robots-sitemap",
+      "status": "PASS",
+      "detail": "Sitemap reference"
+    },
+    {
+      "id": "sitemap-xml",
+      "status": "PASS",
+      "detail": "XML root"
+    },
+    {
+      "id": "sitemap-nonempty",
+      "status": "PASS",
+      "detail": "2509 loc URLs"
+    },
+    {
+      "id": "sitemap-same-origin",
+      "status": "PASS",
+      "detail": "0 foreign/malformed URLs; examples: "
+    },
+    {
+      "id": "sitemap-duplicates",
+      "status": "PASS",
+      "detail": "0 duplicates"
+    },
+    {
+      "id": "news-fresh-dates",
+      "status": "PASS",
+      "detail": "3 dates, invalid 0, stale 0, future 0"
+    },
+    {
+      "id": "news-size",
+      "status": "PASS",
+      "detail": "3 URLs"
+    },
+    {
+      "id": "canonical:/",
+      "status": "PASS",
+      "detail": "https://betgpt.live"
+    },
+    {
+      "id": "noindex:/",
+      "status": "PASS",
+      "detail": "Static HTML meta scan"
+    },
+    {
+      "id": "h1:/",
+      "status": "PASS",
+      "detail": "1 static H1"
+    },
+    {
+      "id": "schema:/",
+      "status": "UNVERIFIED",
+      "detail": "Needs DOM rendering or Google Rich Results Test"
+    },
+    {
+      "id": "canonical:/actualites",
+      "status": "PASS",
+      "detail": "https://betgpt.live/actualites"
+    },
+    {
+      "id": "noindex:/actualites",
+      "status": "PASS",
+      "detail": "Static HTML meta scan"
+    },
+    {
+      "id": "h1:/actualites",
+      "status": "PASS",
+      "detail": "1 static H1"
+    },
+    {
+      "id": "schema:/actualites",
+      "status": "UNVERIFIED",
+      "detail": "Needs DOM rendering or Google Rich Results Test"
+    }
+  ],
+  "summary": {
+    "pass": 20,
+    "fail": 0,
+    "unverified": 2
+  },
+  "status": "PARTIAL",
+  "fetchErrors": []
+}
