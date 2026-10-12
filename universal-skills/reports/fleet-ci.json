@@ -1,0 +1,146 @@
+{
+  "schema": "universal-skills/fleet-ci-v1",
+  "checkedAt": "2026-10-12T20:27:31.134Z",
+  "status": "PARTIAL",
+  "scope": "Actual GitHub Actions step outcomes on current default-branch HEAD; not runtime health, skills adoption or organic traffic",
+  "summary": {
+    "checked": 22,
+    "pass": 2,
+    "fail": 8,
+    "unverified": 12
+  },
+  "results": [
+    {
+      "repository": "Dr-starck66/AION-ARC",
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/AION-ARC/actions/runs/37550327847"
+    },
+    {
+      "repository": "Dr-starck66/aureus-x",
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/aureus-x/actions/runs/36937016933"
+    },
+    {
+      "repository": "Dr-starck66/betgpt-railway",
+      "status": "FAIL",
+      "reason": "Workflow failed on current HEAD: BetGPT Chat Gate Fast",
+      "run": "https://github.com/Dr-starck66/betgpt-railway/actions/runs/38286106639"
+    },
+    {
+      "repository": "Dr-starck66/bio-mimic-x-discovery-factory",
+      "status": "UNVERIFIED",
+      "reason": "No completed CI on current HEAD",
+      "run": null
+    },
+    {
+      "repository": "Dr-starck66/DeepReasoning-Architecture-",
+      "status": "UNVERIFIED",
+      "reason": "CI currently running",
+      "run": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/38304317814"
+    },
+    {
+      "repository": "Dr-starck66/dr--house-diagnostic-ai",
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/dr--house-diagnostic-ai/actions/runs/36936972253"
+    },
+    {
+      "repository": "Dr-starck66/ghost-operator-ai-",
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/ghost-operator-ai-/actions/runs/36936894553"
+    },
+    {
+      "repository": "Dr-starck66/le-courtisan-v1-1",
+      "status": "FAIL",
+      "reason": "Workflow failed on current HEAD: ASTRA MASTER GATE Omega",
+      "run": "https://github.com/Dr-starck66/le-courtisan-v1-1/actions/runs/38284166901"
+    },
+    {
+      "repository": "Dr-starck66/le-harem-prive-fix-images-voix",
+      "status": "FAIL",
+      "reason": "Workflow failed on current HEAD: ASTRA MASTER GATE Omega",
+      "run": "https://github.com/Dr-starck66/le-harem-prive-fix-images-voix/actions/runs/38284135039"
+    },
+    {
+      "repository": "Dr-starck66/library",
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/library/actions/runs/37669803126"
+    },
+    {
+      "repository": "Dr-starck66/mimic-iii-clinical-database-demo-1-4",
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/mimic-iii-clinical-database-demo-1-4/actions/runs/36936963751"
+    },
+    {
+      "repository": "Dr-starck66/neuralys-download",
+      "status": "PASS",
+      "reason": "3 executable test/build/lint steps passed on current HEAD",
+      "run": "https://github.com/Dr-starck66/neuralys-download/actions/runs/36936957506"
+    },
+    {
+      "repository": "Dr-starck66/Nexus-jailbreack",
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/Nexus-jailbreack/actions/runs/36936834632"
+    },
+    {
+      "repository": "Dr-starck66/opportunityforge",
+      "status": "UNVERIFIED",
+      "reason": "No completed CI on current HEAD",
+      "run": null
+    },
+    {
+      "repository": "Dr-starck66/pantomime-dns-fix",
+      "status": "FAIL",
+      "reason": "Workflow failed on current HEAD: ASTRA MASTER GATE Omega",
+      "run": "https://github.com/Dr-starck66/pantomime-dns-fix/actions/runs/38284121106"
+    },
+    {
+      "repository": "Dr-starck66/QuantFlow---Institutional-Python-Trading-System",
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/QuantFlow---Institutional-Python-Trading-System/actions/runs/36936898706"
+    },
+    {
+      "repository": "Dr-starck66/regen",
+      "status": "FAIL",
+      "reason": "Workflow failed on current HEAD: ASTRA MASTER GATE Omega",
+      "run": "https://github.com/Dr-starck66/regen/actions/runs/38284179802"
+    },
+    {
+      "repository": "Dr-starck66/site-1082d3b2",
+      "status": "FAIL",
+      "reason": "Workflow failed on current HEAD: RefundMoneyNow Editorial Autopilot",
+      "run": "https://github.com/Dr-starck66/site-1082d3b2/actions/runs/38299898096"
+    },
+    {
+      "repository": "Dr-starck66/site-457f566a",
+      "status": "FAIL",
+      "reason": "Workflow failed on current HEAD: ASTRA MASTER GATE Omega",
+      "run": "https://github.com/Dr-starck66/site-457f566a/actions/runs/38284130922"
+    },
+    {
+      "repository": "Dr-starck66/splatforge-platform",
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/splatforge-platform/actions/runs/36936850901"
+    },
+    {
+      "repository": "Dr-starck66/wayb",
+      "status": "FAIL",
+      "reason": "Workflow failed on current HEAD: Deploy GitHub Pages",
+      "run": "https://github.com/Dr-starck66/wayb/actions/runs/36936977043"
+    },
+    {
+      "repository": "Dr-starck66/zip-github",
+      "status": "PASS",
+      "reason": "1 executable test/build/lint steps passed on current HEAD",
+      "run": "https://github.com/Dr-starck66/zip-github/actions/runs/38303333684"
+    }
+  ]
+}
