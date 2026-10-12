@@ -1,6 +1,6 @@
 {
   "schema": "universal-skill-intelligence/report-v1",
-  "timestamp": "2026-10-12T19:21:18.200Z",
+  "timestamp": "2026-10-12T19:25:44.741Z",
   "policy": {
     "autoInstall": false,
     "executeRemoteCode": false,
@@ -163,7 +163,7 @@
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 287710,
+            "stars": 287712,
             "archived": false,
             "pushedAt": "2026-10-12T08:46:48Z"
           },
@@ -238,7 +238,7 @@
           "repoUrl": "https://github.com/coreyhaines31/marketingskills",
           "repo": {
             "verified": true,
-            "stars": 54344,
+            "stars": 54345,
             "archived": false,
             "pushedAt": "2026-10-08T21:51:51Z"
           },
@@ -312,35 +312,24 @@
       ],
       "candidates": [
         {
-          "id": "kishorkukreja/awesome-supply-chain/pharmacy-supply-chain",
-          "name": "pharmacy-supply-chain",
-          "source": "kishorkukreja/awesome-supply-chain",
-          "installs": 208,
-          "skillUrl": "https://skills.sh/kishorkukreja/awesome-supply-chain/pharmacy-supply-chain",
-          "repoUrl": "https://github.com/kishorkukreja/awesome-supply-chain",
-          "repo": {
-            "verified": true,
-            "stars": 76,
-            "archived": false,
-            "pushedAt": "2026-10-06T15:51:40Z"
-          },
-          "audit": {
-            "status": "CLEAN_STATIC_SCAN",
-            "note": "Not a security certification",
-            "path": "skills/pharmacy-supply-chain/SKILL.md",
-            "revisionPinned": false
-          },
-          "score": 46,
-          "status": "UNVERIFIED"
-        },
-        {
           "id": "robdtaylor/personal-ai-infrastructure/shippinglogistics",
           "name": "Shippinglogistics",
           "source": "robdtaylor/personal-ai-infrastructure",
           "installs": 101,
           "skillUrl": "https://skills.sh/robdtaylor/personal-ai-infrastructure/shippinglogistics",
           "repoUrl": "https://github.com/robdtaylor/personal-ai-infrastructure",
+          "provenanceError": "HTTP_404",
           "score": 16,
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "kishorkukreja/awesome-supply-chain/food-beverage-supply-chain",
+          "name": "food-beverage-supply-chain",
+          "source": "kishorkukreja/awesome-supply-chain",
+          "installs": 96,
+          "skillUrl": "https://skills.sh/kishorkukreja/awesome-supply-chain/food-beverage-supply-chain",
+          "repoUrl": "https://github.com/kishorkukreja/awesome-supply-chain",
+          "score": 15,
           "status": "UNVERIFIED"
         },
         {
@@ -444,25 +433,14 @@
       ],
       "candidates": [
         {
-          "id": "walrusquant/sports-analytic-skills/anti-slop-analytics",
-          "name": "anti-slop-analytics",
-          "source": "walrusquant/sports-analytic-skills",
-          "installs": 30,
-          "skillUrl": "https://skills.sh/walrusquant/sports-analytic-skills/anti-slop-analytics",
-          "repoUrl": "https://github.com/walrusquant/sports-analytic-skills",
-          "repo": {
-            "verified": true,
-            "stars": 51,
-            "archived": false,
-            "pushedAt": "2026-09-09T04:22:03Z"
-          },
-          "audit": {
-            "status": "CLEAN_STATIC_SCAN",
-            "note": "Not a security certification",
-            "path": "skills/anti-slop-analytics/SKILL.md",
-            "revisionPinned": false
-          },
-          "score": 38,
+          "id": "docs.sx.bet/sx-bet",
+          "name": "sx-bet",
+          "source": "docs.sx.bet",
+          "installs": 16,
+          "skillUrl": "https://skills.sh/docs.sx.bet/sx-bet",
+          "repoUrl": "https://github.com/docs.sx.bet",
+          "provenanceError": "HTTP_404",
+          "score": 9,
           "status": "UNVERIFIED"
         },
         {
@@ -579,7 +557,7 @@
           "repoUrl": "https://github.com/coreyhaines31/marketingskills",
           "repo": {
             "verified": true,
-            "stars": 54344,
+            "stars": 54345,
             "archived": false,
             "pushedAt": "2026-10-08T21:51:51Z"
           },
@@ -780,7 +758,7 @@
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 287710,
+            "stars": 287712,
             "archived": false,
             "pushedAt": "2026-10-12T08:46:48Z"
           },
@@ -855,7 +833,7 @@
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 287710,
+            "stars": 287712,
             "archived": false,
             "pushedAt": "2026-10-12T08:46:48Z"
           },
@@ -940,7 +918,7 @@
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 287710,
+            "stars": 287712,
             "archived": false,
             "pushedAt": "2026-10-12T08:46:48Z"
           },
@@ -969,16 +947,6 @@
           "skillUrl": "https://skills.sh/curiositech/some_claude_skills/geospatial-data-pipeline",
           "repoUrl": "https://github.com/curiositech/some_claude_skills",
           "score": 20,
-          "status": "UNVERIFIED"
-        },
-        {
-          "id": "snailsploit/claude-red/offensive-osint",
-          "name": "offensive-osint",
-          "source": "snailsploit/claude-red",
-          "installs": 130,
-          "skillUrl": "https://skills.sh/snailsploit/claude-red/offensive-osint",
-          "repoUrl": "https://github.com/snailsploit/claude-red",
-          "score": 16,
           "status": "UNVERIFIED"
         },
         {
@@ -1018,6 +986,16 @@
           "installs": 66,
           "skillUrl": "https://skills.sh/leonchaox/qinyan-academic-skills/geopandas",
           "repoUrl": "https://github.com/leonchaox/qinyan-academic-skills",
+          "score": 14,
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "alterlab-ieu/alterlab-academic-skills/alterlab-geopandas",
+          "name": "alterlab-geopandas",
+          "source": "alterlab-ieu/alterlab-academic-skills",
+          "installs": 64,
+          "skillUrl": "https://skills.sh/alterlab-ieu/alterlab-academic-skills/alterlab-geopandas",
+          "repoUrl": "https://github.com/alterlab-ieu/alterlab-academic-skills",
           "score": 14,
           "status": "UNVERIFIED"
         },
@@ -1115,7 +1093,7 @@
           "repoUrl": "https://github.com/vercel-labs/agent-browser",
           "repo": {
             "verified": true,
-            "stars": 43859,
+            "stars": 43860,
             "archived": false,
             "pushedAt": "2026-10-11T23:17:03Z"
           },
@@ -1269,7 +1247,7 @@
           "repoUrl": "https://github.com/vercel-labs/agent-browser",
           "repo": {
             "verified": true,
-            "stars": 43859,
+            "stars": 43860,
             "archived": false,
             "pushedAt": "2026-10-11T23:17:03Z"
           },
@@ -1332,7 +1310,7 @@
     "successfulQueries": 19,
     "failedQueries": 0,
     "candidates": 92,
-    "verifiedRepositories": 14,
+    "verifiedRepositories": 12,
     "blocked": 0
   },
   "status": "PASS",

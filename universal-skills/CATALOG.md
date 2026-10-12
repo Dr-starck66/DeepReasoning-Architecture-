@@ -1,6 +1,6 @@
 # UNIVERSAL SKILL INTELLIGENCE Ω — catalogue public
 
-Dernier relevé : **2026-10-12T19:21:18.200Z**.
+Dernier relevé : **2026-10-12T19:25:44.741Z**.
 
 **Périmètre :** recherches par catégories publiques : développement, médias, export, recherche, patrimoine et projets futurs.
 **Preuve :** appels au registre skills.sh. **Aucun skill n'est installé, homologué ou garanti.**
@@ -17,10 +17,9 @@ Les vérifications statiques ne remplacent pas l'audit de sécurité et de licen
 | Technical SEO and publishing | [seo-audit](https://skills.sh/coreyhaines31/marketingskills/seo-audit) | 225 926 | CANDIDATE_REVIEW_REQUIRED |
 | Technical SEO and publishing | [ai-seo](https://skills.sh/coreyhaines31/marketingskills/ai-seo) | 141 450 | UNVERIFIED |
 | Technical SEO and publishing | [site-architecture](https://skills.sh/coreyhaines31/marketingskills/site-architecture) | 115 897 | UNVERIFIED |
-| International trade and supply chains | [pharmacy-supply-chain](https://skills.sh/kishorkukreja/awesome-supply-chain/pharmacy-supply-chain) | 208 | UNVERIFIED |
 | International trade and supply chains | [Shippinglogistics](https://skills.sh/robdtaylor/personal-ai-infrastructure/shippinglogistics) | 101 | UNVERIFIED |
+| International trade and supply chains | [food-beverage-supply-chain](https://skills.sh/kishorkukreja/awesome-supply-chain/food-beverage-supply-chain) | 96 | UNVERIFIED |
 | International trade and supply chains | [supply-chain-and-logistics](https://skills.sh/cbrock84/headcount/supply-chain-and-logistics) | 17 | UNVERIFIED |
-| Sport data and chatbot research | [anti-slop-analytics](https://skills.sh/walrusquant/sports-analytic-skills/anti-slop-analytics) | 30 | UNVERIFIED |
 | Sport data and chatbot research | [football-player-comparison](https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison) | 7 | UNVERIFIED |
 | Sport data and chatbot research | [football-match-performance-analysis](https://skills.sh/crawlora-org/crawlora-skills/football-match-performance-analysis) | 4 | UNVERIFIED |
 | Ethical lead generation and analytics | [analytics](https://skills.sh/coreyhaines31/marketingskills/analytics) | 76 847 | CANDIDATE_REVIEW_REQUIRED |
@@ -50,7 +49,7 @@ Les vérifications statiques ne remplacent pas l'audit de sécurité et de licen
 | Any unclassified future need | [tdd](https://skills.sh/mattpocock/skills/tdd) | 1 068 997 | UNVERIFIED |
 | Any unclassified future need | [marketing-loops](https://skills.sh/coreyhaines31/marketingskills/marketing-loops) | 41 416 | UNVERIFIED |
 
-**41 candidats affichés**, au plus 3 par domaine. Rapport détaillé : [`latest.json`](./reports/latest.json).
+**40 candidats affichés**, au plus 3 par domaine. Rapport détaillé : [`latest.json`](./reports/latest.json).
 
 ## Avant toute adoption
 

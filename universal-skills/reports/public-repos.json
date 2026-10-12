@@ -1,6 +1,6 @@
 {
   "schema": "universal-skill-intelligence/public-repos-v1",
-  "timestamp": "2026-10-12T19:21:18.200Z",
+  "timestamp": "2026-10-12T19:25:44.741Z",
   "owner": "Dr-starck66",
   "privacy": "Only already public GitHub repositories. No private repo access or repository secrets.",
   "status": "PASS",
@@ -57,12 +57,6 @@
       "archived": false,
       "skills": [
         {
-          "name": "anti-slop-analytics",
-          "url": "https://skills.sh/walrusquant/sports-analytic-skills/anti-slop-analytics",
-          "status": "UNVERIFIED",
-          "score": 38
-        },
-        {
           "name": "football-player-comparison",
           "url": "https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison",
           "status": "UNVERIFIED",
@@ -73,6 +67,12 @@
           "url": "https://skills.sh/crawlora-org/crawlora-skills/football-match-performance-analysis",
           "status": "UNVERIFIED",
           "score": 5
+        },
+        {
+          "name": "hockey-analytics",
+          "url": "https://skills.sh/sports-data-hq/hockey-skills/hockey-analytics",
+          "status": "UNVERIFIED",
+          "score": 4
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"

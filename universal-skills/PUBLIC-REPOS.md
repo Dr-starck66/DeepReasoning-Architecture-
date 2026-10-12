@@ -7,7 +7,7 @@ Inventaire public : 22 dépôts vérifiés dans l'espace de noms GitHub Dr-starc
 | --- | --- | --- | --- |
 | [Dr-starck66/AION-ARC](https://github.com/Dr-starck66/AION-ARC) | application-building | [agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) | REVIEW_REQUIRED |
 | [Dr-starck66/aureus-x](https://github.com/Dr-starck66/aureus-x) | domain-archives | [wayback-site-recovery](https://skills.sh/nazroll/wayback-site-recovery/wayback-site-recovery) | REVIEW_REQUIRED |
-| [Dr-starck66/betgpt-railway](https://github.com/Dr-starck66/betgpt-railway) | sport-analysis | [anti-slop-analytics](https://skills.sh/walrusquant/sports-analytic-skills/anti-slop-analytics) | REVIEW_REQUIRED |
+| [Dr-starck66/betgpt-railway](https://github.com/Dr-starck66/betgpt-railway) | sport-analysis | [football-player-comparison](https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison) | REVIEW_REQUIRED |
 | [Dr-starck66/bio-mimic-x-discovery-factory](https://github.com/Dr-starck66/bio-mimic-x-discovery-factory) | scientific-research | [research](https://skills.sh/mattpocock/skills/research) | REVIEW_REQUIRED |
 | [Dr-starck66/DeepReasoning-Architecture-](https://github.com/Dr-starck66/DeepReasoning-Architecture-) | application-building | [agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) | REVIEW_REQUIRED |
 | [Dr-starck66/dr--house-diagnostic-ai](https://github.com/Dr-starck66/dr--house-diagnostic-ai) | future | [agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) | REVIEW_REQUIRED |
