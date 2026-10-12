@@ -1,0 +1,42 @@
+name: Universal Skills — applied SEO audit BetGPT
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'universal-skills/scripts/live-seo-audit*'
+      - '.github/workflows/universal-skills-seo-pilot.yml'
+  pull_request:
+    paths:
+      - 'universal-skills/scripts/live-seo-audit*'
+      - '.github/workflows/universal-skills-seo-pilot.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '11 8 * * 1'
+permissions:
+  contents: read
+jobs:
+  live-seo-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    defaults:
+      run:
+        working-directory: universal-skills
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test pinned methodology checks
+        run: |
+          node --check scripts/live-seo-audit.mjs
+          node --test scripts/live-seo-audit.test.mjs
+      - name: Fetch real HTTPS SEO signals
+        run: node scripts/live-seo-audit.mjs
+      - name: Keep dated evidence even when FAIL
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: universal-skills-betgpt-seo
+          path: universal-skills/artifacts/seo-pilot/
+          if-no-files-found: warn
+          retention-days: 14
