@@ -1,17 +1,17 @@
 # BetGPT — evidence-based SEO pilot
 
-At 2026-10-12T19:46:04.939Z, status: PARTIAL
+At 2026-10-12T20:20:50.781Z, status: PARTIAL
 
 Reference: MIT seo-audit guidance, commit 1efedbc5148b54b2f0f6c6c9fe0be62e151c7fff. No third-party execution.
 
 | Check | Result | Evidence |
 | --- | --- | --- |
-| endpoint:/ | PASS | HTTP 200 URL https://betgpt.live/ in 5428ms |
-| endpoint:/actualites | PASS | HTTP 200 URL https://betgpt.live/actualites in 619ms |
-| endpoint:/robots.txt | PASS | HTTP 200 URL https://betgpt.live/robots.txt in 5117ms |
-| endpoint:/sitemap.xml | PASS | HTTP 200 URL https://betgpt.live/sitemap.xml in 9876ms |
-| endpoint:/news-sitemap.xml | PASS | HTTP 200 URL https://betgpt.live/news-sitemap.xml in 5099ms |
-| endpoint:/sitemap-images.xml | PASS | HTTP 200 URL https://betgpt.live/sitemap-images.xml in 9708ms |
+| endpoint:/ | PASS | HTTP 200 URL https://betgpt.live/ in 9437ms |
+| endpoint:/actualites | PASS | HTTP 200 URL https://betgpt.live/actualites in 874ms |
+| endpoint:/robots.txt | PASS | HTTP 200 URL https://betgpt.live/robots.txt in 4765ms |
+| endpoint:/sitemap.xml | PASS | HTTP 200 URL https://betgpt.live/sitemap.xml in 10046ms |
+| endpoint:/news-sitemap.xml | PASS | HTTP 200 URL https://betgpt.live/news-sitemap.xml in 4832ms |
+| endpoint:/sitemap-images.xml | PASS | HTTP 200 URL https://betgpt.live/sitemap-images.xml in 9794ms |
 | robots-not-global-block | PASS | Global disallow |
 | robots-sitemap | PASS | Sitemap reference |
 | sitemap-xml | PASS | XML root |

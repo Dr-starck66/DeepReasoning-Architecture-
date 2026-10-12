@@ -1,6 +1,6 @@
 {
   "schema": "universal-skills/seo-pilot-v1",
-  "at": "2026-10-12T19:46:04.939Z",
+  "at": "2026-10-12T20:20:50.781Z",
   "origin": "https://betgpt.live",
   "skillSource": {
     "repository": "coreyhaines31/marketingskills",
@@ -14,32 +14,32 @@
     {
       "id": "endpoint:/",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/ in 5428ms"
+      "detail": "HTTP 200 URL https://betgpt.live/ in 9437ms"
     },
     {
       "id": "endpoint:/actualites",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/actualites in 619ms"
+      "detail": "HTTP 200 URL https://betgpt.live/actualites in 874ms"
     },
     {
       "id": "endpoint:/robots.txt",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/robots.txt in 5117ms"
+      "detail": "HTTP 200 URL https://betgpt.live/robots.txt in 4765ms"
     },
     {
       "id": "endpoint:/sitemap.xml",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/sitemap.xml in 9876ms"
+      "detail": "HTTP 200 URL https://betgpt.live/sitemap.xml in 10046ms"
     },
     {
       "id": "endpoint:/news-sitemap.xml",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/news-sitemap.xml in 5099ms"
+      "detail": "HTTP 200 URL https://betgpt.live/news-sitemap.xml in 4832ms"
     },
     {
       "id": "endpoint:/sitemap-images.xml",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/sitemap-images.xml in 9708ms"
+      "detail": "HTTP 200 URL https://betgpt.live/sitemap-images.xml in 9794ms"
     },
     {
       "id": "robots-not-global-block",
