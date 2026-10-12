@@ -30,7 +30,9 @@ export function evaluate(responses,{now=Date.now()}={}){
   const urls=locs(sitemap.body||"");
   add("sitemap-xml",/<(?:urlset|sitemapindex)\b/i.test(sitemap.body||"")?"PASS":"FAIL","XML root");
   add("sitemap-nonempty",urls.length?"PASS":"FAIL",String(urls.length)+" loc URLs");
-  add("sitemap-same-origin",urls.every(url=>url.startsWith(ORIGIN+"/"))?"PASS":"FAIL","Must use betgpt.live HTTPS");
+  const foreign=urls.filter(url=>{try{const u=new URL(url);return u.origin!==ORIGIN||u.protocol!=="https:";}catch{return true;}});
+  add("sitemap-same-origin",foreign.length===0?"PASS":"FAIL",
+    String(foreign.length)+" foreign/malformed URLs; examples: "+foreign.slice(0,5).join(", "));
   add("sitemap-duplicates",new Set(urls).size===urls.length?"PASS":"FAIL",String(urls.length-new Set(urls).size)+" duplicates");
  }
  const news=responses["/news-sitemap.xml"];
@@ -46,7 +48,8 @@ export function evaluate(responses,{now=Date.now()}={}){
   const html=page.body||"";
   const canon=[...html.matchAll(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi)]
     .map(m=>(m[0].match(/\bhref=["']([^"']+)["']/i)||[])[1]).filter(Boolean);
-  const good=canon.length===1&&canon[0].startsWith(ORIGIN+"/");
+  let good=false;
+  if(canon.length===1){try{const u=new URL(canon[0],ORIGIN);good=u.origin===ORIGIN&&(path==="/"?u.pathname==="/":u.pathname.replace(/\/$/,"")===path);}catch{good=false;}}
   add("canonical:"+path,good?"PASS":canon.length?"FAIL":"UNVERIFIED",canon.join(",")||"Not in static HTML; confirm rendered DOM");
   const metas=[...html.matchAll(/<meta\b[^>]*name=["'](?:robots|googlebot)["'][^>]*>/gi)].map(m=>m[0]);
   add("noindex:"+path,metas.some(m=>/noindex/i.test(m))?"FAIL":"PASS","Static HTML meta scan");
