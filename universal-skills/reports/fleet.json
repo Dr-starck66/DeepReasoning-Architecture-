@@ -1,0 +1,1515 @@
+{
+  "schema": "universal-skills/fleet-v1",
+  "timestamp": "2026-10-12T20:06:46.235Z",
+  "sourceCatalogDate": "2026-10-12T19:40:45.041Z",
+  "status": "PASS",
+  "statusScope": "PASS means public source-tree inventory fetched; NEVER site health, skills adoption or success",
+  "privacy": "Only existing public GitHub repositories. No private data queried or printed.",
+  "summary": {
+    "publicRepositories": 22,
+    "treePass": 22,
+    "partial": 0,
+    "unverified": 0,
+    "withTestFiles": 13,
+    "withCIConfiguration": 22,
+    "approvedSkillInstallations": 0
+  },
+  "projects": [
+    {
+      "repository": "Dr-starck66/AION-ARC",
+      "category": "application-building",
+      "checkedAt": "2026-10-12T20:06:44.841Z",
+      "publicUrl": "https://github.com/Dr-starck66/AION-ARC",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "web-design-guidelines",
+          "url": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/AION-ARC"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 07e9e9c77665, 23 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "23 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "5 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "5 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "UNVERIFIED",
+          "evidence": "No recognized build manifest"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Run declared tests in an isolated project CI, then test benefit of approved skill"
+    },
+    {
+      "repository": "Dr-starck66/aureus-x",
+      "category": "domain-archives",
+      "checkedAt": "2026-10-12T20:06:44.800Z",
+      "publicUrl": "https://github.com/Dr-starck66/aureus-x",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "wayback-site-recovery",
+          "url": "https://skills.sh/nazroll/wayback-site-recovery/wayback-site-recovery",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "restore-website",
+          "url": "https://skills.sh/boochtek/ai-skills/restore-website",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/aureus-x"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 8f5f93f4a4aa, 13 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "13 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "UNVERIFIED",
+          "evidence": "0 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "2 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html, package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify project-specific acceptance tests before trying a skill"
+    },
+    {
+      "repository": "Dr-starck66/betgpt-railway",
+      "category": "sport-analysis",
+      "checkedAt": "2026-10-12T20:06:44.851Z",
+      "publicUrl": "https://github.com/Dr-starck66/betgpt-railway",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "football-player-comparison",
+          "url": "https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "football-match-performance-analysis",
+          "url": "https://skills.sh/crawlora-org/crawlora-skills/football-match-performance-analysis",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/betgpt-railway"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA a9229d08edf9, 1198 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "1198 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "91 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "29 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "package.json, video-factory/gpu-worker/requirements.txt, video-factory/hf-zero-worker/requirements.txt, video-factory/package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Run declared tests in an isolated project CI, then test benefit of approved skill"
+    },
+    {
+      "repository": "Dr-starck66/bio-mimic-x-discovery-factory",
+      "category": "scientific-research",
+      "checkedAt": "2026-10-12T20:06:44.856Z",
+      "publicUrl": "https://github.com/Dr-starck66/bio-mimic-x-discovery-factory",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "research",
+          "url": "https://skills.sh/mattpocock/skills/research",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "peer-review",
+          "url": "https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/bio-mimic-x-discovery-factory"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 8409038c1910, 250 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "250 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "24 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "49 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html, public/index.html"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Run declared tests in an isolated project CI, then test benefit of approved skill"
+    },
+    {
+      "repository": "Dr-starck66/DeepReasoning-Architecture-",
+      "category": "application-building",
+      "checkedAt": "2026-10-12T20:06:45.046Z",
+      "publicUrl": "https://github.com/Dr-starck66/DeepReasoning-Architecture-",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "web-design-guidelines",
+          "url": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/DeepReasoning-Architecture-"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 33330cb2910a, 42 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "42 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "5 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "5 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html, package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Run declared tests in an isolated project CI, then test benefit of approved skill"
+    },
+    {
+      "repository": "Dr-starck66/dr--house-diagnostic-ai",
+      "category": "future",
+      "checkedAt": "2026-10-12T20:06:45.088Z",
+      "publicUrl": "https://github.com/Dr-starck66/dr--house-diagnostic-ai",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/dr--house-diagnostic-ai"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 16a802b4482c, 22 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "22 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "UNVERIFIED",
+          "evidence": "0 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "2 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html, package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify project-specific acceptance tests before trying a skill"
+    },
+    {
+      "repository": "Dr-starck66/ghost-operator-ai-",
+      "category": "lead-generation",
+      "checkedAt": "2026-10-12T20:06:45.314Z",
+      "publicUrl": "https://github.com/Dr-starck66/ghost-operator-ai-",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "analytics",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "analytics-tracking",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics-tracking",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/ghost-operator-ai-"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA d8dad867560c, 22 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "22 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "UNVERIFIED",
+          "evidence": "0 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "2 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html, package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify project-specific acceptance tests before trying a skill"
+    },
+    {
+      "repository": "Dr-starck66/le-courtisan-v1-1",
+      "category": "future",
+      "checkedAt": "2026-10-12T20:06:45.033Z",
+      "publicUrl": "https://github.com/Dr-starck66/le-courtisan-v1-1",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/le-courtisan-v1-1"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 08ef4b3d4c2f, 10 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "10 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "1 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "3 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Run declared tests in an isolated project CI, then test benefit of approved skill"
+    },
+    {
+      "repository": "Dr-starck66/le-harem-prive-fix-images-voix",
+      "category": "future",
+      "checkedAt": "2026-10-12T20:06:45.258Z",
+      "publicUrl": "https://github.com/Dr-starck66/le-harem-prive-fix-images-voix",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/le-harem-prive-fix-images-voix"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 8b29ce41e386, 32 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "32 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "1 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "3 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html, package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Run declared tests in an isolated project CI, then test benefit of approved skill"
+    },
+    {
+      "repository": "Dr-starck66/library",
+      "category": "application-building",
+      "checkedAt": "2026-10-12T20:06:45.352Z",
+      "publicUrl": "https://github.com/Dr-starck66/library",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "web-design-guidelines",
+          "url": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/library"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA aa10d6be5fb5, 25 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "25 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "1 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "3 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html, package.json, projects/nfl-big-data-bowl-2027/requirements.txt"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Run declared tests in an isolated project CI, then test benefit of approved skill"
+    },
+    {
+      "repository": "Dr-starck66/mimic-iii-clinical-database-demo-1-4",
+      "category": "scientific-research",
+      "checkedAt": "2026-10-12T20:06:45.339Z",
+      "publicUrl": "https://github.com/Dr-starck66/mimic-iii-clinical-database-demo-1-4",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "research",
+          "url": "https://skills.sh/mattpocock/skills/research",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "peer-review",
+          "url": "https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/mimic-iii-clinical-database-demo-1-4"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 7ea5b404bf23, 9 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "9 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "UNVERIFIED",
+          "evidence": "0 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "3 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "brulafine-systeme/package.json, package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify project-specific acceptance tests before trying a skill"
+    },
+    {
+      "repository": "Dr-starck66/neuralys-download",
+      "category": "future",
+      "checkedAt": "2026-10-12T20:06:45.511Z",
+      "publicUrl": "https://github.com/Dr-starck66/neuralys-download",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/neuralys-download"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 699b9d37dc42, 4 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "4 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "UNVERIFIED",
+          "evidence": "0 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "2 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify project-specific acceptance tests before trying a skill"
+    },
+    {
+      "repository": "Dr-starck66/Nexus-jailbreack",
+      "category": "future",
+      "checkedAt": "2026-10-12T20:06:45.499Z",
+      "publicUrl": "https://github.com/Dr-starck66/Nexus-jailbreack",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/Nexus-jailbreack"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 033baf9c593d, 17 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "17 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "UNVERIFIED",
+          "evidence": "0 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "3 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html, package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify project-specific acceptance tests before trying a skill"
+    },
+    {
+      "repository": "Dr-starck66/opportunityforge",
+      "category": "lead-generation",
+      "checkedAt": "2026-10-12T20:06:45.605Z",
+      "publicUrl": "https://github.com/Dr-starck66/opportunityforge",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "analytics",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "analytics-tracking",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics-tracking",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/opportunityforge"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 9ca290157357, 30 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "30 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "2 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "6 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "Dockerfile, affilhunt-app/Dockerfile, affilhunt-app/package.json, package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Run declared tests in an isolated project CI, then test benefit of approved skill"
+    },
+    {
+      "repository": "Dr-starck66/pantomime-dns-fix",
+      "category": "seo-editorial",
+      "checkedAt": "2026-10-12T20:06:45.595Z",
+      "publicUrl": "https://github.com/Dr-starck66/pantomime-dns-fix",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/pantomime-dns-fix"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA d57e88de2ae1, 6 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "6 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "1 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "1 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "UNVERIFIED",
+          "evidence": "No recognized build manifest"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify official site URL, then run HTTP/SEO/indexability proof; no unverified domain assumptions"
+    },
+    {
+      "repository": "Dr-starck66/QuantFlow---Institutional-Python-Trading-System",
+      "category": "quant-analysis",
+      "checkedAt": "2026-10-12T20:06:45.924Z",
+      "publicUrl": "https://github.com/Dr-starck66/QuantFlow---Institutional-Python-Trading-System",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "quantitative-research",
+          "url": "https://skills.sh/omer-metin/skills-for-antigravity/quantitative-research",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "finlab",
+          "url": "https://skills.sh/koreal6803/finlab-ai/finlab",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/QuantFlow---Institutional-Python-Trading-System"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 22bda0f7ba91, 17 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "17 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "UNVERIFIED",
+          "evidence": "0 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "2 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "index.html, package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify project-specific acceptance tests before trying a skill"
+    },
+    {
+      "repository": "Dr-starck66/regen",
+      "category": "seo-editorial",
+      "checkedAt": "2026-10-12T20:06:45.976Z",
+      "publicUrl": "https://github.com/Dr-starck66/regen",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/regen"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA f18b7ea6049e, 96 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "96 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "1 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "6 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "astra-gsc-bridge/package.json, avocat-belgique-site/Dockerfile, avocat-belgique-site/package.json, saudi-adviser-site/Dockerfile"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify official site URL, then run HTTP/SEO/indexability proof; no unverified domain assumptions"
+    },
+    {
+      "repository": "Dr-starck66/site-1082d3b2",
+      "category": "seo-editorial",
+      "checkedAt": "2026-10-12T20:06:45.762Z",
+      "publicUrl": "https://github.com/Dr-starck66/site-1082d3b2",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/site-1082d3b2"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 947f822b98f7, 251 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "251 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "6 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "7 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "astra-builder-omega-v2/index.html, astra-builder-omega-v3/Dockerfile, astra-builder-omega-v3/index.html, astra-builder-omega-v3/package.json"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify official site URL, then run HTTP/SEO/indexability proof; no unverified domain assumptions"
+    },
+    {
+      "repository": "Dr-starck66/site-457f566a",
+      "category": "seo-editorial",
+      "checkedAt": "2026-10-12T20:06:45.794Z",
+      "publicUrl": "https://github.com/Dr-starck66/site-457f566a",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/site-457f566a"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA fa1cf5cc6ccd, 65 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "65 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "1 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "5 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "brulafine-netlify-site/index.html, brulafine-netlify-site/package.json, brulafine-railway-site/Dockerfile, brulafine-railway-site/index.html"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify official site URL, then run HTTP/SEO/indexability proof; no unverified domain assumptions"
+    },
+    {
+      "repository": "Dr-starck66/splatforge-platform",
+      "category": "application-building",
+      "checkedAt": "2026-10-12T20:06:46.163Z",
+      "publicUrl": "https://github.com/Dr-starck66/splatforge-platform",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "web-design-guidelines",
+          "url": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/splatforge-platform"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 6c615f8b5e70, 16 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "16 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "UNVERIFIED",
+          "evidence": "0 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "3 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "Dockerfile, app/static/index.html, requirements.txt"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify project-specific acceptance tests before trying a skill"
+    },
+    {
+      "repository": "Dr-starck66/wayb",
+      "category": "future",
+      "checkedAt": "2026-10-12T20:06:46.091Z",
+      "publicUrl": "https://github.com/Dr-starck66/wayb",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/wayb"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 968bacc3c055, 391 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "391 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "UNVERIFIED",
+          "evidence": "0 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "3 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "chicagoduilawyers.net/index.html, index.html"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Identify project-specific acceptance tests before trying a skill"
+    },
+    {
+      "repository": "Dr-starck66/zip-github",
+      "category": "domain-archives",
+      "checkedAt": "2026-10-12T20:06:46.234Z",
+      "publicUrl": "https://github.com/Dr-starck66/zip-github",
+      "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
+      "skillCandidates": [
+        {
+          "name": "wayback-site-recovery",
+          "url": "https://skills.sh/nazroll/wayback-site-recovery/wayback-site-recovery",
+          "verification": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "restore-website",
+          "url": "https://skills.sh/boochtek/ai-skills/restore-website",
+          "verification": "REVIEW_REQUIRED"
+        }
+      ],
+      "controls": [
+        {
+          "name": "public-repo-identity",
+          "status": "PASS",
+          "evidence": "Public GitHub listing matched Dr-starck66/zip-github"
+        },
+        {
+          "name": "active-maintenance",
+          "status": "UNVERIFIED",
+          "evidence": "No deployment or activity verification performed"
+        },
+        {
+          "name": "source-tree",
+          "status": "PASS",
+          "evidence": "Git tree SHA 18aa7b73b856, 432 visible files"
+        },
+        {
+          "name": "project-files",
+          "status": "PASS",
+          "evidence": "432 visible Git files"
+        },
+        {
+          "name": "test-files",
+          "status": "PASS",
+          "evidence": "11 declarations present; execution NOT checked"
+        },
+        {
+          "name": "ci-workflows",
+          "status": "PASS",
+          "evidence": "38 workflow files present; execution NOT checked"
+        },
+        {
+          "name": "build-manifest",
+          "status": "PASS",
+          "evidence": "Dockerfile, astra-1000/index.html, astra-1000/package.json, astra-1000/public/index.html"
+        },
+        {
+          "name": "real-deployment-health",
+          "status": "UNVERIFIED",
+          "evidence": "Public Git tree is not a deployed site or functional test"
+        },
+        {
+          "name": "skill-applied-and-proven",
+          "status": "UNVERIFIED",
+          "evidence": "Candidate suggestions are not installed or evaluated"
+        }
+      ],
+      "status": "PASS",
+      "nextAction": "Run declared tests in an isolated project CI, then test benefit of approved skill"
+    }
+  ]
+}
