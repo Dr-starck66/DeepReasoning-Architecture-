@@ -1,0 +1,574 @@
+{
+  "schema": "universal-skill-intelligence/public-repos-v1",
+  "timestamp": "2026-10-12T19:21:18.200Z",
+  "owner": "Dr-starck66",
+  "privacy": "Only already public GitHub repositories. No private repo access or repository secrets.",
+  "status": "PASS",
+  "repositories": [
+    {
+      "repository": "Dr-starck66/AION-ARC",
+      "category": "application-building",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "web-design-guidelines",
+          "url": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+          "status": "UNVERIFIED",
+          "score": 55
+        },
+        {
+          "name": "browser-qa",
+          "url": "https://skills.sh/affaan-m/ecc/browser-qa",
+          "status": "UNVERIFIED",
+          "score": 31
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/aureus-x",
+      "category": "domain-archives",
+      "archived": false,
+      "skills": [
+        {
+          "name": "wayback-site-recovery",
+          "url": "https://skills.sh/nazroll/wayback-site-recovery/wayback-site-recovery",
+          "status": "UNVERIFIED",
+          "score": 19
+        },
+        {
+          "name": "restore-website",
+          "url": "https://skills.sh/boochtek/ai-skills/restore-website",
+          "status": "UNVERIFIED",
+          "score": 2
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/betgpt-railway",
+      "category": "sport-analysis",
+      "archived": false,
+      "skills": [
+        {
+          "name": "anti-slop-analytics",
+          "url": "https://skills.sh/walrusquant/sports-analytic-skills/anti-slop-analytics",
+          "status": "UNVERIFIED",
+          "score": 38
+        },
+        {
+          "name": "football-player-comparison",
+          "url": "https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison",
+          "status": "UNVERIFIED",
+          "score": 7
+        },
+        {
+          "name": "football-match-performance-analysis",
+          "url": "https://skills.sh/crawlora-org/crawlora-skills/football-match-performance-analysis",
+          "status": "UNVERIFIED",
+          "score": 5
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/bio-mimic-x-discovery-factory",
+      "category": "scientific-research",
+      "archived": false,
+      "skills": [
+        {
+          "name": "research",
+          "url": "https://skills.sh/mattpocock/skills/research",
+          "status": "UNVERIFIED",
+          "score": 70
+        },
+        {
+          "name": "peer-review",
+          "url": "https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review",
+          "status": "UNVERIFIED",
+          "score": 26
+        },
+        {
+          "name": "bgpt-mcp",
+          "url": "https://skills.sh/connerlambden/bgpt-mcp/bgpt-mcp",
+          "status": "UNVERIFIED",
+          "score": 14
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/DeepReasoning-Architecture-",
+      "category": "application-building",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "web-design-guidelines",
+          "url": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+          "status": "UNVERIFIED",
+          "score": 55
+        },
+        {
+          "name": "browser-qa",
+          "url": "https://skills.sh/affaan-m/ecc/browser-qa",
+          "status": "UNVERIFIED",
+          "score": 31
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/dr--house-diagnostic-ai",
+      "category": "future",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "marketing-loops",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/ghost-operator-ai-",
+      "category": "lead-generation",
+      "archived": false,
+      "skills": [
+        {
+          "name": "analytics",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 80
+        },
+        {
+          "name": "analytics-tracking",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics-tracking",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "analytics-tracking",
+          "url": "https://skills.sh/kostja94/marketing-skills/analytics-tracking",
+          "status": "UNVERIFIED",
+          "score": 26
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/le-courtisan-v1-1",
+      "category": "future",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "marketing-loops",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/le-harem-prive-fix-images-voix",
+      "category": "future",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "marketing-loops",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/library",
+      "category": "application-building",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "web-design-guidelines",
+          "url": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+          "status": "UNVERIFIED",
+          "score": 55
+        },
+        {
+          "name": "browser-qa",
+          "url": "https://skills.sh/affaan-m/ecc/browser-qa",
+          "status": "UNVERIFIED",
+          "score": 31
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/mimic-iii-clinical-database-demo-1-4",
+      "category": "scientific-research",
+      "archived": false,
+      "skills": [
+        {
+          "name": "research",
+          "url": "https://skills.sh/mattpocock/skills/research",
+          "status": "UNVERIFIED",
+          "score": 70
+        },
+        {
+          "name": "peer-review",
+          "url": "https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review",
+          "status": "UNVERIFIED",
+          "score": 26
+        },
+        {
+          "name": "bgpt-mcp",
+          "url": "https://skills.sh/connerlambden/bgpt-mcp/bgpt-mcp",
+          "status": "UNVERIFIED",
+          "score": 14
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/neuralys-download",
+      "category": "future",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "marketing-loops",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/Nexus-jailbreack",
+      "category": "future",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "marketing-loops",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/opportunityforge",
+      "category": "lead-generation",
+      "archived": false,
+      "skills": [
+        {
+          "name": "analytics",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 80
+        },
+        {
+          "name": "analytics-tracking",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics-tracking",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "analytics-tracking",
+          "url": "https://skills.sh/kostja94/marketing-skills/analytics-tracking",
+          "status": "UNVERIFIED",
+          "score": 26
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/pantomime-dns-fix",
+      "category": "seo-editorial",
+      "archived": false,
+      "skills": [
+        {
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 80
+        },
+        {
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "site-architecture",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/site-architecture",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/QuantFlow---Institutional-Python-Trading-System",
+      "category": "quant-analysis",
+      "archived": false,
+      "skills": [
+        {
+          "name": "quantitative-research",
+          "url": "https://skills.sh/omer-metin/skills-for-antigravity/quantitative-research",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 59
+        },
+        {
+          "name": "finlab",
+          "url": "https://skills.sh/koreal6803/finlab-ai/finlab",
+          "status": "UNVERIFIED",
+          "score": 26
+        },
+        {
+          "name": "backtesting",
+          "url": "https://skills.sh/gauss314/skills/backtesting",
+          "status": "UNVERIFIED",
+          "score": 19
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/regen",
+      "category": "seo-editorial",
+      "archived": false,
+      "skills": [
+        {
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 80
+        },
+        {
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "site-architecture",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/site-architecture",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/site-1082d3b2",
+      "category": "seo-editorial",
+      "archived": false,
+      "skills": [
+        {
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 80
+        },
+        {
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "site-architecture",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/site-architecture",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/site-457f566a",
+      "category": "seo-editorial",
+      "archived": false,
+      "skills": [
+        {
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 80
+        },
+        {
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "site-architecture",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/site-architecture",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/splatforge-platform",
+      "category": "application-building",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "web-design-guidelines",
+          "url": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+          "status": "UNVERIFIED",
+          "score": 55
+        },
+        {
+          "name": "browser-qa",
+          "url": "https://skills.sh/affaan-m/ecc/browser-qa",
+          "status": "UNVERIFIED",
+          "score": 31
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/wayb",
+      "category": "future",
+      "archived": false,
+      "skills": [
+        {
+          "name": "agent-browser",
+          "url": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+          "status": "CANDIDATE_REVIEW_REQUIRED",
+          "score": 100
+        },
+        {
+          "name": "tdd",
+          "url": "https://skills.sh/mattpocock/skills/tdd",
+          "status": "UNVERIFIED",
+          "score": 35
+        },
+        {
+          "name": "marketing-loops",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "status": "UNVERIFIED",
+          "score": 35
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    },
+    {
+      "repository": "Dr-starck66/zip-github",
+      "category": "domain-archives",
+      "archived": false,
+      "skills": [
+        {
+          "name": "wayback-site-recovery",
+          "url": "https://skills.sh/nazroll/wayback-site-recovery/wayback-site-recovery",
+          "status": "UNVERIFIED",
+          "score": 19
+        },
+        {
+          "name": "restore-website",
+          "url": "https://skills.sh/boochtek/ai-skills/restore-website",
+          "status": "UNVERIFIED",
+          "score": 2
+        }
+      ],
+      "recommendationStatus": "REVIEW_REQUIRED"
+    }
+  ],
+  "summary": {
+    "publicRepositories": 22,
+    "recommendations": 64,
+    "withoutCandidates": 0
+  }
+}

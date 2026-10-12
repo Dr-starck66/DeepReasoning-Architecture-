@@ -1,6 +1,6 @@
 # UNIVERSAL SKILL INTELLIGENCE Ω — catalogue public
 
-Dernier relevé : **2026-10-12T19:15:27.626Z**.
+Dernier relevé : **2026-10-12T19:21:18.200Z**.
 
 **Périmètre :** recherches par catégories publiques : développement, médias, export, recherche, patrimoine et projets futurs.
 **Preuve :** appels au registre skills.sh. **Aucun skill n'est installé, homologué ou garanti.**
@@ -17,11 +17,12 @@ Les vérifications statiques ne remplacent pas l'audit de sécurité et de licen
 | Technical SEO and publishing | [seo-audit](https://skills.sh/coreyhaines31/marketingskills/seo-audit) | 225 926 | CANDIDATE_REVIEW_REQUIRED |
 | Technical SEO and publishing | [ai-seo](https://skills.sh/coreyhaines31/marketingskills/ai-seo) | 141 450 | UNVERIFIED |
 | Technical SEO and publishing | [site-architecture](https://skills.sh/coreyhaines31/marketingskills/site-architecture) | 115 897 | UNVERIFIED |
+| International trade and supply chains | [pharmacy-supply-chain](https://skills.sh/kishorkukreja/awesome-supply-chain/pharmacy-supply-chain) | 208 | UNVERIFIED |
 | International trade and supply chains | [Shippinglogistics](https://skills.sh/robdtaylor/personal-ai-infrastructure/shippinglogistics) | 101 | UNVERIFIED |
-| International trade and supply chains | [ecp-manual](https://skills.sh/thomasmoreai/legal-skills-open/ecp-manual) | 1 | UNVERIFIED |
-| Sport data and chatbot research | [web3-polymarket](https://skills.sh/polymarket/agent-skills/web3-polymarket) | 570 | UNVERIFIED |
-| Sport data and chatbot research | [polymarket](https://skills.sh/atompilot/polymarket-skill/polymarket) | 7 | UNVERIFIED |
-| Sport data and chatbot research | [web3-polymarket](https://skills.sh/elophanto/elophanto/web3-polymarket) | 2 | UNVERIFIED |
+| International trade and supply chains | [supply-chain-and-logistics](https://skills.sh/cbrock84/headcount/supply-chain-and-logistics) | 17 | UNVERIFIED |
+| Sport data and chatbot research | [anti-slop-analytics](https://skills.sh/walrusquant/sports-analytic-skills/anti-slop-analytics) | 30 | UNVERIFIED |
+| Sport data and chatbot research | [football-player-comparison](https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison) | 7 | UNVERIFIED |
+| Sport data and chatbot research | [football-match-performance-analysis](https://skills.sh/crawlora-org/crawlora-skills/football-match-performance-analysis) | 4 | UNVERIFIED |
 | Ethical lead generation and analytics | [analytics](https://skills.sh/coreyhaines31/marketingskills/analytics) | 76 847 | CANDIDATE_REVIEW_REQUIRED |
 | Ethical lead generation and analytics | [analytics-tracking](https://skills.sh/coreyhaines31/marketingskills/analytics-tracking) | 57 817 | UNVERIFIED |
 | Ethical lead generation and analytics | [analytics-tracking](https://skills.sh/kostja94/marketing-skills/analytics-tracking) | 2 329 | UNVERIFIED |
@@ -36,6 +37,9 @@ Les vérifications statiques ne remplacent pas l'audit de sécurité et de licen
 | Scientific methods | [research](https://skills.sh/mattpocock/skills/research) | 649 578 | UNVERIFIED |
 | Scientific methods | [peer-review](https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review) | 2 012 | UNVERIFIED |
 | Scientific methods | [bgpt-mcp](https://skills.sh/connerlambden/bgpt-mcp/bgpt-mcp) | 61 | UNVERIFIED |
+| Archive and geospatial research | [research](https://skills.sh/mattpocock/skills/research) | 649 578 | UNVERIFIED |
+| Archive and geospatial research | [geopandas](https://skills.sh/davila7/claude-code-templates/geopandas) | 401 | UNVERIFIED |
+| Archive and geospatial research | [geospatial-data-pipeline](https://skills.sh/curiositech/some_claude_skills/geospatial-data-pipeline) | 341 | UNVERIFIED |
 | Full-stack software and QA | [agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) | 1 025 492 | CANDIDATE_REVIEW_REQUIRED |
 | Full-stack software and QA | [web-design-guidelines](https://skills.sh/vercel-labs/agent-skills/web-design-guidelines) | 725 805 | UNVERIFIED |
 | Full-stack software and QA | [browser-qa](https://skills.sh/affaan-m/ecc/browser-qa) | 9 047 | UNVERIFIED |
@@ -46,7 +50,7 @@ Les vérifications statiques ne remplacent pas l'audit de sécurité et de licen
 | Any unclassified future need | [tdd](https://skills.sh/mattpocock/skills/tdd) | 1 068 997 | UNVERIFIED |
 | Any unclassified future need | [marketing-loops](https://skills.sh/coreyhaines31/marketingskills/marketing-loops) | 41 416 | UNVERIFIED |
 
-**37 candidats affichés**, au plus 3 par domaine. Rapport détaillé : [`latest.json`](./reports/latest.json).
+**41 candidats affichés**, au plus 3 par domaine. Rapport détaillé : [`latest.json`](./reports/latest.json).
 
 ## Avant toute adoption
 
