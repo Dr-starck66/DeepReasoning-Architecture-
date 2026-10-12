@@ -1,6 +1,6 @@
 {
   "schema": "universal-skill-intelligence/report-v1",
-  "timestamp": "2026-10-12T19:40:45.041Z",
+  "timestamp": "2026-10-12T20:20:42.191Z",
   "policy": {
     "autoInstall": false,
     "executeRemoteCode": false,
@@ -36,7 +36,7 @@
           "repoUrl": "https://github.com/vercel-labs/skills",
           "repo": {
             "verified": true,
-            "stars": 33997,
+            "stars": 33999,
             "archived": false,
             "pushedAt": "2026-10-09T17:54:47Z"
           },
@@ -163,7 +163,7 @@
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 287733,
+            "stars": 287775,
             "archived": false,
             "pushedAt": "2026-10-12T08:46:48Z"
           },
@@ -238,7 +238,7 @@
           "repoUrl": "https://github.com/coreyhaines31/marketingskills",
           "repo": {
             "verified": true,
-            "stars": 54346,
+            "stars": 54353,
             "archived": false,
             "pushedAt": "2026-10-08T21:51:51Z"
           },
@@ -557,7 +557,7 @@
           "repoUrl": "https://github.com/coreyhaines31/marketingskills",
           "repo": {
             "verified": true,
-            "stars": 54346,
+            "stars": 54353,
             "archived": false,
             "pushedAt": "2026-10-08T21:51:51Z"
           },
@@ -758,7 +758,7 @@
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 287733,
+            "stars": 287776,
             "archived": false,
             "pushedAt": "2026-10-12T08:46:48Z"
           },
@@ -833,7 +833,7 @@
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 287733,
+            "stars": 287776,
             "archived": false,
             "pushedAt": "2026-10-12T08:46:48Z"
           },
@@ -848,7 +848,7 @@
           "id": "k-dense-ai/scientific-agent-skills/peer-review",
           "name": "peer-review",
           "source": "k-dense-ai/scientific-agent-skills",
-          "installs": 2012,
+          "installs": 2018,
           "skillUrl": "https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review",
           "repoUrl": "https://github.com/k-dense-ai/scientific-agent-skills",
           "score": 26,
@@ -918,7 +918,7 @@
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 287733,
+            "stars": 287776,
             "archived": false,
             "pushedAt": "2026-10-12T08:46:48Z"
           },
@@ -1093,7 +1093,7 @@
           "repoUrl": "https://github.com/vercel-labs/agent-browser",
           "repo": {
             "verified": true,
-            "stars": 43860,
+            "stars": 43861,
             "archived": false,
             "pushedAt": "2026-10-11T23:17:03Z"
           },
@@ -1247,7 +1247,7 @@
           "repoUrl": "https://github.com/vercel-labs/agent-browser",
           "repo": {
             "verified": true,
-            "stars": 43860,
+            "stars": 43861,
             "archived": false,
             "pushedAt": "2026-10-11T23:17:03Z"
           },

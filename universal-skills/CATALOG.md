@@ -1,6 +1,6 @@
 # UNIVERSAL SKILL INTELLIGENCE Ω — catalogue public
 
-Dernier relevé : **2026-10-12T19:40:45.041Z**.
+Dernier relevé : **2026-10-12T20:20:42.191Z**.
 
 **Périmètre :** recherches par catégories publiques : développement, médias, export, recherche, patrimoine et projets futurs.
 **Preuve :** appels au registre skills.sh. **Aucun skill n'est installé, homologué ou garanti.**
@@ -34,7 +34,7 @@ Les vérifications statiques ne remplacent pas l'audit de sécurité et de licen
 | Threat intelligence | [osint-recon](https://skills.sh/briiirussell/cybersecurity-skills/osint-recon) | 343 | UNVERIFIED |
 | Threat intelligence | [osint-recon](https://skills.sh/coreyhaines31/cybersecurity-skills/osint-recon) | 26 | UNVERIFIED |
 | Scientific methods | [research](https://skills.sh/mattpocock/skills/research) | 649 578 | UNVERIFIED |
-| Scientific methods | [peer-review](https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review) | 2 012 | UNVERIFIED |
+| Scientific methods | [peer-review](https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review) | 2 018 | UNVERIFIED |
 | Scientific methods | [bgpt-mcp](https://skills.sh/connerlambden/bgpt-mcp/bgpt-mcp) | 61 | UNVERIFIED |
 | Archive and geospatial research | [research](https://skills.sh/mattpocock/skills/research) | 649 578 | UNVERIFIED |
 | Archive and geospatial research | [geopandas](https://skills.sh/davila7/claude-code-templates/geopandas) | 401 | UNVERIFIED |
