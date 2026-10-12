@@ -15,3 +15,7 @@ test("sitewide Disallow blocks gate",()=>{let b=base();b["/robots.txt"].body="Di
 test("foreign sitemap and duplicate URLs fail",()=>{let b=base();b["/sitemap.xml"].body="<urlset><loc>https://other.example/</loc><loc>https://other.example/</loc></urlset>";assert.equal(evaluate(b).status,"FAIL");});
 test("missing pages cannot PASS",()=>{let b=base();b["/actualites"].status=404;assert.equal(evaluate(b).status,"FAIL");});
 test("missing static canonical is UNVERIFIED not fake failure",()=>{let b=base();b["/"].body="<html></html>";assert.equal(evaluate(b).checks.find(x=>x.id==="canonical:/").status,"UNVERIFIED");});
+
+test("root canonical without trailing slash is accepted",()=>{let b=base();b["/"].body='<link rel="canonical" href="https://betgpt.live"><h1>Site</h1>';const x=evaluate(b);assert.equal(x.checks.find(c=>c.id==="canonical:/").status,"PASS");});
+test("sitemap URLs at the exact root origin are not falsely rejected",()=>{let b=base();b["/sitemap.xml"].body="<urlset><loc>https://betgpt.live</loc></urlset>";const x=evaluate(b);assert.equal(x.checks.find(c=>c.id==="sitemap-same-origin").status,"PASS");});
+test("real foreign sitemap URLs include bounded evidence",()=>{let b=base();b["/sitemap.xml"].body="<urlset><loc>https://other.example/path</loc></urlset>";const x=evaluate(b);assert.match(x.checks.find(c=>c.id==="sitemap-same-origin").detail,/other.example/);});
