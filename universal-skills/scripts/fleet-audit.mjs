@@ -58,7 +58,7 @@ export function evaluateRepo(repo,matched,tree,{timestamp=new Date().toISOString
     verification:s.status==="BLOCKED"?"BLOCKED":"REVIEW_REQUIRED"})),
    controls:[],status:"UNVERIFIED"};
  const check=(name,status,evidence)=>result.controls.push({name,status,evidence:short(evidence)});
- check("public-repo-identity","PASS","Authenticated listing matched public "+result.repository);
+ check("public-repo-identity","PASS","Public GitHub listing matched "+result.repository);
  if(repo.archived===true){
   check("active-maintenance","N/A","Repository is archived");
  }else{
@@ -70,7 +70,7 @@ export function evaluateRepo(repo,matched,tree,{timestamp=new Date().toISOString
   return result;
  }
  const entries=tree.tree.filter(x=>x&&typeof x.path==="string"&&x.type==="blob").map(x=>x.path);
- const tests=entries.filter(x=>/(?:^|\/)(?:tests?\/|__tests__\/)|\.(?:test|spec)\.[cm]?[jt]sx?$|test_[^/]+\.py$/.test(x));
+ const tests=entries.filter(x=>/(?:^|\/)(?:tests?\/|__tests__\/)|\.(?:test|spec)\.(?:[cm]?[jt]s|[jt]sx)$|test_[^/]+\.py$/.test(x));
  const workflows=entries.filter(x=>/^\.github\/workflows\/[^/]+\.(?:yml|yaml)$/i.test(x));
  const manifests=entries.filter(x=>/(?:^|\/)(?:package\.json|pyproject\.toml|requirements\.txt|go\.mod|Cargo\.toml|pom\.xml|Dockerfile|index\.html)$/i.test(x)).slice(0,12);
  check("source-tree",tree.truncated?"PARTIAL":"PASS",
