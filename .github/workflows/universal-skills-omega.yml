@@ -1,23 +1,24 @@
-name: UNIVERSAL SKILLS Ω — public free execution hub
+name: UNIVERSAL SKILLS Omega — cross-project catalog
 on:
   push:
-    branches: [main, ci/universal-skills-omega-hub]
+    branches: [main]
     paths:
-      - 'universal-skills/**'
-      - '.github/workflows/universal-skills-public-proof.yml'
+      - 'universal-skills/scripts/**'
+      - 'universal-skills/config/**'
+      - '.github/workflows/universal-skills-omega.yml'
   pull_request:
     paths:
       - 'universal-skills/**'
-      - '.github/workflows/universal-skills-public-proof.yml'
+      - '.github/workflows/universal-skills-omega.yml'
   workflow_dispatch:
     inputs:
       project:
-        description: 'Category id or all (no private details)'
+        description: 'Generic public category ID or all'
         type: string
         required: false
-        default: 'public-smoke'
+        default: 'all'
       query:
-        description: 'Optional free-text skill search'
+        description: 'Optional non-confidential skill search'
         type: string
         required: false
         default: ''
@@ -26,9 +27,9 @@ on:
 permissions:
   contents: read
 jobs:
-  portable-smoke:
+  discover-and-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     defaults:
       run:
         working-directory: universal-skills
@@ -37,28 +38,62 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Verify engine with standard Node
+      - name: Full engine and report adversarial tests
         run: |
-          node --version
           node --check scripts/universal-skill-intelligence.mjs
-          node --test scripts/universal-skill-intelligence.test.mjs
-      - name: Probe skills.sh API and verify candidate repository identity (zero-install)
+          node --check scripts/report-to-catalog.mjs
+          node --test scripts/universal-skill-intelligence.test.mjs scripts/report-to-catalog.test.mjs
+      - name: Live discovery (full coverage on push, PR and schedule)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          INPUT_PROJECT: ${{ inputs.project || 'public-smoke' }}
+          INPUT_PROJECT: ${{ inputs.project || 'all' }}
           INPUT_QUERY: ${{ inputs.query || '' }}
           EVENT_NAME: ${{ github.event_name }}
         run: |
           project="$INPUT_PROJECT"
-          if [ "$EVENT_NAME" = "schedule" ]; then project="all"; fi
-          args=("--config=config/public-probe.json" "--project=$project" "--verifyTop=1" "--timeoutMs=8000" "--report=artifacts/public-proof/report.json" "--strict")
+          if [ "$EVENT_NAME" != "workflow_dispatch" ]; then project="all"; fi
+          args=("--config=config/public-probe.json" "--project=$project" "--verifyTop=1" "--timeoutMs=9000" "--report=artifacts/public-proof/report.json" "--strict")
           if [ -n "$INPUT_QUERY" ]; then args+=("--query=$INPUT_QUERY"); fi
           node scripts/universal-skill-intelligence.mjs "${args[@]}"
-      - name: Preserve query and safety evidence
+      - name: Generate publishable catalog only from passing public evidence
+        if: github.event_name != 'workflow_dispatch'
+        run: node scripts/report-to-catalog.mjs artifacts/public-proof/report.json reports/latest.json CATALOG.md
+      - name: Keep proof artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: universal-skills-evidence
-          path: universal-skills/artifacts/public-proof/report.json
+          name: universal-skills-audit
+          path: |
+            universal-skills/artifacts/public-proof/report.json
+            universal-skills/reports/latest.json
+            universal-skills/CATALOG.md
           if-no-files-found: warn
-          retention-days: 7
+          retention-days: 14
+  publish-catalog:
+    needs: discover-and-test
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'schedule')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: universal-skills-audit
+          path: universal-skills
+      - name: Commit validated public catalog to main
+        run: |
+          test -s universal-skills/reports/latest.json
+          test -s universal-skills/CATALOG.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add universal-skills/reports/latest.json universal-skills/CATALOG.md
+          if git diff --cached --quiet; then
+            echo "Catalog unchanged"
+          else
+            git commit -m "docs: refresh evidence-based universal skills catalog [skip ci]"
+            git push origin HEAD:main
+          fi

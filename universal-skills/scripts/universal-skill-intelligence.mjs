@@ -46,14 +46,22 @@ export function auditText(text){
   return flags.length?{status:"RISK_DETECTED",flags}:{status:"CLEAN_STATIC_SCAN",note:"Not a security certification"};
 }
 async function request(url,fetcher,ms){
-  const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),ms);
   const headers={Accept:"application/json","User-Agent":"universal-skill-intelligence-omega/1"};
   if(url.startsWith(github+"/")&&process.env.GITHUB_TOKEN)headers.Authorization="Bearer "+process.env.GITHUB_TOKEN;
-  try{
-    const resp=await fetcher(url,{headers,signal:controller.signal});
-    if(!resp.ok)throw Error("HTTP_"+resp.status);
-    return await resp.json();
-  }finally{clearTimeout(timer);}
+  const transient=new Set([429,500,502,503,504]);
+  for(let attempt=0;attempt<4;attempt++){
+    const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),ms);
+    try{
+      const resp=await fetcher(url,{headers,signal:controller.signal});
+      if(!resp.ok){const error=Error("HTTP_"+resp.status);error.httpStatus=resp.status;throw error;}
+      return await resp.json();
+    }catch(error){
+      if(attempt===3||!(transient.has(error.httpStatus)||error.name==="AbortError"||error.name==="TypeError"))throw error;
+    }finally{clearTimeout(timer);}
+    // Fixed capped exponential backoff: no tight loops during temporary provider outages.
+    await new Promise(done=>setTimeout(done,400*2**attempt));
+  }
+  throw Error("REQUEST_RETRIES_EXHAUSTED");
 }
 export function score(skill){
   let n=Math.min(35,Math.floor(Math.log10(1+skill.installs)*8));
