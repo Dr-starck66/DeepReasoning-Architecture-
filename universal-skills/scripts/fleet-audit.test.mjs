@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {evaluateRepo,routePublicRepos,publicRepoInventory,auditFleet,githubJSON,renderFleet} from "./fleet-audit.mjs";
+import {evaluateRepo,publicRepoInventory,auditFleet,githubJSON,renderFleet} from "./fleet-audit.mjs";
 const sha="a".repeat(40),owner={login:"Dr-starck66"};
 const repo=(name,priv=false)=>({name,full_name:"Dr-starck66/"+name,owner,private:priv,default_branch:"main",archived:false});
 const catalog={schema:"universal-skill-intelligence/report-v1",timestamp:"2026-10-12T19:00:00.000Z",status:"PASS",
