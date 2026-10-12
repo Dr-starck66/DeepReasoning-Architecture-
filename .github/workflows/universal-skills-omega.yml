@@ -42,7 +42,7 @@ jobs:
         run: |
           node --check scripts/universal-skill-intelligence.mjs
           node --check scripts/report-to-catalog.mjs
-          node --test scripts/universal-skill-intelligence.test.mjs scripts/report-to-catalog.test.mjs
+          node --test scripts/universal-skill-intelligence.test.mjs scripts/report-to-catalog.test.mjs scripts/public-repo-router.test.mjs
       - name: Live discovery (full coverage on push, PR and schedule)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -58,6 +58,11 @@ jobs:
       - name: Generate publishable catalog only from passing public evidence
         if: github.event_name != 'workflow_dispatch'
         run: node scripts/report-to-catalog.mjs artifacts/public-proof/report.json reports/latest.json CATALOG.md
+      - name: Map public GitHub repositories to catalog recommendations
+        if: github.event_name != 'workflow_dispatch'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/public-repo-router.mjs reports/latest.json reports/public-repos.json PUBLIC-REPOS.md
       - name: Keep proof artifact
         if: always()
         uses: actions/upload-artifact@v4
@@ -67,6 +72,8 @@ jobs:
             universal-skills/artifacts/public-proof/report.json
             universal-skills/reports/latest.json
             universal-skills/CATALOG.md
+            universal-skills/PUBLIC-REPOS.md
+            universal-skills/reports/public-repos.json
           if-no-files-found: warn
           retention-days: 14
   publish-catalog:
@@ -88,9 +95,11 @@ jobs:
         run: |
           test -s universal-skills/reports/latest.json
           test -s universal-skills/CATALOG.md
+          test -s universal-skills/PUBLIC-REPOS.md
+          test -s universal-skills/reports/public-repos.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add universal-skills/reports/latest.json universal-skills/CATALOG.md
+          git add universal-skills/reports/latest.json universal-skills/CATALOG.md universal-skills/reports/public-repos.json universal-skills/PUBLIC-REPOS.md
           if git diff --cached --quiet; then
             echo "Catalog unchanged"
           else

@@ -32,7 +32,8 @@
       "label": "International trade and supply chains",
       "kind": "trade",
       "queries": [
-        "international trade export compliance"
+        "international trade export compliance",
+        "supply chain logistics"
       ]
     },
     {
@@ -40,7 +41,13 @@
       "label": "Sport data and chatbot research",
       "kind": "sport",
       "queries": [
-        "sports data integration"
+        "football match statistics",
+        "sports analytics"
+      ],
+      "exclude": [
+        "polymarket",
+        "crypto",
+        "web3"
       ]
     },
     {
@@ -88,7 +95,9 @@
       "label": "Archive and geospatial research",
       "kind": "archaeology",
       "queries": [
-        "geospatial history research"
+        "archaeology",
+        "historical records research",
+        "geospatial mapping"
       ]
     },
     {

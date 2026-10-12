@@ -105,7 +105,9 @@ export async function discover({projects,project="all",query,fetcher=fetch,verif
       summary.queries++;
       try{
         const data=await request(registry+"/api/search?q="+encodeURIComponent(q)+"&limit=20",fetcher,timeoutMs);
-        const skills=normalize(data).slice(0,5);
+        // Project-specific exclusions prevent high-install but irrelevant candidates from dominating.
+        const exclusions=(Array.isArray(p.exclude)?p.exclude:[]).filter(v=>typeof v==="string"&&/^[a-z0-9-]{2,40}$/i.test(v)).map(v=>v.toLowerCase());
+        const skills=normalize(data).filter(s=>!exclusions.some(ex=>(s.id+" "+s.name).toLowerCase().includes(ex))).slice(0,5);
         item.queries.push({q,status:"PASS",found:skills.length});
         summary.successfulQueries++;
         for(const s of skills)found.set(s.id.toLowerCase(),s);
