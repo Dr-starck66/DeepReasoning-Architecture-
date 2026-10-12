@@ -96,3 +96,29 @@ test("inconsistent ID paths fail closed",()=>{
   const items=normalize({skills:[{id:"attacker/sneak",name:"Safe Name",source:"vercel-labs/skills",installs:200}]});
   assert.equal(items.length,0);
 });
+
+test("recover after a transient HTTP 503 without false PASS",async()=>{
+  let calls=0;
+  const fetcher=async (url,opts)=>{
+    if(String(url).includes("skills.sh/api/search")){
+      calls++;
+      if(calls===1)return {ok:false,status:503};
+    }
+    return mocked(url,opts);
+  };
+  const result=await discover({projects,project:"future",verifyTop:0,fetcher});
+  assert.equal(result.status,"PASS");
+  assert.equal(calls,2);
+  assert.equal(result.summary.failedQueries,0);
+});
+test("persistent HTTP 503 fails closed after capped retries",async()=>{
+  let calls=0;
+  const fetcher=async ()=>{
+    calls++;
+    return {ok:false,status:503};
+  };
+  const result=await discover({projects,project:"future",verifyTop:0,fetcher});
+  assert.equal(result.status,"FAIL");
+  assert.equal(calls,4);
+  assert.match(result.projects[0].queries[0].reason,/HTTP_503/);
+});
