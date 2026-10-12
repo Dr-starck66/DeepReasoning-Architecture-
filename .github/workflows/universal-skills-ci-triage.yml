@@ -1,0 +1,92 @@
+name: Universal Skills Omega - executable CI proof across public repos
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/universal-skills-ci-triage.yml']
+  pull_request:
+    paths: ['.github/workflows/universal-skills-ci-triage.yml']
+  workflow_dispatch:
+  schedule:
+    - cron: '23 10 * * 1'
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: universal-skills-main-evidence-publishing
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs=require('node:fs');
+            const fleet=JSON.parse(fs.readFileSync('universal-skills/reports/fleet.json','utf8'));
+            if(fleet.schema!=='universal-skills/fleet-v1'||!fleet.projects?.length)throw Error('BAD_FLEET');
+            const owner='Dr-starck66',names=fleet.projects.map(x=>x.repository.split('/')[1]),results=[];
+            if(names.some(n=>!/^[a-zA-Z0-9_.-]{1,100}$/.test(n)))throw Error('INVALID_REPO');
+            let cursor=0;
+            async function worker(){
+              while(cursor<names.length){
+                const repo=names[cursor++],p={repository:owner+'/'+repo,status:'UNVERIFIED',reason:'',run:null};
+                try{
+                  const meta=(await github.rest.repos.get({owner,repo})).data;
+                  if(meta.private!==false||meta.full_name.toLowerCase()!==p.repository.toLowerCase())throw Error('PRIVATE_OR_MISMATCH');
+                  const branch=meta.default_branch;
+                  const head=(await github.rest.repos.getBranch({owner,repo,branch})).data.commit.sha;
+                  const list=(await github.rest.actions.listWorkflowRunsForRepo({owner,repo,branch,per_page:30})).data.workflow_runs;
+                  const current=list.filter(r=>r.head_sha===head);
+                  const failed=current.filter(r=>r.status==='completed'&&r.conclusion==='failure');
+                  const successful=current.filter(r=>r.status==='completed'&&r.conclusion==='success');
+                  if(failed.length){p.status='FAIL';p.reason='Workflow failed on current HEAD: '+failed[0].name;p.run=failed[0].html_url;}
+                  else if(current.some(r=>r.status!=='completed')){p.reason='CI currently running';p.run=current[0].html_url;}
+                  else if(successful.length){
+                    const run=successful.sort((a,b)=>Number(/test|build|lint|master gate/i.test(b.name))-Number(/test|build|lint|master gate/i.test(a.name)))[0];
+                    p.run=run.html_url;
+                    const jobs=(await github.rest.actions.listJobsForWorkflowRun({owner,repo,run_id:run.id,per_page:50})).data.jobs;
+                    const real=jobs.filter(j=>j.runner_id>0).flatMap(j=>j.steps||[]).filter(s=>s.conclusion==='success'&&/\b(test|tests|build|lint|typecheck|regression)\b/i.test(s.name)&&!/setup|checkout|post run|upload|download|zero.?cost/i.test(s.name));
+                    p.status=real.length?'PASS':'UNVERIFIED';
+                    p.reason=real.length?real.length+' executable test/build/lint steps passed on current HEAD':'Only generic workflow success; functional proof missing';
+                  }else{p.reason='No completed CI on current HEAD';}
+                }catch(e){p.reason=String(e.message).slice(0,120);}
+                results.push(p);
+              }
+            }
+            await Promise.all(Array.from({length:Math.min(names.length,4)},worker));
+            results.sort((a,b)=>a.repository.localeCompare(b.repository));
+            const summary={checked:results.length,pass:results.filter(x=>x.status==='PASS').length,fail:results.filter(x=>x.status==='FAIL').length,unverified:results.filter(x=>x.status==='UNVERIFIED').length};
+            if(results.length!==names.length)throw Error('MISSING_REPOSITORY_PROOFS');
+            const data={schema:'universal-skills/fleet-ci-v1',checkedAt:new Date().toISOString(),status:summary.fail||summary.unverified?'PARTIAL':'PASS',scope:'Actual GitHub Actions step outcomes on current default-branch HEAD; not runtime health, skills adoption or organic traffic',summary,results};
+            fs.mkdirSync('universal-skills/reports',{recursive:true});
+            fs.writeFileSync('universal-skills/reports/fleet-ci.json',JSON.stringify(data,null,2)+'\n');
+            const lines=['# UNIVERSAL SKILLS Omega - CI executables par projet','','Inventaire du '+data.checkedAt+'. PASS = au moins une etape test/build/lint executee sur le dernier commit.','', '| Projet | Statut | Preuve | Motif |','| --- | --- | --- | --- |'];
+            for(const p of results){const clean=s=>String(s||'').replace(/[<>|\n]/g,' ').slice(0,140);lines.push('| '+clean(p.repository)+' | '+p.status+' | '+(p.run?'[GitHub Actions]('+p.run+')':'Non prouve')+' | '+clean(p.reason)+' |');}
+            lines.push('','Les projets prives sont audites exclusivement dans leur registre confidentiel.','');
+            fs.writeFileSync('universal-skills/FLEET-CI.md',lines.join('\n'));
+            core.info('FLEET_CI '+JSON.stringify(summary));
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: universal-skills-fleet-ci-evidence
+          path: |
+            universal-skills/reports/fleet-ci.json
+            universal-skills/FLEET-CI.md
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Publish verified inspection on main
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          test -s universal-skills/reports/fleet-ci.json
+          node -e "const x=require('./universal-skills/reports/fleet-ci.json'); if(x.schema!=='universal-skills/fleet-ci-v1'||x.summary.checked!==x.results.length)process.exit(1)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add universal-skills/reports/fleet-ci.json universal-skills/FLEET-CI.md
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: update public portfolio CI evidence [skip ci]"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
