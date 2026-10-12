@@ -44,6 +44,9 @@ jobs:
     needs: live-seo-proof
     if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'schedule')
     runs-on: ubuntu-latest
+    concurrency:
+      group: universal-skills-main-evidence-publishing
+      cancel-in-progress: false
     timeout-minutes: 5
     permissions:
       contents: write
@@ -63,5 +66,7 @@ jobs:
           git add universal-skills/seo-health/report.json universal-skills/seo-health/report.md
           if ! git diff --cached --quiet; then
             git commit -m "docs: refresh BetGPT SEO audit proof [skip ci]"
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
