@@ -1,6 +1,6 @@
 {
   "schema": "universal-skills/seo-pilot-v1",
-  "at": "2026-10-12T20:20:50.781Z",
+  "at": "2026-10-19T15:31:51.640Z",
   "origin": "https://betgpt.live",
   "skillSource": {
     "repository": "coreyhaines31/marketingskills",
@@ -14,32 +14,32 @@
     {
       "id": "endpoint:/",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/ in 9437ms"
+      "detail": "HTTP 200 URL https://betgpt.live/ in 755ms"
     },
     {
       "id": "endpoint:/actualites",
-      "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/actualites in 874ms"
+      "status": "UNVERIFIED",
+      "detail": "HTTP 0 URL https://betgpt.live/actualites in 12001ms; The operation was aborted due to timeout"
     },
     {
       "id": "endpoint:/robots.txt",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/robots.txt in 4765ms"
+      "detail": "HTTP 200 URL https://betgpt.live/robots.txt in 2618ms"
     },
     {
       "id": "endpoint:/sitemap.xml",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/sitemap.xml in 10046ms"
+      "detail": "HTTP 200 URL https://betgpt.live/sitemap.xml in 4835ms"
     },
     {
       "id": "endpoint:/news-sitemap.xml",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/news-sitemap.xml in 4832ms"
+      "detail": "HTTP 200 URL https://betgpt.live/news-sitemap.xml in 4539ms"
     },
     {
       "id": "endpoint:/sitemap-images.xml",
       "status": "PASS",
-      "detail": "HTTP 200 URL https://betgpt.live/sitemap-images.xml in 9794ms"
+      "detail": "HTTP 200 URL https://betgpt.live/sitemap-images.xml in 4850ms"
     },
     {
       "id": "robots-not-global-block",
@@ -59,7 +59,7 @@
     {
       "id": "sitemap-nonempty",
       "status": "PASS",
-      "detail": "2509 loc URLs"
+      "detail": "2405 loc URLs"
     },
     {
       "id": "sitemap-same-origin",
@@ -74,12 +74,12 @@
     {
       "id": "news-fresh-dates",
       "status": "PASS",
-      "detail": "3 dates, invalid 0, stale 0, future 0"
+      "detail": "1 dates, invalid 0, stale 0, future 0"
     },
     {
       "id": "news-size",
       "status": "PASS",
-      "detail": "3 URLs"
+      "detail": "1 URLs"
     },
     {
       "id": "canonical:/",
@@ -100,33 +100,18 @@
       "id": "schema:/",
       "status": "UNVERIFIED",
       "detail": "Needs DOM rendering or Google Rich Results Test"
-    },
-    {
-      "id": "canonical:/actualites",
-      "status": "PASS",
-      "detail": "https://betgpt.live/actualites"
-    },
-    {
-      "id": "noindex:/actualites",
-      "status": "PASS",
-      "detail": "Static HTML meta scan"
-    },
-    {
-      "id": "h1:/actualites",
-      "status": "PASS",
-      "detail": "1 static H1"
-    },
-    {
-      "id": "schema:/actualites",
-      "status": "UNVERIFIED",
-      "detail": "Needs DOM rendering or Google Rich Results Test"
     }
   ],
   "summary": {
-    "pass": 20,
+    "pass": 16,
     "fail": 0,
     "unverified": 2
   },
   "status": "PARTIAL",
-  "fetchErrors": []
+  "fetchErrors": [
+    {
+      "url": "https://betgpt.live/actualites",
+      "error": "The operation was aborted due to timeout"
+    }
+  ]
 }
