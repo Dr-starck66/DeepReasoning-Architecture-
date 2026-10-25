@@ -1,6 +1,6 @@
 {
   "schema": "universal-skill-intelligence/public-repos-v1",
-  "timestamp": "2026-10-18T12:10:10.518Z",
+  "timestamp": "2026-10-25T12:43:40.236Z",
   "owner": "Dr-starck66",
   "privacy": "Only already public GitHub repositories. No private repo access or repository secrets.",
   "status": "PASS",
@@ -60,19 +60,19 @@
           "name": "football-player-comparison",
           "url": "https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison",
           "status": "UNVERIFIED",
-          "score": 8
+          "score": 9
         },
         {
           "name": "football-match-performance-analysis",
           "url": "https://skills.sh/crawlora-org/crawlora-skills/football-match-performance-analysis",
           "status": "UNVERIFIED",
-          "score": 7
+          "score": 8
         },
         {
           "name": "hockey-analytics",
           "url": "https://skills.sh/sports-data-hq/hockey-skills/hockey-analytics",
           "status": "UNVERIFIED",
-          "score": 5
+          "score": 6
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -173,10 +173,10 @@
           "score": 35
         },
         {
-          "name": "analytics-tracking",
-          "url": "https://skills.sh/kostja94/marketing-skills/analytics-tracking",
+          "name": "conversion-signal-qa",
+          "url": "https://skills.sh/aaron-he-zhu/aaron-marketing-skills/conversion-signal-qa",
           "status": "UNVERIFIED",
-          "score": 26
+          "score": 24
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -355,10 +355,10 @@
           "score": 35
         },
         {
-          "name": "analytics-tracking",
-          "url": "https://skills.sh/kostja94/marketing-skills/analytics-tracking",
+          "name": "conversion-signal-qa",
+          "url": "https://skills.sh/aaron-he-zhu/aaron-marketing-skills/conversion-signal-qa",
           "status": "UNVERIFIED",
-          "score": 26
+          "score": 24
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -410,7 +410,7 @@
           "name": "backtesting",
           "url": "https://skills.sh/gauss314/skills/backtesting",
           "status": "UNVERIFIED",
-          "score": 19
+          "score": 20
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
