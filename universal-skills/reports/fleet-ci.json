@@ -1,13 +1,13 @@
 {
   "schema": "universal-skills/fleet-ci-v1",
-  "checkedAt": "2026-10-19T17:00:49.806Z",
+  "checkedAt": "2026-10-26T16:49:31.176Z",
   "status": "PARTIAL",
   "scope": "Actual GitHub Actions step outcomes on current default-branch HEAD; not runtime health, skills adoption or organic traffic",
   "summary": {
     "checked": 22,
-    "pass": 3,
+    "pass": 4,
     "fail": 7,
-    "unverified": 12
+    "unverified": 11
   },
   "results": [
     {
@@ -24,9 +24,9 @@
     },
     {
       "repository": "Dr-starck66/betgpt-railway",
-      "status": "UNVERIFIED",
-      "reason": "No completed CI on current HEAD",
-      "run": null
+      "status": "PASS",
+      "reason": "1 executable test/build/lint steps passed on current HEAD",
+      "run": "https://github.com/Dr-starck66/betgpt-railway/actions/runs/40347170246"
     },
     {
       "repository": "Dr-starck66/bio-mimic-x-discovery-factory",
@@ -38,7 +38,7 @@
       "repository": "Dr-starck66/DeepReasoning-Architecture-",
       "status": "UNVERIFIED",
       "reason": "CI currently running",
-      "run": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/39290413100"
+      "run": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/40362768152"
     },
     {
       "repository": "Dr-starck66/dr--house-diagnostic-ai",
@@ -50,7 +50,7 @@
       "repository": "Dr-starck66/ghost-operator-ai-",
       "status": "UNVERIFIED",
       "reason": "Only generic workflow success; functional proof missing",
-      "run": "https://github.com/Dr-starck66/ghost-operator-ai-/actions/runs/39144256084"
+      "run": "https://github.com/Dr-starck66/ghost-operator-ai-/actions/runs/40120399991"
     },
     {
       "repository": "Dr-starck66/le-courtisan-v1-1",
@@ -116,7 +116,7 @@
       "repository": "Dr-starck66/site-1082d3b2",
       "status": "FAIL",
       "reason": "Workflow failed on current HEAD: RefundMoneyNow Editorial Autopilot",
-      "run": "https://github.com/Dr-starck66/site-1082d3b2/actions/runs/39180056120"
+      "run": "https://github.com/Dr-starck66/site-1082d3b2/actions/runs/40249673439"
     },
     {
       "repository": "Dr-starck66/site-457f566a",
@@ -140,7 +140,7 @@
       "repository": "Dr-starck66/zip-github",
       "status": "PASS",
       "reason": "1 executable test/build/lint steps passed on current HEAD",
-      "run": "https://github.com/Dr-starck66/zip-github/actions/runs/39279672420"
+      "run": "https://github.com/Dr-starck66/zip-github/actions/runs/40347235616"
     }
   ]
 }
