@@ -114,21 +114,27 @@ theorem q3_matrix_support (u v : Label) (h : m3 u v ≠ 0) :
     mismatches u v ≤ 1 := by
   by_cases h1 : v = s2 (s3 u)
   · subst v
-    simp [mismatches, s2, s3] <;> split_ifs <;> omega
-  by_cases h2 : v = s1 (s3 u)
-  · subst v
-    simp [mismatches, s1, s3] <;> split_ifs <;> omega
-  by_cases h3 : v = s1 (s2 u)
-  · subst v
-    simp [mismatches, s1, s2] <;> split_ifs <;> omega
-  by_cases h4 : v = s1 (s2 (s3 u))
-  · subst v
-    simp [mismatches, s1, s2, s3]
-  simp [m3, h1, h2, h3, h4] at h
+    by_cases eq1 : u.a1 = u.d1
+    · simp [mismatches, s2, s3, eq1]
+    · simp [mismatches, s2, s3, eq1]
+  · by_cases h2 : v = s1 (s3 u)
+    · subst v
+      by_cases eq2 : u.a2 = u.d2
+      · simp [mismatches, s1, s3, eq2]
+      · simp [mismatches, s1, s3, eq2]
+    · by_cases h3 : v = s1 (s2 u)
+      · subst v
+        by_cases eq3 : u.a3 = u.d3
+        · simp [mismatches, s1, s2, eq3]
+        · simp [mismatches, s1, s2, eq3]
+      · by_cases h4 : v = s1 (s2 (s3 u))
+        · subst v
+          simp [mismatches, s1, s2, s3]
+        · simp [m3, h1, h2, h3, h4] at h
 
 /-- Binomial eigenmultiplicities r=2, Q=3: bad j=2,3 -> 10 measurements. -/
 theorem q3_bad_eigenvectors : 3*3 + 1 = (10:Nat) := by decide
-theorem q3_fraction_of_bad_spectrum : (10:Rat) / 64 = 5/32 := by decide
+theorem q3_fraction_of_bad_spectrum : (10:Nat)*32 = 5*64 := by decide
 
 #print axioms rank_one_factor
 #print axioms row_one_localizes
