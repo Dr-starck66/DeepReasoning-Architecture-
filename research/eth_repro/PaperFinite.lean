@@ -44,4 +44,9 @@ def gNumerator (t : Int) : Int := 3 * t - t * t
 theorem g_numerator_at_zero : gNumerator 0 = 0 := by decide
 theorem g_numerator_at_one : gNumerator 1 = 2 := by decide
 theorem g_numerator_at_two : gNumerator 2 = 2 := by decide
+#print axioms clause2_correct
+#print axioms clause3_correct
+#print axioms toy_polynomial_matches_sat
+#print axioms toy_count_exact
+#print axioms toy_polynomial_sum_exact
 end AstraMath
