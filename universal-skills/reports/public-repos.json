@@ -1,6 +1,6 @@
 {
   "schema": "universal-skill-intelligence/public-repos-v1",
-  "timestamp": "2026-10-25T12:43:40.236Z",
+  "timestamp": "2026-11-01T14:27:50.246Z",
   "owner": "Dr-starck66",
   "privacy": "Only already public GitHub repositories. No private repo access or repository secrets.",
   "status": "PASS",
@@ -26,7 +26,7 @@
           "name": "browser-qa",
           "url": "https://skills.sh/affaan-m/ecc/browser-qa",
           "status": "UNVERIFIED",
-          "score": 31
+          "score": 32
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -57,16 +57,16 @@
       "archived": false,
       "skills": [
         {
-          "name": "football-player-comparison",
-          "url": "https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison",
-          "status": "UNVERIFIED",
-          "score": 9
-        },
-        {
           "name": "football-match-performance-analysis",
           "url": "https://skills.sh/crawlora-org/crawlora-skills/football-match-performance-analysis",
           "status": "UNVERIFIED",
-          "score": 8
+          "score": 24
+        },
+        {
+          "name": "football-player-comparison",
+          "url": "https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison",
+          "status": "UNVERIFIED",
+          "score": 10
         },
         {
           "name": "hockey-analytics",
@@ -124,7 +124,7 @@
           "name": "browser-qa",
           "url": "https://skills.sh/affaan-m/ecc/browser-qa",
           "status": "UNVERIFIED",
-          "score": 31
+          "score": 32
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -254,7 +254,7 @@
           "name": "browser-qa",
           "url": "https://skills.sh/affaan-m/ecc/browser-qa",
           "status": "UNVERIFIED",
-          "score": 31
+          "score": 32
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -514,7 +514,7 @@
           "name": "browser-qa",
           "url": "https://skills.sh/affaan-m/ecc/browser-qa",
           "status": "UNVERIFIED",
-          "score": 31
+          "score": 32
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
