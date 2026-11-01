@@ -29,3 +29,9 @@ jobs:
             echo 'Forbidden proof escape hatch'; exit 1
           fi
           lean research/eth_repro/PaperFinite.lean
+      - name: Python exact finite cross-checks (stdlib only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s research/eth_repro -p 'test_*.py' -v
+          python3 research/eth_repro/paper_exact.py
