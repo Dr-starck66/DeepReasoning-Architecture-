@@ -1,10 +1,10 @@
+import Lean
 /-!
 ASTRA MATH LAB Ω — verification formelle FINIE en Lean 4.
 Source: OpenAI, The Exponential Time Hypothesis is False (25 Oct 2026),
 section "A direct polynomial for the count".
 No sorry, axiom, unsafe, native_decide. N'implique PAS une preuve d'ETH.
 -/
-import Lean
 namespace AstraMath
 private def bit (b : Bool) : Int := if b then 1 else 0
 private def phi2 (a b : Bool) : Int :=
