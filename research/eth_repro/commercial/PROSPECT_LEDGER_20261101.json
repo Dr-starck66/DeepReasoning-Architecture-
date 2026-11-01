@@ -13,9 +13,12 @@
     "dsn_rejected": 5,
     "not_returned_bounced_yet": 28,
     "human_positive_replies_confirmed": 0,
-    "orders_confirmed": 0
+    "orders_confirmed": 0,
+    "exact_primary_sources_verified_in_ledger": 0,
+    "mailbox_control_verified_in_ledger": 0,
+    "cold_resend_allowed": 0
   },
-  "sending_policy": "No resend to 5 rejected; no duplicate campaign; every future send needs current Gmail history and known suppressions and recipient-control proof. No native Gmail connector hook established.",
+  "sending_policy": "HARD STOP: zero guessed addresses, no new sends until exact independently fetched official address and dated mailbox control proof; existing suppressions and Gmail history also enforced. Native Gmail hook not established; manual preflight needed. Previous 33 SENT are historical receipts, not verification.",
   "rejected_cross_project_additional": [
     "f5technologyallianceprogram@f5.com",
     "sales@hiddenlayer.com"
@@ -30,7 +33,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "contact@analogia-entis.com",
@@ -41,7 +48,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "contact@formel.ai",
@@ -52,7 +63,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "contact@gpaipolicylab.org",
@@ -63,7 +78,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "contact@lanyon.ai",
@@ -74,7 +93,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "contact@neoresearch.ai",
@@ -85,7 +108,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "contact@safer-ai.org",
@@ -96,7 +123,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "contact@srlab.ai",
@@ -107,7 +138,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "enrique@coresyn.io",
@@ -118,7 +153,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "founders@archway-labs.com",
@@ -134,7 +173,11 @@
         "enabled": true
       },
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "KNOWN_SUPPRESSED"
     },
     {
       "recipient": "founders@theorem.dev",
@@ -145,7 +188,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "hello@beverified.ai",
@@ -156,7 +203,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "hello@blueravenai.com",
@@ -167,7 +218,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "hello@edawise.com",
@@ -178,7 +233,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "hello@icarofoundation.org",
@@ -189,7 +248,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "hello@korabench.ai",
@@ -200,7 +263,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "hello@lambdaclass.com",
@@ -211,7 +278,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "hello@midspiral.com",
@@ -222,7 +293,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "hello@openeng.ai",
@@ -238,7 +313,11 @@
         "enabled": true
       },
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "KNOWN_SUPPRESSED"
     },
     {
       "recipient": "hello@primedirective.ai",
@@ -249,7 +328,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "hello@zeroth.org",
@@ -260,7 +343,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "help@cyber-safe.eu",
@@ -271,7 +358,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "info@alunalabs.org",
@@ -282,7 +373,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "info@amododesign.com",
@@ -293,7 +388,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "info@fangcunleap.com",
@@ -304,7 +403,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "info@humancenteredailab.org",
@@ -320,7 +423,11 @@
         "enabled": true
       },
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "KNOWN_SUPPRESSED"
     },
     {
       "recipient": "jacob@zeroproofai.com",
@@ -331,7 +438,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "merlean.prover@gmail.com",
@@ -342,7 +453,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "partners@authenticitylabs.ai",
@@ -358,7 +473,11 @@
         "enabled": true
       },
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "KNOWN_SUPPRESSED"
     },
     {
       "recipient": "proof@andtruth.com",
@@ -369,7 +488,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "scott@elyanlabs.ai",
@@ -380,7 +503,11 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     },
     {
       "recipient": "support@thinkproof.ai",
@@ -396,7 +523,11 @@
         "enabled": true
       },
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "KNOWN_SUPPRESSED"
     },
     {
       "recipient": "team@xbench.org",
@@ -407,8 +538,21 @@
       "transport_status": "GMAIL_SENT_ONLY",
       "suppression": null,
       "delivery_confirmed": false,
-      "human_positive_reply_confirmed": false
+      "human_positive_reply_confirmed": false,
+      "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
+      "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
+      "new_outbound_permitted": false,
+      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
     }
   ],
-  "next_gate": "Await a new human reply, qualify exact proof artifact and buyer budget/authority; no spam follow-up until verified."
+  "next_gate": "Await a new human reply, qualify exact proof artifact and buyer budget/authority; no spam follow-up until verified.",
+  "sourceVerificationPolicy": {
+    "version": "ASTRA MAILGUARD Ω 2026-11-01.2",
+    "exactPrimarySource": "REQUIRED",
+    "mailboxControlProof": "REQUIRED",
+    "previousSenderAssumption": "REVOKED",
+    "newUnprovenRecipientAction": "DO_NOT_SEND",
+    "rules": "https://github.com/Dr-starck66/indexation/blob/main/tools/astra-mailguard/README.md",
+    "warning": "No source proof in this ledger should be fabricated; unknown is not the same as invalid; SENT != DELIVERED."
+  }
 }
