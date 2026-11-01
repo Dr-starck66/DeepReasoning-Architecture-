@@ -66,6 +66,23 @@ def github_run(repo: str, run_id: int, fetcher=None):
         return json.load(response)
 
 
+def github_immutable_artifact(repo: str, sha: str, repo_path: str, fetcher=None) -> bytes:
+    if not re.fullmatch(r'[0-9a-f]{40}', sha):
+        raise ValueError('Invalid immutable commit SHA')
+    if not re.fullmatch(r'[a-zA-Z0-9_.\-/]+', repo_path) or '..' in Path(repo_path).parts or repo_path.startswith('/'):
+        raise ValueError('Invalid repository artifact path')
+    if not re.fullmatch(r'[\w.\-]+/[\w.\-]+', repo):
+        raise ValueError('Invalid repo')
+    url=f'https://raw.githubusercontent.com/{repo}/{sha}/{repo_path}'
+    if fetcher is not None:
+        response=fetcher(url)
+        if not isinstance(response, bytes):
+            raise ValueError('Immutable source fetcher did not return bytes')
+        return response
+    req=urllib.request.Request(url,headers={'User-Agent':'ASTRA-ProofLab-Evidence-Gate'})
+    with urllib.request.urlopen(req, timeout=10) as response:
+        return response.read()
+
 def audit(manifest_path: Path, fetcher=None) -> dict:
     manifest_path = Path(manifest_path)
     data = json.loads(manifest_path.read_text(encoding='utf-8'))
@@ -138,9 +155,20 @@ def audit(manifest_path: Path, fetcher=None) -> dict:
                     report['status'] = 'FAIL' if record.get('status') == 'completed' else 'UNVERIFIED'
                     report['rationale'].append(f'GitHub CI state: {record.get("status")}/{record.get("conclusion")}')
                 else:
-                    report['status'] = ('PASS' if c['scope'] == 'finite' and
-                                        'FORMAL_THEOREM_STATEMENT_MATCH' in report['checks'] else 'PARTIAL')
                     report['checks'].append('GITHUB_CI_SUCCESS_ON_EXACT_SHA')
+                    if not ci.get('repo_path'):
+                        report['status'] = 'PARTIAL'
+                        report['rationale'].append('CI run is not bound to an immutable file path')
+                    else:
+                        source_at_commit = github_immutable_artifact(
+                            ci['repository'], ci['head_sha'], ci['repo_path'], fetcher)
+                        if hashlib.sha256(source_at_commit).hexdigest() != digest:
+                            report['status'] = 'FAIL'
+                            report['rationale'].append('Artifact differs from source at audited commit')
+                        else:
+                            report['checks'].append('IMMUTABLE_SOURCE_SHA256_MATCH')
+                            report['status'] = ('PASS' if c['scope'] == 'finite' and
+                                                'FORMAL_THEOREM_STATEMENT_MATCH' in report['checks'] else 'PARTIAL')
             except Exception as exc:
                 report['status'] = 'UNVERIFIED'
                 report['rationale'].append(f'Independent CI unavailable: {type(exc).__name__}')
