@@ -5,7 +5,7 @@
   "cost_eur": 0,
   "safety": {
     "policy": "ASTRA MAILGUARD Ω v2026-11-01.2",
-    "note": "All routes are literal contact FORM URLs on organizations' own pages. No email inferred or generated; no claim of mailbox validity; no outreach performed.",
+    "note": "All routes are literal contact FORM URLs on organizations' own pages. No email inferred or generated; no claim of mailbox validity; no outreach performed. Update 2026-11-02: existing CoreSyn outreach detected; that form is HOLD to avoid contacting the same business twice.",
     "suppressed_earlier_emails": 5,
     "disallow": "Never send email to assumed info@domain or similar; do not count form draft as submission."
   },
@@ -30,7 +30,14 @@
       ],
       "overlap": "Strongest: evidence provenance, AI verification and accountability as explicit research topics.",
       "ask": "Can a paid 2,900 EUR third-party evidence-chain audit be commissioned as a small Trust Lab research pilot or bought by a client of yours?",
-      "message": "Hello Just Verify Trust Lab,\n\nI develop ASTRA ProofLab Ω, an independent, fail-closed evidence-auditing workflow for AI research and software claims. It links exact claims to immutable source code, SHA-256 artifacts, CI run receipts and bounded Lean theorem checks where applicable, and preserves negative-control failures.\n\nYour Trust Lab research on evidence, provenance and accountable verification is highly relevant. Could we explore one FIXED-SCOPE paid pilot or a subcontracted client evidence pack? The proposed scope is one mutually agreed public repository/commit, up to five claims, a JSON audit ledger, negative controls and a concise reproducibility report for a proposed EUR 2,900 before applicable tax, subject to written contracting terms.\n\nWorking demonstrator: https://astra-prooflab-6jyfg1.v2.appdeploy.ai/\nTechnical case study: https://github.com/Dr-starck66/DeepReasoning-Architecture-/blob/astra/prooflab-commercial-20261101/research/eth_repro/commercial/BUYER_CASE_STUDY_2026-11-01.md\n\nCould you direct this to the commercial/research manager for fixed-fee evidence audits? I do not claim safety certification or proof of an arbitrary general scientific theorem.\n\nRegards,\nDr Starck"
+      "message": "Hello Just Verify Trust Lab,\n\nI develop ASTRA ProofLab Ω, an independent, fail-closed evidence-auditing workflow for AI research and software claims. It links exact claims to immutable source code, SHA-256 artifacts, CI run receipts and bounded Lean theorem checks where applicable, and preserves negative-control failures.\n\nYour Trust Lab research on evidence, provenance and accountable verification is highly relevant. Could we explore one FIXED-SCOPE paid pilot or a subcontracted client evidence pack? The proposed scope is one mutually agreed public repository/commit, up to five claims, a JSON audit ledger, negative controls and a concise reproducibility report for a proposed EUR 2,900 before applicable tax, subject to written contracting terms.\n\nWorking demonstrator: https://astra-prooflab-6jyfg1.v2.appdeploy.ai/\nTechnical case study: https://github.com/Dr-starck66/DeepReasoning-Architecture-/blob/astra/prooflab-commercial-20261101/research/eth_repro/commercial/BUYER_CASE_STUDY_2026-11-01.md\n\nCould you direct this to the commercial/research manager for fixed-fee evidence audits? I do not claim safety certification or proof of an arbitrary general scientific theorem.\n\nRegards,\nDr Starck",
+      "prior_contact": {
+        "matches_found": 0,
+        "search_date": "2026-11-02",
+        "source": "Gmail sent to organization domain"
+      },
+      "form_submission_allowed": true,
+      "form_submission_reason": "NEW_OFFICIAL_CONTACT_FORM_NOT_ALREADY_CONTACTED; form requires live browser and valid source attribution"
     },
     {
       "priority": 2,
@@ -52,7 +59,15 @@
       ],
       "overlap": "Existing white-label and referral offers; third-party technical audit could complement assurance reports.",
       "ask": "Does this specific evidence-verification module fit as a subcontracted €2,900 white-label add-on or partner service?",
-      "message": "Hello Model Assurance Lab,\n\nI am exploring a complementary technical audit service for your model-assurance partnership offer. ASTRA ProofLab Ω checks the integrity and reproducibility of claimed research evidence (exact source version, CI runs, SHA-256 checks, Lean formal scope when present, deliberate negative controls). It is NOT a model risk certification and would serve as a supporting evidence layer for your main assessments.\n\nI propose a one-repository, five-claim fixed-scope subcontracted paid pilot at an indicative EUR 2,900 before applicable tax, with a structured JSON/HTML evidence ledger, human-reviewed findings and explicit limitations. A public demonstrator and technical case study are available:\nhttps://astra-prooflab-6jyfg1.v2.appdeploy.ai/\nhttps://github.com/Dr-starck66/DeepReasoning-Architecture-/blob/astra/prooflab-commercial-20261101/research/eth_repro/commercial/BUYER_CASE_STUDY_2026-11-01.md\n\nWould you be interested in discussing this narrowly defined verification add-on, or who approves partnership subcontracting?\n\nRegards,\nDr Starck"
+      "message": "Hello Model Assurance Lab,\n\nI am exploring a complementary technical audit service for your model-assurance partnership offer. ASTRA ProofLab Ω checks the integrity and reproducibility of claimed research evidence (exact source version, CI runs, SHA-256 checks, Lean formal scope when present, deliberate negative controls). It is NOT a model risk certification and would serve as a supporting evidence layer for your main assessments.\n\nI propose a one-repository, five-claim fixed-scope subcontracted paid pilot at an indicative EUR 2,900 before applicable tax, with a structured JSON/HTML evidence ledger, human-reviewed findings and explicit limitations. A public demonstrator and technical case study are available:\nhttps://astra-prooflab-6jyfg1.v2.appdeploy.ai/\nhttps://github.com/Dr-starck66/DeepReasoning-Architecture-/blob/astra/prooflab-commercial-20261101/research/eth_repro/commercial/BUYER_CASE_STUDY_2026-11-01.md\n\nWould you be interested in discussing this narrowly defined verification add-on, or who approves partnership subcontracting?\n\nRegards,\nDr Starck",
+      "prior_contact": {
+        "gmail_message_id": "1a19688d1e32d461",
+        "recipient": "enrique@coresyn.io",
+        "status": "SENT_ONLY",
+        "date": "2026-11-01"
+      },
+      "form_submission_allowed": false,
+      "form_submission_reason": "DUPLICATE_OFFER_SAME_COMPANY_PREVIOUS_GMAIL_SENT"
     },
     {
       "priority": 3,
@@ -72,7 +87,14 @@
       ],
       "overlap": "Research and model evaluation workflows; strong provenance of a published assessment can be a funded subcontract.",
       "ask": "Could one public AI evaluation release be externally audited for evidence provenance and reproducibility on a fixed-scope budget?",
-      "message": "Hello Crane AI Labs research and evaluation team,\n\nYour published work on language and model evaluation makes traceable research claims valuable. I develop ASTRA ProofLab Ω, a narrowly scoped, independently auditable workflow that binds source artifacts and immutable commits to CI receipts, formal statements where applicable and negative controls.\n\nI would like to explore a paid external reproducibility audit on ONE publicly shareable release (up to five precisely defined claims, findings in JSON and a concise report), for an indicative fixed fee of EUR 2,900 excluding applicable taxes. This is independent evidence assurance, not a blanket safety or scientific certification.\n\nProduct and case study:\nhttps://astra-prooflab-6jyfg1.v2.appdeploy.ai/\nhttps://github.com/Dr-starck66/DeepReasoning-Architecture-/blob/astra/prooflab-commercial-20261101/research/eth_repro/commercial/BUYER_CASE_STUDY_2026-11-01.md\n\nWould a funded research/evaluation owner be open to a five-day scoping discussion, and which project could benefit most?\n\nRegards,\nDr Starck"
+      "message": "Hello Crane AI Labs research and evaluation team,\n\nYour published work on language and model evaluation makes traceable research claims valuable. I develop ASTRA ProofLab Ω, a narrowly scoped, independently auditable workflow that binds source artifacts and immutable commits to CI receipts, formal statements where applicable and negative controls.\n\nI would like to explore a paid external reproducibility audit on ONE publicly shareable release (up to five precisely defined claims, findings in JSON and a concise report), for an indicative fixed fee of EUR 2,900 excluding applicable taxes. This is independent evidence assurance, not a blanket safety or scientific certification.\n\nProduct and case study:\nhttps://astra-prooflab-6jyfg1.v2.appdeploy.ai/\nhttps://github.com/Dr-starck66/DeepReasoning-Architecture-/blob/astra/prooflab-commercial-20261101/research/eth_repro/commercial/BUYER_CASE_STUDY_2026-11-01.md\n\nWould a funded research/evaluation owner be open to a five-day scoping discussion, and which project could benefit most?\n\nRegards,\nDr Starck",
+      "prior_contact": {
+        "matches_found": 0,
+        "search_date": "2026-11-02",
+        "source": "Gmail sent to organization domain"
+      },
+      "form_submission_allowed": true,
+      "form_submission_reason": "NEW_OFFICIAL_CONTACT_FORM_NOT_ALREADY_CONTACTED; form requires live browser and valid source attribution"
     }
   ],
   "procurement_blockers": {
@@ -81,5 +103,11 @@
     "buyer_acceptance": "NONE",
     "quote_issued": "NO",
     "paid_order": "NO"
+  },
+  "counts": {
+    "verified_official_form_urls": 3,
+    "uncontacted_new_form_routes": 2,
+    "blocked_duplicate_form_routes": 1,
+    "form_submissions_confirmed": 0
   }
 }
