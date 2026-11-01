@@ -6,6 +6,8 @@ on:
       - "research/eth_repro/LowRankExact.lean"
       - "research/eth_repro/lowrank_exact.py"
       - "research/eth_repro/test_lowrank_exact.py"
+      - "research/eth_repro/proof_gate.py"
+      - "research/eth_repro/test_proof_gate.py"
       - ".github/workflows/astra-eth-lean.yml"
   workflow_dispatch:
 permissions:
