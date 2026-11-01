@@ -13,7 +13,8 @@
         "repository": "Dr-starck66/DeepReasoning-Architecture-",
         "run_id": 41289478387,
         "head_sha": "5f0521ad8e2a127ba9f147372ddd73fa78757d3d",
-        "workflow_name": "ASTRA MATH LAB - Lean 4 formal check"
+        "workflow_name": "ASTRA MATH LAB - Lean 4 formal check",
+        "repo_path": "research/eth_repro/LowRankExact.lean"
       }
     },
     {
@@ -27,7 +28,8 @@
         "repository": "Dr-starck66/DeepReasoning-Architecture-",
         "run_id": 41289478387,
         "head_sha": "5f0521ad8e2a127ba9f147372ddd73fa78757d3d",
-        "workflow_name": "ASTRA MATH LAB - Lean 4 formal check"
+        "workflow_name": "ASTRA MATH LAB - Lean 4 formal check",
+        "repo_path": "research/eth_repro/LowRankExact.lean"
       }
     }
   ]
