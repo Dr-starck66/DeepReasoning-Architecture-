@@ -14,7 +14,8 @@ class ContractTests(unittest.TestCase):
         self.sha=hashlib.sha256(self.src.read_bytes()).hexdigest()
         self.manifest=self.base/'audit.json'
         self.run={'repository':'user/repo','run_id':42,'head_sha':'abc'}
-        self.claim={'id':'C1','title':'Example','scope':'finite','artifact':'Example.lean','sha256':self.sha,'ci_run':self.run}
+        self.claim={'id':'C1','title':'Example','scope':'finite','artifact':'Example.lean','sha256':self.sha,'ci_run':self.run,
+                    'formal_statement':'theorem identity : True := by trivial'}
         self.save([self.claim])
     def tearDown(self): self.tmp.cleanup()
     def save(self,claims): self.manifest.write_text(json.dumps({'schema':'astra-prooflab-evidence/1','claims':claims}))
@@ -23,6 +24,12 @@ class ContractTests(unittest.TestCase):
         report=audit(self.manifest,self.fetch)
         self.assertEqual(report['summary']['PASS'],1)
         self.assertFalse(report['valuation_usd_verified'])
+    def test_mismatch_to_formal_statement_rejected(self):
+        self.save([{**self.claim,'formal_statement':'theorem impossible : False := by trivial'}])
+        self.assertEqual(audit(self.manifest,self.fetch)['claims'][0]['status'],'FAIL')
+    def test_without_statement_is_partial(self):
+        self.save([{k:v for k,v in self.claim.items() if k!='formal_statement'}])
+        self.assertEqual(audit(self.manifest,self.fetch)['claims'][0]['status'],'PARTIAL')
     def test_valid_asymptotic_claim_never_passes(self):
         self.save([{**self.claim,'scope':'asymptotic'}])
         self.assertEqual(audit(self.manifest,self.fetch)['claims'][0]['status'],'PARTIAL')
