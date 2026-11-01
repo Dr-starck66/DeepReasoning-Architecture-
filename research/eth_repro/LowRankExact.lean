@@ -1,6 +1,6 @@
 import Lean
 /-!
-ASTRA MATH LAB Ω: finite formal checks for OpenAI ETH preprint §4.
+ASTRA MATH LAB Ω: finite proof-checking tests for OpenAI ETH preprint §4.
 - Q=R=2 manuscript four-coordinate example: exact rank-one I-M0,
   measurement c, and polynomial row confinement.
 - Q=3, R=2: support property of the full swap-based 64x64 M0.
