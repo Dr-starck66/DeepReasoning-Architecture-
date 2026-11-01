@@ -3,6 +3,9 @@ on:
   pull_request:
     paths:
       - "research/eth_repro/PaperFinite.lean"
+      - "research/eth_repro/LowRankExact.lean"
+      - "research/eth_repro/lowrank_exact.py"
+      - "research/eth_repro/test_lowrank_exact.py"
       - ".github/workflows/astra-eth-lean.yml"
   workflow_dispatch:
 permissions:
@@ -29,6 +32,12 @@ jobs:
             echo 'Forbidden proof escape hatch'; exit 1
           fi
           lean research/eth_repro/PaperFinite.lean
+          lean research/eth_repro/LowRankExact.lean
+      - name: Exact Python comparison tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s research/eth_repro -p "test_*.py" -v
       - name: Python exact finite cross-checks (stdlib only)
         shell: bash
         run: |
