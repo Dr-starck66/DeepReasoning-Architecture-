@@ -1,0 +1,36 @@
+{
+  "schema": "astra-prooflab-evidence/1",
+  "name": "OpenAI ETH paper §4 — ASTRA finite low-rank replication",
+  "claims": [
+    {
+      "id": "LOWRANK-FINITE-001",
+      "title": "On the four-coordinate manuscript orbit, I - M0 has an exact outer-product factorization",
+      "scope": "finite",
+      "artifact": "LowRankExact.lean",
+      "sha256": "70f700f825f6ed8a24fcc55243bfb7a1e83ac3412c773cce63dca26d7494a640",
+      "formal_statement": "theorem rank_one_factor : ∀ i j : Fin 4, matrixDifference i j = sign i * sign j := by decide",
+      "ci_run": {
+        "repository": "Dr-starck66/DeepReasoning-Architecture-",
+        "run_id": 41289478387,
+        "head_sha": "5f0521ad8e2a127ba9f147372ddd73fa78757d3d",
+        "workflow_name": "ASTRA MATH LAB - Lean 4 formal check",
+        "repo_path": "research/eth_repro/LowRankExact.lean"
+      }
+    },
+    {
+      "id": "LOWRANK-ASYMPTOTIC-002",
+      "title": "General subexponential algorithm for all k-SAT formulae",
+      "scope": "asymptotic",
+      "artifact": "LowRankExact.lean",
+      "sha256": "70f700f825f6ed8a24fcc55243bfb7a1e83ac3412c773cce63dca26d7494a640",
+      "formal_statement": "theorem rank_one_factor : ∀ i j : Fin 4, matrixDifference i j = sign i * sign j := by decide",
+      "ci_run": {
+        "repository": "Dr-starck66/DeepReasoning-Architecture-",
+        "run_id": 41289478387,
+        "head_sha": "5f0521ad8e2a127ba9f147372ddd73fa78757d3d",
+        "workflow_name": "ASTRA MATH LAB - Lean 4 formal check",
+        "repo_path": "research/eth_repro/LowRankExact.lean"
+      }
+    }
+  ]
+}

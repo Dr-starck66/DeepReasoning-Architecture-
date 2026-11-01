@@ -6,6 +6,9 @@ on:
       - "research/eth_repro/LowRankExact.lean"
       - "research/eth_repro/lowrank_exact.py"
       - "research/eth_repro/test_lowrank_exact.py"
+      - "research/eth_repro/proof_gate.py"
+      - "research/eth_repro/test_proof_gate.py"
+      - "research/eth_repro/example_audit.json"
       - ".github/workflows/astra-eth-lean.yml"
   workflow_dispatch:
 permissions:
@@ -44,3 +47,10 @@ jobs:
           set -euo pipefail
           python3 -m unittest discover -s research/eth_repro -p 'test_*.py' -v
           python3 research/eth_repro/paper_exact.py
+
+      - name: ProofGate immutable claim audit (live GitHub API)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 research/eth_repro/proof_gate.py research/eth_repro/example_audit.json --output /tmp/astra_proof_gate_receipt.json
+          python3 -c 'import json; x=json.load(open("/tmp/astra_proof_gate_receipt.json")); assert x["summary"]["PASS"] == 1 and x["summary"]["PARTIAL"] == 1 and x["summary"]["UNVERIFIED"] == 0 and x["summary"]["FAIL"] == 0, x["summary"]'
