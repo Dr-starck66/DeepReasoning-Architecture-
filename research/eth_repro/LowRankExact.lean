@@ -4,7 +4,7 @@ ASTRA MATH LAB Ω: finite proof-checking tests for OpenAI ETH preprint §4.
 - Q=R=2 manuscript four-coordinate example: exact rank-one I-M0,
   measurement c, and polynomial row confinement.
 - Q=3, R=2: support property of the full swap-based 64x64 M0.
-The general rank/tail/parameter lemmas and 2^o(n) bound are NOT proved here.
+The global rank/tail/parameter lemmas and 2^o(n) bound remain unverified here.
 No sorry, axiom or native_decide.
 -/
 namespace AstraMath.LowRank
