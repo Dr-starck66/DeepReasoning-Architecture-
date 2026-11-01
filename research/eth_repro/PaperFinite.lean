@@ -37,6 +37,8 @@ def toySumPhi : Int :=
    bitDomain.map fun d => toyPhi a b c d).foldl (fun acc x => acc + x) 0
 theorem toy_count_exact : toyCount = 5 := by decide
 theorem toy_polynomial_sum_exact : toySumPhi = 5 := by decide
+/-- The instance is satisfiable, independently of its polynomial representation. -/
+theorem toy_nonempty : 0 < toyCount := by decide
 def gNumerator (t : Int) : Int := 3 * t - t * t
 -- At the selected points, g(T)=gNumerator(T)/2, so g(0)=0, g(1)=g(2)=1.
 theorem g_numerator_at_zero : gNumerator 0 = 0 := by decide
