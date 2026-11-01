@@ -1,0 +1,414 @@
+{
+  "schema": "astra-prooflab-outreach-receipts/1",
+  "scope": "ASTRA ProofLab Ω pilot B2B only",
+  "generated_at": "2026-11-01T16:16:42.386Z",
+  "data_date": "2026-11-01",
+  "sources": [
+    "Gmail SENT for 33 recipients",
+    "Gmail DSNs (5 ProofLab rejections)"
+  ],
+  "status_policy": "SENT ≠ DELIVERED ≠ OPENED ≠ HUMAN_REPLY ≠ ORDER",
+  "counts": {
+    "gmail_sent": 33,
+    "dsn_rejected": 5,
+    "not_returned_bounced_yet": 28,
+    "human_positive_replies_confirmed": 0,
+    "orders_confirmed": 0
+  },
+  "sending_policy": "No resend to 5 rejected; no duplicate campaign; every future send needs current Gmail history and known suppressions and recipient-control proof. No native Gmail connector hook established.",
+  "rejected_cross_project_additional": [
+    "f5technologyallianceprogram@f5.com",
+    "sales@hiddenlayer.com"
+  ],
+  "records": [
+    {
+      "recipient": "connor@detent.ai",
+      "message_id": "1a1968727e8396a2",
+      "thread_id": "1a1968727e8396a2",
+      "subject": "Detent proof-carrying answers — external verification audit pilot",
+      "sent_timestamp": "2026-11-01T09:53:22+00:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "contact@analogia-entis.com",
+      "message_id": "1a19688d65958774",
+      "thread_id": "1a19688d65958774",
+      "subject": "Analogia Entis — sous-traitance de vérification Lean / preuves IA",
+      "sent_timestamp": "2026-11-01T01:55:12-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "contact@formel.ai",
+      "message_id": "1a1966e4e9c76346",
+      "thread_id": "1a1966e4e9c76346",
+      "subject": "Formel AI — proposition de pilote rémunéré : audit indépendant des preuves et de la reproductibilité",
+      "sent_timestamp": "2026-11-01T01:26:14-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "contact@gpaipolicylab.org",
+      "message_id": "1a1968836467f2c5",
+      "thread_id": "1a1968836467f2c5",
+      "subject": "GPAI Policy Lab — proposition de pilote rémunéré sur la vérifiabilité IA",
+      "sent_timestamp": "2026-11-01T04:54:31-05:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "contact@lanyon.ai",
+      "message_id": "1a1966e826e758ab",
+      "thread_id": "1a1966e826e758ab",
+      "subject": "Lanyon.AI — paid external proof-reproducibility pilot (Lean / CI / research claims)",
+      "sent_timestamp": "2026-11-01T04:26:27-05:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "contact@neoresearch.ai",
+      "message_id": "1a1968843184488d",
+      "thread_id": "1a1968843184488d",
+      "subject": "Neo Research — independent AI evaluation evidence audit",
+      "sent_timestamp": "2026-11-01T01:54:34-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "contact@safer-ai.org",
+      "message_id": "1a19688e6a8c9fa4",
+      "thread_id": "1a19688e6a8c9fa4",
+      "subject": "SaferAI — vérification externe des éléments probants d'un rapport IA",
+      "sent_timestamp": "2026-11-01T01:55:16-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "contact@srlab.ai",
+      "message_id": "1a196884ecc5f7fc",
+      "thread_id": "1a196884ecc5f7fc",
+      "subject": "SRLab — independent audit of a research-evaluation release",
+      "sent_timestamp": "2026-11-01T01:54:37-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "enrique@coresyn.io",
+      "message_id": "1a19688d1e32d461",
+      "thread_id": "1a19688d1e32d461",
+      "subject": "CoreSyn Model Assurance — subcontracted evidence audit pilot",
+      "sent_timestamp": "2026-11-01T03:55:11-06:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "founders@archway-labs.com",
+      "message_id": "1a196872cf1f6757",
+      "thread_id": "1a196872cf1f6757",
+      "subject": "Archway — external verification of AI-generated code evidence",
+      "sent_timestamp": "2026-11-01T03:53:23-06:00",
+      "transport_status": "REJECTED_OR_BLOCKED",
+      "suppression": {
+        "dsn": "1a19687329f74e15",
+        "cause": "GOOGLE_GROUP_REJECTED",
+        "reason": "Group not available/open",
+        "enabled": true
+      },
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "founders@theorem.dev",
+      "message_id": "1a1968a339b39507",
+      "thread_id": "1a1968a339b39507",
+      "subject": "Theorem OSS Verify — external verification evidence pilot",
+      "sent_timestamp": "2026-11-01T04:56:41-05:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@beverified.ai",
+      "message_id": "1a19687204a6c0bb",
+      "thread_id": "1a19687204a6c0bb",
+      "subject": "Verified / Lean 4 — paid independent evidence audit pilot",
+      "sent_timestamp": "2026-11-01T01:53:20-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@blueravenai.com",
+      "message_id": "1a19687c12ede728",
+      "thread_id": "1a19687c12ede728",
+      "subject": "Blue Raven AI — paid formal-verification evidence pilot",
+      "sent_timestamp": "2026-11-01T01:54:01-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@edawise.com",
+      "message_id": "1a19687b5cbb13b2",
+      "thread_id": "1a19687b5cbb13b2",
+      "subject": "Edawise — reproducibility audit for autonomous verification",
+      "sent_timestamp": "2026-11-01T03:53:58-06:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@icarofoundation.org",
+      "message_id": "1a19688486632742",
+      "thread_id": "1a19688486632742",
+      "subject": "Icaro Lab — externally auditable evaluation release pilot",
+      "sent_timestamp": "2026-11-01T01:54:36-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@korabench.ai",
+      "message_id": "1a19688c91f11be6",
+      "thread_id": "1a19688c91f11be6",
+      "subject": "KORA — paid independent benchmark evidence audit",
+      "sent_timestamp": "2026-11-01T03:55:08-06:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@lambdaclass.com",
+      "message_id": "1a19687bba341b3a",
+      "thread_id": "1a19687bba341b3a",
+      "subject": "LambdaClass — external Lean / verified computation release audit",
+      "sent_timestamp": "2026-11-01T03:54:00-06:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@midspiral.com",
+      "message_id": "1a1966eba5968355",
+      "thread_id": "1a1966eba5968355",
+      "subject": "Midspiral — paid independent reproducibility audit for one verified-code release",
+      "sent_timestamp": "2026-11-01T10:26:41+01:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@openeng.ai",
+      "message_id": "1a19687b1461dca7",
+      "thread_id": "1a19687b1461dca7",
+      "subject": "OpenEng — independent evidence audit for agentic execution",
+      "sent_timestamp": "2026-11-01T03:53:57-06:00",
+      "transport_status": "REJECTED_OR_BLOCKED",
+      "suppression": {
+        "dsn": "1a19687b68535a8a",
+        "cause": "HARD_BOUNCE_NO_SUCH_USER",
+        "reason": "Recipient does not exist",
+        "enabled": true
+      },
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@primedirective.ai",
+      "message_id": "1a1968a4402849db",
+      "thread_id": "1a1968a4402849db",
+      "subject": "Prime Directive AI — subcontracted reproducible-study audit",
+      "sent_timestamp": "2026-11-01T01:56:46-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "hello@zeroth.org",
+      "message_id": "1a1968855f963e53",
+      "thread_id": "1a1968855f963e53",
+      "subject": "Zeroth Research — independent formal-methods audit pilot",
+      "sent_timestamp": "2026-11-01T10:54:39+01:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "help@cyber-safe.eu",
+      "message_id": "1a19688dfdbbe45f",
+      "thread_id": "1a19688dfdbbe45f",
+      "subject": "Europe Cyber-Safe — subcontractable research-evidence audit",
+      "sent_timestamp": "2026-11-01T03:55:15-06:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "info@alunalabs.org",
+      "message_id": "1a196883cb63449e",
+      "thread_id": "1a196883cb63449e",
+      "subject": "Aluna Labs — paid audit of evaluation provenance and negative controls",
+      "sent_timestamp": "2026-11-01T01:54:33-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "info@amododesign.com",
+      "message_id": "1a1968740e60af9d",
+      "thread_id": "1a1968740e60af9d",
+      "subject": "Amodo AI verification — external proof-of-concept audit pilot",
+      "sent_timestamp": "2026-11-01T03:53:28-06:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "info@fangcunleap.com",
+      "message_id": "1a19687a89e25a07",
+      "thread_id": "1a19687a89e25a07",
+      "subject": "Fangcun AI — paid third-party evaluation evidence pilot",
+      "sent_timestamp": "2026-11-01T04:53:55-05:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "info@humancenteredailab.org",
+      "message_id": "1a19688ec3ed74c7",
+      "thread_id": "1a19688ec3ed74c7",
+      "subject": "Human-Centered AI Lab — funded research evidence audit pilot",
+      "sent_timestamp": "2026-11-01T03:55:18-06:00",
+      "transport_status": "REJECTED_OR_BLOCKED",
+      "suppression": {
+        "dsn": "1a19688f432a4f3a",
+        "cause": "HARD_BOUNCE_550_5_1_1",
+        "reason": "User does not exist",
+        "enabled": true
+      },
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "jacob@zeroproofai.com",
+      "message_id": "1a1968a3977933a8",
+      "thread_id": "1a1968a3977933a8",
+      "subject": "Jacob — paid independent audit of a Zero Proof AI release",
+      "sent_timestamp": "2026-11-01T01:56:43-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "merlean.prover@gmail.com",
+      "message_id": "1a19687337fb4b07",
+      "thread_id": "1a19687337fb4b07",
+      "subject": "MerLean-Prover — independent Lean reproducibility pilot",
+      "sent_timestamp": "2026-11-01T01:53:25-08:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "partners@authenticitylabs.ai",
+      "message_id": "1a1968a4aed2834f",
+      "thread_id": "1a1968a4aed2834f",
+      "subject": "Authenticity Labs — paid provenance / reproducibility audit partnership",
+      "sent_timestamp": "2026-11-01T03:56:48-06:00",
+      "transport_status": "REJECTED_OR_BLOCKED",
+      "suppression": {
+        "dsn": "1a1968a515b90e2c",
+        "cause": "RELAY_554_5_7_1",
+        "reason": "Relay access denied, hold for review",
+        "enabled": true
+      },
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "proof@andtruth.com",
+      "message_id": "1a1968a2ace70f02",
+      "thread_id": "1a1968a2ace70f02",
+      "subject": "&Truth — paid independent proof-to-code evidence audit",
+      "sent_timestamp": "2026-11-01T03:56:39-06:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "scott@elyanlabs.ai",
+      "message_id": "1a1968a3ef50db14",
+      "thread_id": "1a1968a3ef50db14",
+      "subject": "Scott — fixed-fee external research reproducibility audit",
+      "sent_timestamp": "2026-11-01T03:56:45-06:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "support@thinkproof.ai",
+      "message_id": "1a19687a272dcb33",
+      "thread_id": "1a19687a272dcb33",
+      "subject": "ThinkProof — external audit of AI judgment evidence",
+      "sent_timestamp": "2026-11-01T03:53:53-06:00",
+      "transport_status": "REJECTED_OR_BLOCKED",
+      "suppression": {
+        "dsn": "1a19687a7248b314",
+        "cause": "HARD_BOUNCE_550_5_1_1",
+        "reason": "Mailbox does not exist",
+        "enabled": true
+      },
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    },
+    {
+      "recipient": "team@xbench.org",
+      "message_id": "1a196873950d5ec9",
+      "thread_id": "1a196873950d5ec9",
+      "subject": "xbench — paid benchmark-release evidence audit pilot",
+      "sent_timestamp": "2026-11-01T03:53:26-06:00",
+      "transport_status": "GMAIL_SENT_ONLY",
+      "suppression": null,
+      "delivery_confirmed": false,
+      "human_positive_reply_confirmed": false
+    }
+  ],
+  "next_gate": "Await a new human reply, qualify exact proof artifact and buyer budget/authority; no spam follow-up until verified."
+}
