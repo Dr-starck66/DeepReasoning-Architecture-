@@ -387,7 +387,7 @@ def finite_paper_audit(seed=20261101, trials=60):
               'https://github.com/openai/math/blob/main/lean/ComparatorChallenges/SubexponentialSAT.lean',
               'https://github.com/openai/math/blob/main/lean/docs/378.md'],
             'hermite':{k:v for k,v in r.items() if k!='taylor_data'},
-            'lean_kernel_check':'UNVERIFIED (Lean compiler not installed/available)',
+            'lean_kernel_check':'NOT_RUN_BY_PYTHON (separate public GitHub Lean job)',
             'official_openai_proof_replay':'NOT_RUN',
             'asymptotic_claim':'NOT_TESTED'}
     return result
