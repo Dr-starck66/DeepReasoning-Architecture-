@@ -106,6 +106,21 @@ def audit(manifest_path: Path, fetcher=None) -> dict:
                 report['status'] = 'FAIL'; report['rationale'].append('Forbidden proof escapes: ' + ', '.join(bad))
                 claims.append(report); continue
             report['checks'].append('NO_COMMON_PROOF_ESCAPES')
+            expected = c.get('formal_statement')
+            if isinstance(expected, str) and expected.strip():
+                normalized = ' '.join(code.split())
+                statement = ' '.join(expected.split())
+                if not statement.startswith('theorem ') or ':=' not in statement:
+                    report['status'] = 'FAIL'
+                    report['rationale'].append('Formal statement must contain a Lean theorem header through :=')
+                    claims.append(report); continue
+                if statement not in normalized:
+                    report['status'] = 'FAIL'
+                    report['rationale'].append('Bound theorem statement is absent from checked Lean artifact')
+                    claims.append(report); continue
+                report['checks'].append('FORMAL_THEOREM_STATEMENT_MATCH')
+            else:
+                report['rationale'].append('The natural-language claim is not bound to a specific Lean theorem statement')
         ci = c.get('ci_run')
         if not isinstance(ci, dict) or not all(k in ci for k in ('repository', 'run_id', 'head_sha')):
             report['status'] = 'UNVERIFIED'
@@ -120,7 +135,8 @@ def audit(manifest_path: Path, fetcher=None) -> dict:
                     report['status'] = 'FAIL' if record.get('status') == 'completed' else 'UNVERIFIED'
                     report['rationale'].append(f'GitHub CI state: {record.get("status")}/{record.get("conclusion")}')
                 else:
-                    report['status'] = 'PASS' if c['scope'] == 'finite' else 'PARTIAL'
+                    report['status'] = ('PASS' if c['scope'] == 'finite' and
+                                        'FORMAL_THEOREM_STATEMENT_MATCH' in report['checks'] else 'PARTIAL')
                     report['checks'].append('GITHUB_CI_SUCCESS_ON_EXACT_SHA')
             except Exception as exc:
                 report['status'] = 'UNVERIFIED'
