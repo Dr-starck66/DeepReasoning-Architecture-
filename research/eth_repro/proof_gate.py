@@ -131,6 +131,9 @@ def audit(manifest_path: Path, fetcher=None) -> dict:
                 if record.get('head_sha') != ci['head_sha']:
                     report['status'] = 'FAIL'
                     report['rationale'].append('GitHub CI SHA mismatch')
+                elif not ci.get('workflow_name') or record.get('name') != ci['workflow_name']:
+                    report['status'] = 'FAIL'
+                    report['rationale'].append('GitHub workflow name mismatch or absent')
                 elif record.get('conclusion') != 'success' or record.get('status') != 'completed':
                     report['status'] = 'FAIL' if record.get('status') == 'completed' else 'UNVERIFIED'
                     report['rationale'].append(f'GitHub CI state: {record.get("status")}/{record.get("conclusion")}')
