@@ -1,20 +1,20 @@
 {
   "schema": "universal-skills/fleet-ci-v1",
-  "checkedAt": "2026-10-26T16:49:31.176Z",
+  "checkedAt": "2026-11-02T20:24:08.142Z",
   "status": "PARTIAL",
   "scope": "Actual GitHub Actions step outcomes on current default-branch HEAD; not runtime health, skills adoption or organic traffic",
   "summary": {
     "checked": 22,
-    "pass": 4,
-    "fail": 7,
-    "unverified": 11
+    "pass": 2,
+    "fail": 8,
+    "unverified": 12
   },
   "results": [
     {
       "repository": "Dr-starck66/AION-ARC",
-      "status": "PASS",
-      "reason": "1 executable test/build/lint steps passed on current HEAD",
-      "run": "https://github.com/Dr-starck66/AION-ARC/actions/runs/38718538334"
+      "status": "UNVERIFIED",
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/AION-ARC/actions/runs/41356643356"
     },
     {
       "repository": "Dr-starck66/aureus-x",
@@ -24,21 +24,21 @@
     },
     {
       "repository": "Dr-starck66/betgpt-railway",
-      "status": "PASS",
-      "reason": "1 executable test/build/lint steps passed on current HEAD",
-      "run": "https://github.com/Dr-starck66/betgpt-railway/actions/runs/40347170246"
+      "status": "FAIL",
+      "reason": "Workflow failed on current HEAD: ASTRA Single-Source Release Gate Ω",
+      "run": "https://github.com/Dr-starck66/betgpt-railway/actions/runs/41517040309"
     },
     {
       "repository": "Dr-starck66/bio-mimic-x-discovery-factory",
       "status": "UNVERIFIED",
-      "reason": "No completed CI on current HEAD",
-      "run": null
+      "reason": "Only generic workflow success; functional proof missing",
+      "run": "https://github.com/Dr-starck66/bio-mimic-x-discovery-factory/actions/runs/41513805814"
     },
     {
       "repository": "Dr-starck66/DeepReasoning-Architecture-",
       "status": "UNVERIFIED",
       "reason": "CI currently running",
-      "run": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/40362768152"
+      "run": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/41518813946"
     },
     {
       "repository": "Dr-starck66/dr--house-diagnostic-ai",
@@ -116,7 +116,7 @@
       "repository": "Dr-starck66/site-1082d3b2",
       "status": "FAIL",
       "reason": "Workflow failed on current HEAD: RefundMoneyNow Editorial Autopilot",
-      "run": "https://github.com/Dr-starck66/site-1082d3b2/actions/runs/40249673439"
+      "run": "https://github.com/Dr-starck66/site-1082d3b2/actions/runs/41518143109"
     },
     {
       "repository": "Dr-starck66/site-457f566a",
@@ -128,7 +128,7 @@
       "repository": "Dr-starck66/splatforge-platform",
       "status": "UNVERIFIED",
       "reason": "Only generic workflow success; functional proof missing",
-      "run": "https://github.com/Dr-starck66/splatforge-platform/actions/runs/39039949524"
+      "run": "https://github.com/Dr-starck66/splatforge-platform/actions/runs/40509554058"
     },
     {
       "repository": "Dr-starck66/wayb",
@@ -140,7 +140,7 @@
       "repository": "Dr-starck66/zip-github",
       "status": "PASS",
       "reason": "1 executable test/build/lint steps passed on current HEAD",
-      "run": "https://github.com/Dr-starck66/zip-github/actions/runs/40347235616"
+      "run": "https://github.com/Dr-starck66/zip-github/actions/runs/41515207811"
     }
   ]
 }
