@@ -21,3 +21,12 @@ Only static HTML/CSS/JS. No server functions, database, analytics, cookies, trac
 
 ## Claims and intellectual property
 Use OpenAI/mathematics article under its published license with attribution, but do not imply affiliation. Software, copy and workflow original except separately credited public mathematics. Legal/IP counsel recommended before claiming exclusivity or a protective patent.
+## ASTRA CLOUD BROWSER Ω — Prospect form execution gate (2026-11-02)
+
+A project-specific, ZERO-COST-FIRST isolated form submission adapter is staged under [Dr-starck66/indexation, branch astra/prooflab-browser-form-submit-20261102](https://github.com/Dr-starck66/indexation/tree/astra/prooflab-browser-form-submit-20261102/tools/astra-cloud-browser). It routes only Just Verify Trust Lab and Crane AI Labs official contact forms; **no fake email addresses**, no arbitrary targets, persistent D1 unique lock, dedicated bearer secret and visible site confirmation required. The shared monitoring Worker code is byte-identical to main. This is NOT yet deployed and **0 forms have actually been sent**; write gate remains OFF. Live Cloudflare browser access, authorized secret and D1 binding remain UNVERIFIED. Avoid duplicate or false delivery claims.
+
+- [Security and deployment audit](https://github.com/Dr-starck66/indexation/blob/astra/prooflab-browser-form-submit-20261102/tools/astra-cloud-browser/PROOFLAB_FORM_SUBMISSION.md)
+- [Audited code](https://github.com/Dr-starck66/indexation/blob/astra/prooflab-browser-form-submit-20261102/tools/astra-cloud-browser/prooflab-forms.mjs)
+- [Evidence record](https://github.com/Dr-starck66/indexation/blob/astra/prooflab-browser-form-submit-20261102/tools/astra-cloud-browser/PROOFLAB_FORM_GATE_EVIDENCE_20261102.json)
+
+Offer: a fixed-scope independent evidence audit proposed at **EUR 2,900 excl. taxes** with signed buyer PO required before claiming an order. No auto-relance and no paid deployment.
