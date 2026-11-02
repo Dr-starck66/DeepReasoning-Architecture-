@@ -5,7 +5,7 @@
   "cost_eur": 0,
   "safety": {
     "policy": "ASTRA MAILGUARD Ω v2026-11-01.2",
-    "note": "All routes are literal contact FORM URLs on organizations' own pages. No email inferred or generated; no claim of mailbox validity; no outreach performed. Update 2026-11-02: existing CoreSyn outreach detected; that form is HOLD to avoid contacting the same business twice.",
+    "note": "All routes are literal contact FORM URLs on organizations' own pages. No email inferred or generated; no claim of mailbox validity; no outreach performed. Update 2026-11-02: existing CoreSyn outreach detected; that form is HOLD to avoid contacting the same business twice. Correction: Crane research route linked by official site is ?intent=research (not ?intent=integrate/partner).",
     "suppressed_earlier_emails": 5,
     "disallow": "Never send email to assumed info@domain or similar; do not count form draft as submission."
   },
@@ -73,8 +73,8 @@
       "priority": 3,
       "organization": "Crane AI Labs",
       "type": "AI model evaluation engineering and research partnership",
-      "page_verified": "https://www.craneailabs.com/company?intent=integrate",
-      "official_contact_form": "https://www.craneailabs.com/company?intent=integrate",
+      "page_verified": "https://www.craneailabs.com/company",
+      "official_contact_form": "https://www.craneailabs.com/company?intent=research",
       "source_checked": "2026-11-02",
       "official_form_fields": [
         "Name",
@@ -94,7 +94,7 @@
         "source": "Gmail sent to organization domain"
       },
       "form_submission_allowed": true,
-      "form_submission_reason": "NEW_OFFICIAL_CONTACT_FORM_NOT_ALREADY_CONTACTED; form requires live browser and valid source attribution"
+      "form_submission_reason": "Verified official 'Partner on research / Propose a collaboration' route from company page on 2026-11-02; NOT_SUBMITTED; dedicated isolated ASTRA browser code staged"
     }
   ],
   "procurement_blockers": {
