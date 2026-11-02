@@ -3,7 +3,7 @@
 **Status: NOT_SUBMITTED, NO REPLY, NO ACCEPTED QUOTE.** Prepared 2026-11-02 for an official public form, not an email to an assumed address.
 
 - Prospect: **Crane AI Labs**
-- Verified primary form: https://www.craneailabs.com/company?intent=partner
+- Verified primary form: https://www.craneailabs.com/company?intent=research
 - Recommended route / reason: **Partner on research / Propose a collaboration**
 - Requested purchasing contact: **CTO or Data & Evaluation technical owner, procurement authority to confirm**
 - Direct email address: **NOT USED** (Not required: official company-page form, no assumed personal email.)
