@@ -573,6 +573,19 @@
     "new_human_negative": 1,
     "new_prooflab_dsn": 0,
     "actions": "Suppressed KORA explicit refusal; no outgoing communications; other existing five bounces unchanged",
-    "caveat": "Domain and subject searches are not a guarantee of all collaborator identities; no delivery confirmation inferred from SENT."
+    "caveat": "Domain and subject searches are not a guarantee of all collaborator identities; no delivery confirmation inferred from SENT.",
+    "full_thread_check": {
+      "historical_threads_read": 33,
+      "errors": 0,
+      "truncated": 0,
+      "non_sent_messages": 4,
+      "known_2026_11_01_bounces_in_original_threads": 3,
+      "other_known_2026_11_01_bounces_recorded_in_ledger": 2,
+      "new_human_declines": 1,
+      "new_positive_human_replies": 0,
+      "new_bounces": 0,
+      "live_form_submissions_proven": 0,
+      "interpretation": "All 33 historical Gmail threads read; other-domain collaborator messages outside those threads cannot be exhaustively excluded."
+    }
   }
 }
