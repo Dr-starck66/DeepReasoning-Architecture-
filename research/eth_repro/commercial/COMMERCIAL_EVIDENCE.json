@@ -1,0 +1,11 @@
+{
+ "schema":"astra-prooflab-business/1",
+ "date":"2026-11-01",
+ "asset":"ASTRA ProofLab Evidence Audit Sprint",
+ "product_stage":"working_static_candidate",
+ "existing_foundations":["ASTRA MATH LAB finite Lean proof", "ASTRA proof_gate.py", "GitHub CI receipts", "ASTRA EVIDENLOCK historical evidence modules"],
+ "offer":{"indicative_price_eur":2900,"delivery":"human-reviewed reproducible report","payment_enabled":false,"approved_orders":0,"customers_verified":0,"revenue_verified_eur":0},
+ "valuation":{"target_usd":1000000,"independent_valuation":"UNVERIFIED","signed_LOIs":0},
+ "risks":["Formal theorem semantics not independently checked by browser UI", "Commercial willingness-to-pay untested", "Public mathematical construction is not proprietary", "Need legal billing status before paid orders"],
+ "source_of_truth":"Internal build record; no external market-validation evidence"
+}
