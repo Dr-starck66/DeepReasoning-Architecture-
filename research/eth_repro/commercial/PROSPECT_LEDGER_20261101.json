@@ -16,7 +16,9 @@
     "orders_confirmed": 0,
     "exact_primary_sources_verified_in_ledger": 0,
     "mailbox_control_verified_in_ledger": 0,
-    "cold_resend_allowed": 0
+    "cold_resend_allowed": 0,
+    "human_negative_replies_confirmed": 1,
+    "human_declined_no_followup": 1
   },
   "sending_policy": "HARD STOP: zero guessed addresses, no new sends until exact independently fetched official address and dated mailbox control proof; existing suppressions and Gmail history also enforced. Native Gmail hook not established; manual preflight needed. Previous 33 SENT are historical receipts, not verification.",
   "rejected_cross_project_additional": [
@@ -261,13 +263,21 @@
       "subject": "KORA — paid independent benchmark evidence audit",
       "sent_timestamp": "2026-11-01T03:55:08-06:00",
       "transport_status": "GMAIL_SENT_ONLY",
-      "suppression": null,
+      "suppression": {
+        "enabled": true,
+        "cause": "HUMAN_EXPLICIT_DECLINE",
+        "reason": "Not a fit; no reply, resend, or follow-up",
+        "reply_message_id": "1a1a949ea0068695",
+        "reply_thread_id": "1a19688c91f11be6",
+        "reply_date": "2026-11-05T01:19:15+00:00"
+      },
       "delivery_confirmed": false,
       "human_positive_reply_confirmed": false,
       "primary_source_address_evidence": "UNVERIFIED_NO_SOURCE_RECEIPT_IN_LEDGER",
       "mailbox_control_evidence": "UNVERIFIED_NO_TOKEN_OR_HUMAN_INBOUND_PROOF_IN_LEDGER",
       "new_outbound_permitted": false,
-      "new_outbound_reason": "ADDRESS_PROVENANCE_AND_CONTROL_NOT_VERIFIED"
+      "new_outbound_reason": "HUMAN_DECLINED_NO_FOLLOWUP",
+      "human_negative_reply_confirmed": true
     },
     {
       "recipient": "hello@lambdaclass.com",
@@ -554,5 +564,15 @@
     "newUnprovenRecipientAction": "DO_NOT_SEND",
     "rules": "https://github.com/Dr-starck66/indexation/blob/main/tools/astra-mailguard/README.md",
     "warning": "No source proof in this ledger should be fabricated; unknown is not the same as invalid; SENT != DELIVERED."
+  },
+  "last_checked_at": "2026-11-05",
+  "latest_inbound_audit": {
+    "scope": "ProofLab 33 historical recipients + 2 unsubmitted official form targets",
+    "gmail_thread_evidence": "1a19688c91f11be6",
+    "new_human_positive": 0,
+    "new_human_negative": 1,
+    "new_prooflab_dsn": 0,
+    "actions": "Suppressed KORA explicit refusal; no outgoing communications; other existing five bounces unchanged",
+    "caveat": "Domain and subject searches are not a guarantee of all collaborator identities; no delivery confirmation inferred from SENT."
   }
 }
