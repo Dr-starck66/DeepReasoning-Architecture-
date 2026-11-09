@@ -1,6 +1,6 @@
 {
   "schema": "universal-skills/fleet-ci-v1",
-  "checkedAt": "2026-11-02T20:24:08.142Z",
+  "checkedAt": "2026-11-09T20:49:57.039Z",
   "status": "PARTIAL",
   "scope": "Actual GitHub Actions step outcomes on current default-branch HEAD; not runtime health, skills adoption or organic traffic",
   "summary": {
@@ -14,7 +14,7 @@
       "repository": "Dr-starck66/AION-ARC",
       "status": "UNVERIFIED",
       "reason": "Only generic workflow success; functional proof missing",
-      "run": "https://github.com/Dr-starck66/AION-ARC/actions/runs/41356643356"
+      "run": "https://github.com/Dr-starck66/AION-ARC/actions/runs/41902085557"
     },
     {
       "repository": "Dr-starck66/aureus-x",
@@ -25,20 +25,20 @@
     {
       "repository": "Dr-starck66/betgpt-railway",
       "status": "FAIL",
-      "reason": "Workflow failed on current HEAD: ASTRA Single-Source Release Gate Ω",
-      "run": "https://github.com/Dr-starck66/betgpt-railway/actions/runs/41517040309"
+      "reason": "Workflow failed on current HEAD: BetGPT Chat Gate Fast",
+      "run": "https://github.com/Dr-starck66/betgpt-railway/actions/runs/42695498445"
     },
     {
       "repository": "Dr-starck66/bio-mimic-x-discovery-factory",
       "status": "UNVERIFIED",
-      "reason": "Only generic workflow success; functional proof missing",
-      "run": "https://github.com/Dr-starck66/bio-mimic-x-discovery-factory/actions/runs/41513805814"
+      "reason": "No completed CI on current HEAD",
+      "run": null
     },
     {
       "repository": "Dr-starck66/DeepReasoning-Architecture-",
       "status": "UNVERIFIED",
       "reason": "CI currently running",
-      "run": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/41518813946"
+      "run": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/42696647943"
     },
     {
       "repository": "Dr-starck66/dr--house-diagnostic-ai",
@@ -116,7 +116,7 @@
       "repository": "Dr-starck66/site-1082d3b2",
       "status": "FAIL",
       "reason": "Workflow failed on current HEAD: RefundMoneyNow Editorial Autopilot",
-      "run": "https://github.com/Dr-starck66/site-1082d3b2/actions/runs/41518143109"
+      "run": "https://github.com/Dr-starck66/site-1082d3b2/actions/runs/42695196920"
     },
     {
       "repository": "Dr-starck66/site-457f566a",
@@ -140,7 +140,7 @@
       "repository": "Dr-starck66/zip-github",
       "status": "PASS",
       "reason": "1 executable test/build/lint steps passed on current HEAD",
-      "run": "https://github.com/Dr-starck66/zip-github/actions/runs/41515207811"
+      "run": "https://github.com/Dr-starck66/zip-github/actions/runs/42686187021"
     }
   ]
 }
