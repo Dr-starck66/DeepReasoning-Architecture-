@@ -1,0 +1,50 @@
+{
+  "schema": "astra-prooflab/audit-2026-11-01",
+  "timestamp_utc": "2026-11-01",
+  "scope": "exact finite reproduction only",
+  "source": {
+    "repository": "openai/math",
+    "manuscript_revision": "2026-10-25",
+    "manuscript_blob_sha": "f7af85e623b58e0ca9f4b9416916d442defa963a",
+    "section": "4, low-degree replacement forms"
+  },
+  "matrix_parameters": {
+    "r": 2,
+    "Q": 3,
+    "R": 2,
+    "A0": 0
+  },
+  "exact_rational_results": {
+    "dimension": 64,
+    "measurement_rows": 10,
+    "rank_I_minus_M0": 10,
+    "rank_M0": 64,
+    "rank_C": 10,
+    "binomial_tail": "5/32",
+    "q2_worked_row": "z0 - (T/2) z1 - T z2"
+  },
+  "python": {
+    "tests": 28,
+    "failures": 0,
+    "local_test_command": "python -m unittest discover -s research/eth_repro -p 'test_*.py' -v",
+    "negative_controls": 2
+  },
+  "lean": {
+    "version": "4.23.0",
+    "status": "PASS",
+    "url": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/41289001101",
+    "sha": "4497d36ff8faca8c747d26111c6526b12aaca8aa",
+    "global_asymptotic_proof": "NOT_FORMALIZED"
+  },
+  "value": {
+    "requested_usd": 1000000,
+    "independent_valuation": "UNVERIFIED",
+    "paying_customers": "UNVERIFIED",
+    "ARR": "UNVERIFIED"
+  },
+  "commercial_rights": {
+    "source_openai_repo_license": "Apache-2.0 (check asset-specific notices)",
+    "exclusive_patentable_invention": "UNVERIFIED"
+  },
+  "status": "PARTIAL"
+}
