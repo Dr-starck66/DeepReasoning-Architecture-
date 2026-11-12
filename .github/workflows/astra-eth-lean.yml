@@ -8,6 +8,7 @@ on:
       - "research/eth_repro/math_research_engine.py"
       - "research/eth_repro/test_math_research_engine.py"
       - "research/eth_repro/rank10_proof_pipeline.py"
+      - "research/eth_repro/rank10_immutable_audit.json"
       - "research/eth_repro/lowrank_exact.py"
       - "research/eth_repro/test_lowrank_exact.py"
       - "research/eth_repro/proof_gate.py"
@@ -60,3 +61,10 @@ jobs:
           set -euo pipefail
           python3 research/eth_repro/proof_gate.py research/eth_repro/example_audit.json --output /tmp/astra_proof_gate_receipt.json
           python3 -c 'import json; x=json.load(open("/tmp/astra_proof_gate_receipt.json")); assert x["summary"]["PASS"] == 1 and x["summary"]["PARTIAL"] == 1 and x["summary"]["UNVERIFIED"] == 0 and x["summary"]["FAIL"] == 0, x["summary"]'
+
+      - name: ProofGate independent immutable rank-ten attestation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 research/eth_repro/proof_gate.py research/eth_repro/rank10_immutable_audit.json --output /tmp/astra-rank10-immutable.json
+          python3 -c 'import json; r=json.load(open("/tmp/astra-rank10-immutable.json")); assert r["summary"] == {"PASS":1,"PARTIAL":0,"FAIL":0,"UNVERIFIED":0}, r["summary"]'
