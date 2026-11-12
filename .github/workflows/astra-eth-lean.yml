@@ -4,6 +4,10 @@ on:
     paths:
       - "research/eth_repro/PaperFinite.lean"
       - "research/eth_repro/LowRankExact.lean"
+      - "research/eth_repro/RankTen.lean"
+      - "research/eth_repro/math_research_engine.py"
+      - "research/eth_repro/test_math_research_engine.py"
+      - "research/eth_repro/rank10_proof_pipeline.py"
       - "research/eth_repro/lowrank_exact.py"
       - "research/eth_repro/test_lowrank_exact.py"
       - "research/eth_repro/proof_gate.py"
@@ -36,17 +40,19 @@ jobs:
           fi
           lean research/eth_repro/PaperFinite.lean
           lean research/eth_repro/LowRankExact.lean
-      - name: Exact Python comparison tests
-        shell: bash
-        run: |
-          set -euo pipefail
-          python -m unittest discover -s research/eth_repro -p "test_*.py" -v
       - name: Python exact finite cross-checks (stdlib only)
         shell: bash
         run: |
           set -euo pipefail
           python3 -m unittest discover -s research/eth_repro -p 'test_*.py' -v
           python3 research/eth_repro/paper_exact.py
+
+      - name: ASTRA rank-ten proof — Python + Lean + ProofGate local evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 research/eth_repro/rank10_proof_pipeline.py --output /tmp/astra-rank10-evidence.json
+          python3 -c 'import json; r=json.load(open("/tmp/astra-rank10-evidence.json")); assert r["local_mathematical_status"] == "PASS" and r["lean_kernel"]["status"] == "PASS" and r["proof_gate"]["status"] == "PASS" and r["proof_gate"]["remote_ci_binding"] == "UNVERIFIED", r'
 
       - name: ProofGate immutable claim audit (live GitHub API)
         shell: bash
