@@ -1,0 +1,49 @@
+name: ASTRA TOPOQUANTUM - Lean kernel verification
+on:
+  push:
+    branches:
+      - astra/topoquantum-proofgate-20261112
+    paths:
+      - "research/eth_repro/topoquantum/**"
+      - ".github/workflows/astra-topoquantum-lean.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  topoquantum-lean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install pinned official Lean 4 via elan
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --show-error --silent https://elan.lean-lang.org/elan-init.sh -o /tmp/astra-elan-init.sh
+          sh /tmp/astra-elan-init.sh -y --default-toolchain leanprover/lean4:v4.23.0 --no-modify-path
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Check five finite theorems with Lean kernel
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/astra-topoquantum-lean
+          lean --version | tee /tmp/astra-topoquantum-lean/lean-version.txt
+          sha256sum research/eth_repro/topoquantum/TopoQuantumFinite.lean | tee /tmp/astra-topoquantum-lean/source-sha256.txt
+          lean research/eth_repro/topoquantum/TopoQuantumFinite.lean 2>&1 | tee /tmp/astra-topoquantum-lean/lean-output.txt
+          printf 'commit=%s\nrun_id=%s\nworkflow=%s\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" "$GITHUB_WORKFLOW" > /tmp/astra-topoquantum-lean/identifiers.txt
+      - name: Check exact computational controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s research/eth_repro/topoquantum -p 'test_*.py' -v 2>&1 | tee /tmp/astra-topoquantum-lean/unittest.txt
+      - name: Preserve execution evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topoquantum-lean-receipt
+          path: /tmp/astra-topoquantum-lean/
+          if-no-files-found: warn
