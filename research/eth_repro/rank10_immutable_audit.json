@@ -1,0 +1,21 @@
+{
+  "schema": "astra-prooflab-evidence/1",
+  "name": "ASTRA MATH RESEARCH ENGINE Omega — Lean rank-ten immutable attestation",
+  "claims": [
+    {
+      "id": "RANK10-FINITE-LEAN-20261112",
+      "title": "Axiom-free exact 64x64 rank-ten algebraic certificate, not a Matrix.rank theorem or asymptotic claim",
+      "scope": "finite",
+      "artifact": "RankTen.lean",
+      "sha256": "046fdf0987af845835e5ec505c0a7460e650bf121925525a8e43a7dcff2ac31d",
+      "formal_statement": "theorem rank_exactly_ten_certificate : RankTenCertificate :=",
+      "ci_run": {
+        "repository": "Dr-starck66/DeepReasoning-Architecture-",
+        "run_id": 43167984016,
+        "head_sha": "7ab8080cf19706292141a7d8d1c334498a83cdc1",
+        "workflow_name": "ASTRA MATH LAB - Lean 4 formal check",
+        "repo_path": "research/eth_repro/RankTen.lean"
+      }
+    }
+  ]
+}
