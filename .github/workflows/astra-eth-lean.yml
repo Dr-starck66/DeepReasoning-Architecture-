@@ -4,6 +4,7 @@ on:
     paths:
       - "research/eth_repro/PaperFinite.lean"
       - "research/eth_repro/LowRankExact.lean"
+      - "research/eth_repro/topoquantum/**"
       - "research/eth_repro/lowrank_exact.py"
       - "research/eth_repro/test_lowrank_exact.py"
       - "research/eth_repro/proof_gate.py"
@@ -36,6 +37,9 @@ jobs:
           fi
           lean research/eth_repro/PaperFinite.lean
           lean research/eth_repro/LowRankExact.lean
+          echo "TOPOQUANTUM HEAD ${GITHUB_SHA}"
+          sha256sum research/eth_repro/topoquantum/TopoQuantumFinite.lean
+          lean research/eth_repro/topoquantum/TopoQuantumFinite.lean
       - name: Exact Python comparison tests
         shell: bash
         run: |
