@@ -1,6 +1,6 @@
 {
   "schema": "universal-skill-intelligence/public-repos-v1",
-  "timestamp": "2026-11-08T14:28:38.655Z",
+  "timestamp": "2026-11-15T14:56:00.358Z",
   "owner": "Dr-starck66",
   "privacy": "Only already public GitHub repositories. No private repo access or repository secrets.",
   "status": "PASS",
@@ -60,7 +60,7 @@
           "name": "football-match-performance-analysis",
           "url": "https://skills.sh/crawlora-org/crawlora-skills/football-match-performance-analysis",
           "status": "UNVERIFIED",
-          "score": 24
+          "score": 25
         },
         {
           "name": "football-player-comparison",
@@ -72,7 +72,7 @@
           "name": "hockey-analytics",
           "url": "https://skills.sh/sports-data-hq/hockey-skills/hockey-analytics",
           "status": "UNVERIFIED",
-          "score": 6
+          "score": 7
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -92,7 +92,7 @@
           "name": "peer-review",
           "url": "https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review",
           "status": "UNVERIFIED",
-          "score": 26
+          "score": 27
         },
         {
           "name": "bgpt-mcp",
@@ -147,10 +147,10 @@
           "score": 35
         },
         {
-          "name": "marketing-loops",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "name": "Browser Automation",
+          "url": "https://skills.sh/claude-office-skills/skills/browser-automation",
           "status": "UNVERIFIED",
-          "score": 35
+          "score": 29
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -161,22 +161,22 @@
       "archived": false,
       "skills": [
         {
-          "name": "analytics",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics",
-          "status": "CANDIDATE_REVIEW_REQUIRED",
-          "score": 80
-        },
-        {
           "name": "analytics-tracking",
           "url": "https://skills.sh/coreyhaines31/marketingskills/analytics-tracking",
           "status": "UNVERIFIED",
-          "score": 35
+          "score": 70
         },
         {
           "name": "conversion-signal-qa",
           "url": "https://skills.sh/aaron-he-zhu/aaron-marketing-skills/conversion-signal-qa",
           "status": "UNVERIFIED",
           "score": 24
+        },
+        {
+          "name": "performance-marketer",
+          "url": "https://skills.sh/ncklrs/startup-os-skills/performance-marketer",
+          "status": "UNVERIFIED",
+          "score": 18
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -199,10 +199,10 @@
           "score": 35
         },
         {
-          "name": "marketing-loops",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "name": "Browser Automation",
+          "url": "https://skills.sh/claude-office-skills/skills/browser-automation",
           "status": "UNVERIFIED",
-          "score": 35
+          "score": 29
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -225,10 +225,10 @@
           "score": 35
         },
         {
-          "name": "marketing-loops",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "name": "Browser Automation",
+          "url": "https://skills.sh/claude-office-skills/skills/browser-automation",
           "status": "UNVERIFIED",
-          "score": 35
+          "score": 29
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -274,7 +274,7 @@
           "name": "peer-review",
           "url": "https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review",
           "status": "UNVERIFIED",
-          "score": 26
+          "score": 27
         },
         {
           "name": "bgpt-mcp",
@@ -303,10 +303,10 @@
           "score": 35
         },
         {
-          "name": "marketing-loops",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "name": "Browser Automation",
+          "url": "https://skills.sh/claude-office-skills/skills/browser-automation",
           "status": "UNVERIFIED",
-          "score": 35
+          "score": 29
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -329,10 +329,10 @@
           "score": 35
         },
         {
-          "name": "marketing-loops",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "name": "Browser Automation",
+          "url": "https://skills.sh/claude-office-skills/skills/browser-automation",
           "status": "UNVERIFIED",
-          "score": 35
+          "score": 29
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -343,22 +343,22 @@
       "archived": false,
       "skills": [
         {
-          "name": "analytics",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/analytics",
-          "status": "CANDIDATE_REVIEW_REQUIRED",
-          "score": 80
-        },
-        {
           "name": "analytics-tracking",
           "url": "https://skills.sh/coreyhaines31/marketingskills/analytics-tracking",
           "status": "UNVERIFIED",
-          "score": 35
+          "score": 70
         },
         {
           "name": "conversion-signal-qa",
           "url": "https://skills.sh/aaron-he-zhu/aaron-marketing-skills/conversion-signal-qa",
           "status": "UNVERIFIED",
           "score": 24
+        },
+        {
+          "name": "performance-marketer",
+          "url": "https://skills.sh/ncklrs/startup-os-skills/performance-marketer",
+          "status": "UNVERIFIED",
+          "score": 18
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
@@ -370,19 +370,19 @@
       "skills": [
         {
           "name": "seo-audit",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
-          "status": "CANDIDATE_REVIEW_REQUIRED",
-          "score": 80
+          "url": "https://skills.sh/anthropics/knowledge-work-plugins/seo-audit",
+          "status": "UNVERIFIED",
+          "score": 83
         },
         {
-          "name": "ai-seo",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
           "status": "UNVERIFIED",
           "score": 35
         },
         {
-          "name": "site-architecture",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/site-architecture",
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
           "status": "UNVERIFIED",
           "score": 35
         }
@@ -398,7 +398,7 @@
           "name": "quantitative-research",
           "url": "https://skills.sh/omer-metin/skills-for-antigravity/quantitative-research",
           "status": "CANDIDATE_REVIEW_REQUIRED",
-          "score": 59
+          "score": 60
         },
         {
           "name": "finlab",
@@ -422,19 +422,19 @@
       "skills": [
         {
           "name": "seo-audit",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
-          "status": "CANDIDATE_REVIEW_REQUIRED",
-          "score": 80
+          "url": "https://skills.sh/anthropics/knowledge-work-plugins/seo-audit",
+          "status": "UNVERIFIED",
+          "score": 83
         },
         {
-          "name": "ai-seo",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
           "status": "UNVERIFIED",
           "score": 35
         },
         {
-          "name": "site-architecture",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/site-architecture",
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
           "status": "UNVERIFIED",
           "score": 35
         }
@@ -448,19 +448,19 @@
       "skills": [
         {
           "name": "seo-audit",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
-          "status": "CANDIDATE_REVIEW_REQUIRED",
-          "score": 80
+          "url": "https://skills.sh/anthropics/knowledge-work-plugins/seo-audit",
+          "status": "UNVERIFIED",
+          "score": 83
         },
         {
-          "name": "ai-seo",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
           "status": "UNVERIFIED",
           "score": 35
         },
         {
-          "name": "site-architecture",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/site-architecture",
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
           "status": "UNVERIFIED",
           "score": 35
         }
@@ -474,19 +474,19 @@
       "skills": [
         {
           "name": "seo-audit",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
-          "status": "CANDIDATE_REVIEW_REQUIRED",
-          "score": 80
+          "url": "https://skills.sh/anthropics/knowledge-work-plugins/seo-audit",
+          "status": "UNVERIFIED",
+          "score": 83
         },
         {
-          "name": "ai-seo",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
+          "name": "seo-audit",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
           "status": "UNVERIFIED",
           "score": 35
         },
         {
-          "name": "site-architecture",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/site-architecture",
+          "name": "ai-seo",
+          "url": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
           "status": "UNVERIFIED",
           "score": 35
         }
@@ -537,10 +537,10 @@
           "score": 35
         },
         {
-          "name": "marketing-loops",
-          "url": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+          "name": "Browser Automation",
+          "url": "https://skills.sh/claude-office-skills/skills/browser-automation",
           "status": "UNVERIFIED",
-          "score": 35
+          "score": 29
         }
       ],
       "recommendationStatus": "REVIEW_REQUIRED"
