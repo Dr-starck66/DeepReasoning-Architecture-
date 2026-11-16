@@ -1,6 +1,6 @@
 {
   "schema": "universal-skills/fleet-ci-v1",
-  "checkedAt": "2026-11-09T20:49:57.039Z",
+  "checkedAt": "2026-11-16T20:33:16.525Z",
   "status": "PARTIAL",
   "scope": "Actual GitHub Actions step outcomes on current default-branch HEAD; not runtime health, skills adoption or organic traffic",
   "summary": {
@@ -25,8 +25,8 @@
     {
       "repository": "Dr-starck66/betgpt-railway",
       "status": "FAIL",
-      "reason": "Workflow failed on current HEAD: BetGPT Chat Gate Fast",
-      "run": "https://github.com/Dr-starck66/betgpt-railway/actions/runs/42695498445"
+      "reason": "Workflow failed on current HEAD: ASTRA National Breakout Ω",
+      "run": "https://github.com/Dr-starck66/betgpt-railway/actions/runs/43948935266"
     },
     {
       "repository": "Dr-starck66/bio-mimic-x-discovery-factory",
@@ -38,7 +38,7 @@
       "repository": "Dr-starck66/DeepReasoning-Architecture-",
       "status": "UNVERIFIED",
       "reason": "CI currently running",
-      "run": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/42696647943"
+      "run": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/43950928763"
     },
     {
       "repository": "Dr-starck66/dr--house-diagnostic-ai",
@@ -116,7 +116,7 @@
       "repository": "Dr-starck66/site-1082d3b2",
       "status": "FAIL",
       "reason": "Workflow failed on current HEAD: RefundMoneyNow Editorial Autopilot",
-      "run": "https://github.com/Dr-starck66/site-1082d3b2/actions/runs/42695196920"
+      "run": "https://github.com/Dr-starck66/site-1082d3b2/actions/runs/43949105165"
     },
     {
       "repository": "Dr-starck66/site-457f566a",
@@ -140,7 +140,7 @@
       "repository": "Dr-starck66/zip-github",
       "status": "PASS",
       "reason": "1 executable test/build/lint steps passed on current HEAD",
-      "run": "https://github.com/Dr-starck66/zip-github/actions/runs/42686187021"
+      "run": "https://github.com/Dr-starck66/zip-github/actions/runs/43950340461"
     }
   ]
 }
