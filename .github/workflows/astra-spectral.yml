@@ -4,6 +4,7 @@ on:
     paths:
       - "research/eth_repro/spectral_certificate.py"
       - "research/eth_repro/test_spectral_certificate.py"
+      - "research/eth_repro/SpectralRankTen.lean"
       - "research/eth_repro/math_research_engine.py"
       - ".github/workflows/astra-spectral.yml"
   workflow_dispatch:
@@ -15,6 +16,19 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - name: Install pinned Lean 4.23.0
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL https://elan.lean-lang.org/elan-init.sh -o /tmp/astra-elan.sh
+          sh /tmp/astra-elan.sh -y --default-toolchain leanprover/lean4:v4.23.0 --no-modify-path
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Lean kernel - exact rank ten spectral certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          lean --version
+          lean research/eth_repro/SpectralRankTen.lean
       - name: Independent spectral arithmetic and two adversarial controls
         shell: bash
         run: |
