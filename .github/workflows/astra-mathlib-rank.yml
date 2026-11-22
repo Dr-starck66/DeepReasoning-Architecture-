@@ -37,4 +37,5 @@ jobs:
         run: |
           set -euo pipefail
           lean --version
-          lake env bash -c 'set -euo pipefail; export LEAN_PATH="$PWD:$LEAN_PATH"; lean -o SpectralRankTen.olean ../SpectralRankTen.lean; lean RankTenMathlib.lean'
+          cp ../SpectralRankTen.lean SpectralRankTen.lean
+          lake env bash -c 'set -euo pipefail; export LEAN_PATH="$PWD:$LEAN_PATH"; lean -o SpectralRankTen.olean SpectralRankTen.lean; lean RankTenMathlib.lean'
