@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - "research/eth_repro/mathlib_rank/**"
+      - "research/eth_repro/SpectralRankTen.lean"
       - ".github/workflows/astra-mathlib-rank.yml"
   workflow_dispatch:
 permissions:
@@ -36,4 +37,4 @@ jobs:
         run: |
           set -euo pipefail
           lean --version
-          lake env lean RankTenMathlib.lean
+          lake env bash -c 'set -euo pipefail; export LEAN_PATH="$PWD:$LEAN_PATH"; lean -o SpectralRankTen.olean ../SpectralRankTen.lean; lean RankTenMathlib.lean'
