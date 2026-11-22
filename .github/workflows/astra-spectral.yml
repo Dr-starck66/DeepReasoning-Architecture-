@@ -1,0 +1,38 @@
+name: ASTRA spectral finite certificate (stdlib)
+on:
+  pull_request:
+    paths:
+      - "research/eth_repro/spectral_certificate.py"
+      - "research/eth_repro/test_spectral_certificate.py"
+      - "research/eth_repro/math_research_engine.py"
+      - ".github/workflows/astra-spectral.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  spectral-exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independent spectral arithmetic and two adversarial controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s research/eth_repro -p 'test_spectral_certificate.py' -v
+          python3 research/eth_repro/spectral_certificate.py --output /tmp/astra_spectral_receipt.json
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          report=json.loads(Path("/tmp/astra_spectral_receipt.json").read_text())
+          assert report["computational_certificate_status"] == "PASS", report
+          assert report["project_integration_status"] == "PASS", report
+          assert report["existing_ASTRA_4096_entry_crosscheck"]["entries_compared"] == 4096
+          assert report["spectral"]["equations_checked"] == 4096
+          assert report["rank_over_Q_from_spectrum"] == 10
+          assert all(report["negative_controls"].values())
+          assert report["formal_Lean_kernel_verification"] == "UNVERIFIED"
+          print("SOURCE_SHA:", os.environ.get("GITHUB_SHA", "UNVERIFIED"))
+          print("CERTIFICATE_SHA256:", report["receipt_sha256"])
+          PY
