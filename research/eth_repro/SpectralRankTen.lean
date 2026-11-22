@@ -134,6 +134,15 @@ theorem ten_modes_independent :
           if k = l then 8 else 0 := by
   decide
 
+/-- Each of the ten selected nonzero modes is an *exact* eigenvector
+    of A=I−M0 with its stated eigenvalue, verified at all 64 rows. -/
+theorem ten_exact_eigenvectors :
+    ∀ i : Fin 64, ∀ k : Fin 10,
+      sumN 64 (fun j =>
+        a i.val j * basis64 j (selected k.val)) =
+        spectralValue (selected k.val) * basis64 i.val (selected k.val) := by
+  decide
+
 /-- **Exact rank-10 certificate**: A has a 10-column factorization,
     and those columns admit the displayed scaled left inverse.
     Together with selected_spectral_values (all λ ≠ 0), this is the
@@ -163,6 +172,7 @@ theorem exact_rank_ten_certificate :
 #print axioms exactly_ten_nonzero_modes
 #print axioms factorization_through_ten
 #print axioms ten_modes_independent
+#print axioms ten_exact_eigenvectors
 #print axioms exact_rank_ten_certificate
 
 end AstraMath.SpectralRankTen
