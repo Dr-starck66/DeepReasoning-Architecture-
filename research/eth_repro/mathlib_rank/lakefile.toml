@@ -1,0 +1,8 @@
+name = "astra_rank_ten"
+version = "0.1.0"
+defaultTargets = []
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.23.0"
