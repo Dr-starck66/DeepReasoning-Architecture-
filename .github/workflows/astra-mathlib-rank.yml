@@ -1,0 +1,41 @@
+name: ASTRA Mathlib rank bridge (pinned)
+on:
+  pull_request:
+    paths:
+      - "research/eth_repro/mathlib_rank/**"
+      - "research/eth_repro/SpectralRankTen.lean"
+      - ".github/workflows/astra-mathlib-rank.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: astra-mathlib-rank-branch
+  cancel-in-progress: true
+jobs:
+  rank-bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lean 4.23.0
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL https://elan.lean-lang.org/elan-init.sh -o /tmp/astra-mathlib-elan.sh
+          sh /tmp/astra-mathlib-elan.sh -y --default-toolchain leanprover/lean4:v4.23.0 --no-modify-path
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Pin Mathlib 4.23.0 and use compiled public cache
+        shell: bash
+        working-directory: research/eth_repro/mathlib_rank
+        run: |
+          set -euo pipefail
+          lake update
+          lake exe cache get
+      - name: Check Mathlib rank bridge (no sorry, no axioms)
+        shell: bash
+        working-directory: research/eth_repro/mathlib_rank
+        run: |
+          set -euo pipefail
+          lean --version
+          cp ../SpectralRankTen.lean SpectralRankTen.lean
+          lake env bash -c 'set -euo pipefail; export LEAN_PATH="$PWD:$LEAN_PATH"; lean -o SpectralRankTen.olean SpectralRankTen.lean; lean RankTenMathlib.lean'
