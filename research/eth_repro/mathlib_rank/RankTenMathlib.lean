@@ -75,12 +75,12 @@ set_option maxHeartbeats 0
 /-- Decidable 10×10 rational identity, linked to the verified basis64/dual8. -/
 theorem dual_left_inverse : D * B = 1 := by
   ext k l
-  decide +revert
+  fin_cases k <;> fin_cases l <;> decide
 
 /-- Decidable 64×64 rational factorization. No axioms, no approximations. -/
 theorem exact_factorization : A = B * W * D := by
   ext i j
-  decide +revert
+  fin_cases i <;> fin_cases j <;> decide
 
 theorem diagonal_full_rank : W.rank = 10 := by
   classical
