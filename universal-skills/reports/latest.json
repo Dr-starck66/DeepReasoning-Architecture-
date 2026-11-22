@@ -1,6 +1,6 @@
 {
   "schema": "universal-skill-intelligence/report-v1",
-  "timestamp": "2026-11-15T14:56:00.358Z",
+  "timestamp": "2026-11-22T15:36:47.442Z",
   "policy": {
     "autoInstall": false,
     "executeRemoteCode": false,
@@ -31,14 +31,14 @@
           "id": "vercel-labs/skills/find-skills",
           "name": "find-skills",
           "source": "vercel-labs/skills",
-          "installs": 4369065,
+          "installs": 4480665,
           "skillUrl": "https://skills.sh/vercel-labs/skills/find-skills",
           "repoUrl": "https://github.com/vercel-labs/skills",
           "repo": {
             "verified": true,
-            "stars": 39455,
+            "stars": 40437,
             "archived": false,
-            "pushedAt": "2026-11-12T23:25:25Z"
+            "pushedAt": "2026-11-17T00:58:04Z"
           },
           "audit": {
             "status": "CLEAN_STATIC_SCAN",
@@ -53,7 +53,7 @@
           "id": "vercel-labs/agent-skills/vercel-react-best-practices",
           "name": "vercel-react-best-practices",
           "source": "vercel-labs/agent-skills",
-          "installs": 900588,
+          "installs": 921811,
           "skillUrl": "https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices",
           "repoUrl": "https://github.com/vercel-labs/agent-skills",
           "score": 55,
@@ -63,7 +63,7 @@
           "id": "callstackincubator/agent-skills/react-native-best-practices",
           "name": "react-native-best-practices",
           "source": "callstackincubator/agent-skills",
-          "installs": 32546,
+          "installs": 33424,
           "skillUrl": "https://skills.sh/callstackincubator/agent-skills/react-native-best-practices",
           "repoUrl": "https://github.com/callstackincubator/agent-skills",
           "score": 35,
@@ -73,47 +73,47 @@
           "id": "huaweicloud/huaweicloud-skills/huawei-cloud-find-skills",
           "name": "huawei-cloud-find-skills",
           "source": "huaweicloud/huaweicloud-skills",
-          "installs": 18967,
+          "installs": 19486,
           "skillUrl": "https://skills.sh/huaweicloud/huaweicloud-skills/huawei-cloud-find-skills",
           "repoUrl": "https://github.com/huaweicloud/huaweicloud-skills",
           "score": 34,
           "status": "UNVERIFIED"
         },
         {
-          "id": "software-mansion-labs/skills/react-native-best-practices",
-          "name": "react-native-best-practices",
-          "source": "software-mansion-labs/skills",
-          "installs": 5990,
-          "skillUrl": "https://skills.sh/software-mansion-labs/skills/react-native-best-practices",
-          "repoUrl": "https://github.com/software-mansion-labs/skills",
-          "score": 30,
-          "status": "UNVERIFIED"
-        },
-        {
-          "id": "alleneubank/claude-code/react-best-practices",
-          "name": "react-best-practices",
-          "source": "alleneubank/claude-code",
-          "installs": 3177,
-          "skillUrl": "https://skills.sh/alleneubank/claude-code/react-best-practices",
-          "repoUrl": "https://github.com/alleneubank/claude-code",
-          "score": 28,
-          "status": "UNVERIFIED"
-        },
-        {
           "id": "qianwen-ai/qianwen-ai/qianwen-find-skills",
           "name": "qianwen-find-skills",
           "source": "qianwen-ai/qianwen-ai",
-          "installs": 3166,
+          "installs": 3363,
           "skillUrl": "https://skills.sh/qianwen-ai/qianwen-ai/qianwen-find-skills",
           "repoUrl": "https://github.com/qianwen-ai/qianwen-ai",
           "score": 28,
           "status": "UNVERIFIED"
         },
         {
+          "id": "alleneubank/claude-code/react-best-practices",
+          "name": "react-best-practices",
+          "source": "alleneubank/claude-code",
+          "installs": 3182,
+          "skillUrl": "https://skills.sh/alleneubank/claude-code/react-best-practices",
+          "repoUrl": "https://github.com/alleneubank/claude-code",
+          "score": 28,
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "callstackincubator/agent-skills/react-native-tv-best-practices",
+          "name": "react-native-tv-best-practices",
+          "source": "callstackincubator/agent-skills",
+          "installs": 2942,
+          "skillUrl": "https://skills.sh/callstackincubator/agent-skills/react-native-tv-best-practices",
+          "repoUrl": "https://github.com/callstackincubator/agent-skills",
+          "score": 27,
+          "status": "UNVERIFIED"
+        },
+        {
           "id": "mastra-ai/mastra/react-best-practices",
           "name": "react-best-practices",
           "source": "mastra-ai/mastra",
-          "installs": 2849,
+          "installs": 2852,
           "skillUrl": "https://skills.sh/mastra-ai/mastra/react-best-practices",
           "repoUrl": "https://github.com/mastra-ai/mastra",
           "score": 27,
@@ -123,7 +123,7 @@
           "id": "aliyun/alibabacloud-aiops-skills/alibabacloud-find-skills",
           "name": "alibabacloud-find-skills",
           "source": "aliyun/alibabacloud-aiops-skills",
-          "installs": 2235,
+          "installs": 2249,
           "skillUrl": "https://skills.sh/aliyun/alibabacloud-aiops-skills/alibabacloud-find-skills",
           "repoUrl": "https://github.com/aliyun/alibabacloud-aiops-skills",
           "score": 26,
@@ -133,7 +133,7 @@
           "id": "skills.volces.com/find-skills",
           "name": "find-skills",
           "source": "skills.volces.com",
-          "installs": 1564,
+          "installs": 1565,
           "skillUrl": "https://skills.sh/skills.volces.com/find-skills",
           "repoUrl": "https://github.com/skills.volces.com",
           "score": 25,
@@ -158,14 +158,14 @@
           "id": "mattpocock/skills/tdd",
           "name": "tdd",
           "source": "mattpocock/skills",
-          "installs": 1241731,
+          "installs": 1268059,
           "skillUrl": "https://skills.sh/mattpocock/skills/tdd",
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 324855,
+            "stars": 330209,
             "archived": false,
-            "pushedAt": "2026-11-13T12:30:31Z"
+            "pushedAt": "2026-11-19T13:35:13Z"
           },
           "audit": {
             "status": "UNVERIFIED",
@@ -178,7 +178,7 @@
           "id": "mattpocock/skills/code-review",
           "name": "code-review",
           "source": "mattpocock/skills",
-          "installs": 894959,
+          "installs": 921837,
           "skillUrl": "https://skills.sh/mattpocock/skills/code-review",
           "repoUrl": "https://github.com/mattpocock/skills",
           "score": 35,
@@ -188,7 +188,7 @@
           "id": "mattpocock/skills/research",
           "name": "research",
           "source": "mattpocock/skills",
-          "installs": 806395,
+          "installs": 830992,
           "skillUrl": "https://skills.sh/mattpocock/skills/research",
           "repoUrl": "https://github.com/mattpocock/skills",
           "score": 35,
@@ -198,7 +198,7 @@
           "id": "mattpocock/skills/git-guardrails-claude-code",
           "name": "git-guardrails-claude-code",
           "source": "mattpocock/skills",
-          "installs": 561338,
+          "installs": 577157,
           "skillUrl": "https://skills.sh/mattpocock/skills/git-guardrails-claude-code",
           "repoUrl": "https://github.com/mattpocock/skills",
           "score": 35,
@@ -208,7 +208,7 @@
           "id": "mattpocock/skills/setup-pre-commit",
           "name": "setup-pre-commit",
           "source": "mattpocock/skills",
-          "installs": 550293,
+          "installs": 565963,
           "skillUrl": "https://skills.sh/mattpocock/skills/setup-pre-commit",
           "repoUrl": "https://github.com/mattpocock/skills",
           "score": 35,
@@ -233,14 +233,14 @@
           "id": "anthropics/knowledge-work-plugins/seo-audit",
           "name": "seo-audit",
           "source": "anthropics/knowledge-work-plugins",
-          "installs": 3900,
+          "installs": 3985,
           "skillUrl": "https://skills.sh/anthropics/knowledge-work-plugins/seo-audit",
           "repoUrl": "https://github.com/anthropics/knowledge-work-plugins",
           "repo": {
             "verified": true,
-            "stars": 36075,
+            "stars": 36678,
             "archived": false,
-            "pushedAt": "2026-11-13T22:21:52Z"
+            "pushedAt": "2026-11-21T07:25:29Z"
           },
           "audit": {
             "status": "UNVERIFIED",
@@ -253,7 +253,7 @@
           "id": "coreyhaines31/marketingskills/seo-audit",
           "name": "seo-audit",
           "source": "coreyhaines31/marketingskills",
-          "installs": 255185,
+          "installs": 262570,
           "skillUrl": "https://skills.sh/coreyhaines31/marketingskills/seo-audit",
           "repoUrl": "https://github.com/coreyhaines31/marketingskills",
           "score": 35,
@@ -263,7 +263,7 @@
           "id": "coreyhaines31/marketingskills/ai-seo",
           "name": "ai-seo",
           "source": "coreyhaines31/marketingskills",
-          "installs": 165256,
+          "installs": 171579,
           "skillUrl": "https://skills.sh/coreyhaines31/marketingskills/ai-seo",
           "repoUrl": "https://github.com/coreyhaines31/marketingskills",
           "score": 35,
@@ -273,7 +273,7 @@
           "id": "squirrelscan/skills/audit-website",
           "name": "audit-website",
           "source": "squirrelscan/skills",
-          "installs": 75054,
+          "installs": 75312,
           "skillUrl": "https://skills.sh/squirrelscan/skills/audit-website",
           "repoUrl": "https://github.com/squirrelscan/skills",
           "score": 35,
@@ -283,7 +283,7 @@
           "id": "firecrawl/firecrawl-workflows/firecrawl-seo-audit",
           "name": "firecrawl-seo-audit",
           "source": "firecrawl/firecrawl-workflows",
-          "installs": 32386,
+          "installs": 32457,
           "skillUrl": "https://skills.sh/firecrawl/firecrawl-workflows/firecrawl-seo-audit",
           "repoUrl": "https://github.com/firecrawl/firecrawl-workflows",
           "score": 35,
@@ -318,7 +318,7 @@
           "repoUrl": "https://github.com/kishorkukreja/awesome-supply-chain",
           "repo": {
             "verified": true,
-            "stars": 99,
+            "stars": 101,
             "archived": false,
             "pushedAt": "2026-10-06T15:51:40Z"
           },
@@ -445,14 +445,14 @@
           "id": "crawlora-org/crawlora-skills/football-match-performance-analysis",
           "name": "football-match-performance-analysis",
           "source": "crawlora-org/crawlora-skills",
-          "installs": 32,
+          "installs": 34,
           "skillUrl": "https://skills.sh/crawlora-org/crawlora-skills/football-match-performance-analysis",
           "repoUrl": "https://github.com/crawlora-org/crawlora-skills",
           "repo": {
             "verified": true,
             "stars": 1,
             "archived": false,
-            "pushedAt": "2026-11-10T10:10:50Z"
+            "pushedAt": "2026-11-17T07:05:51Z"
           },
           "audit": {
             "status": "CLEAN_STATIC_SCAN",
@@ -467,7 +467,7 @@
           "id": "crawlora-org/crawlora-skills/football-player-comparison",
           "name": "football-player-comparison",
           "source": "crawlora-org/crawlora-skills",
-          "installs": 26,
+          "installs": 27,
           "skillUrl": "https://skills.sh/crawlora-org/crawlora-skills/football-player-comparison",
           "repoUrl": "https://github.com/crawlora-org/crawlora-skills",
           "score": 11,
@@ -572,14 +572,14 @@
           "id": "coreyhaines31/marketingskills/analytics-tracking",
           "name": "analytics-tracking",
           "source": "coreyhaines31/marketingskills",
-          "installs": 57817,
+          "installs": 57818,
           "skillUrl": "https://skills.sh/coreyhaines31/marketingskills/analytics-tracking",
           "repoUrl": "https://github.com/coreyhaines31/marketingskills",
           "repo": {
             "verified": true,
-            "stars": 60486,
+            "stars": 61995,
             "archived": false,
-            "pushedAt": "2026-11-11T17:49:23Z"
+            "pushedAt": "2026-11-20T02:15:08Z"
           },
           "audit": {
             "status": "UNVERIFIED",
@@ -592,7 +592,7 @@
           "id": "aaron-he-zhu/aaron-marketing-skills/conversion-signal-qa",
           "name": "conversion-signal-qa",
           "source": "aaron-he-zhu/aaron-marketing-skills",
-          "installs": 1140,
+          "installs": 1174,
           "skillUrl": "https://skills.sh/aaron-he-zhu/aaron-marketing-skills/conversion-signal-qa",
           "repoUrl": "https://github.com/aaron-he-zhu/aaron-marketing-skills",
           "score": 24,
@@ -602,7 +602,7 @@
           "id": "ncklrs/startup-os-skills/performance-marketer",
           "name": "performance-marketer",
           "source": "ncklrs/startup-os-skills",
-          "installs": 226,
+          "installs": 229,
           "skillUrl": "https://skills.sh/ncklrs/startup-os-skills/performance-marketer",
           "repoUrl": "https://github.com/ncklrs/startup-os-skills",
           "score": 18,
@@ -612,17 +612,17 @@
           "id": "pawbytes/skill-suites/paw-mkt-analytics",
           "name": "paw-mkt-analytics",
           "source": "pawbytes/skill-suites",
-          "installs": 176,
+          "installs": 177,
           "skillUrl": "https://skills.sh/pawbytes/skill-suites/paw-mkt-analytics",
           "repoUrl": "https://github.com/pawbytes/skill-suites",
-          "score": 17,
+          "score": 18,
           "status": "UNVERIFIED"
         },
         {
           "id": "finsilabs/awesome-ecommerce-skills/marketing-attribution-dashboard",
           "name": "marketing-attribution-dashboard",
           "source": "finsilabs/awesome-ecommerce-skills",
-          "installs": 84,
+          "installs": 85,
           "skillUrl": "https://skills.sh/finsilabs/awesome-ecommerce-skills/marketing-attribution-dashboard",
           "repoUrl": "https://github.com/finsilabs/awesome-ecommerce-skills",
           "score": 15,
@@ -694,14 +694,14 @@
           "id": "martindelophy/ai-video-editor/edit-timeline-studio",
           "name": "edit-timeline-studio",
           "source": "martindelophy/ai-video-editor",
-          "installs": 144,
+          "installs": 156,
           "skillUrl": "https://skills.sh/martindelophy/ai-video-editor/edit-timeline-studio",
           "repoUrl": "https://github.com/martindelophy/ai-video-editor",
           "repo": {
             "verified": true,
-            "stars": 981,
+            "stars": 1002,
             "archived": false,
-            "pushedAt": "2026-11-14T09:41:14Z"
+            "pushedAt": "2026-11-22T13:34:04Z"
           },
           "audit": {
             "status": "CLEAN_STATIC_SCAN",
@@ -709,17 +709,27 @@
             "path": "skills/edit-timeline-studio/SKILL.md",
             "revisionPinned": false
           },
-          "score": 56,
+          "score": 57,
           "status": "CANDIDATE_REVIEW_REQUIRED"
         },
         {
           "id": "calesthio/generative-media-skills/midjourney-video",
           "name": "midjourney-video",
           "source": "calesthio/generative-media-skills",
-          "installs": 132,
+          "installs": 148,
           "skillUrl": "https://skills.sh/calesthio/generative-media-skills/midjourney-video",
           "repoUrl": "https://github.com/calesthio/generative-media-skills",
-          "score": 16,
+          "score": 17,
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "mirage-hq/tesseract/tesseract-audio",
+          "name": "tesseract-audio",
+          "source": "mirage-hq/tesseract",
+          "installs": 74,
+          "skillUrl": "https://skills.sh/mirage-hq/tesseract/tesseract-audio",
+          "repoUrl": "https://github.com/mirage-hq/tesseract",
+          "score": 15,
           "status": "UNVERIFIED"
         },
         {
@@ -736,20 +746,10 @@
           "id": "bankai-skills/superpowers/ai-content-pipeline",
           "name": "ai-content-pipeline",
           "source": "bankai-skills/superpowers",
-          "installs": 24,
+          "installs": 31,
           "skillUrl": "https://skills.sh/bankai-skills/superpowers/ai-content-pipeline",
           "repoUrl": "https://github.com/bankai-skills/superpowers",
-          "score": 11,
-          "status": "UNVERIFIED"
-        },
-        {
-          "id": "nguyenphp/antigravity-marketing/video-automation",
-          "name": "video-automation",
-          "source": "nguyenphp/antigravity-marketing",
-          "installs": 13,
-          "skillUrl": "https://skills.sh/nguyenphp/antigravity-marketing/video-automation",
-          "repoUrl": "https://github.com/nguyenphp/antigravity-marketing",
-          "score": 9,
+          "score": 12,
           "status": "UNVERIFIED"
         }
       ],
@@ -771,14 +771,14 @@
           "id": "mattpocock/skills/research",
           "name": "research",
           "source": "mattpocock/skills",
-          "installs": 806395,
+          "installs": 830992,
           "skillUrl": "https://skills.sh/mattpocock/skills/research",
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 324855,
+            "stars": 330209,
             "archived": false,
-            "pushedAt": "2026-11-13T12:30:31Z"
+            "pushedAt": "2026-11-19T13:35:13Z"
           },
           "audit": {
             "status": "UNVERIFIED",
@@ -791,7 +791,7 @@
           "id": "briiirussell/cybersecurity-skills/osint-recon",
           "name": "osint-recon",
           "source": "briiirussell/cybersecurity-skills",
-          "installs": 467,
+          "installs": 499,
           "skillUrl": "https://skills.sh/briiirussell/cybersecurity-skills/osint-recon",
           "repoUrl": "https://github.com/briiirussell/cybersecurity-skills",
           "score": 21,
@@ -801,7 +801,7 @@
           "id": "sickn33/agentic-awesome-skills/malware-analyst",
           "name": "malware-analyst",
           "source": "sickn33/agentic-awesome-skills",
-          "installs": 335,
+          "installs": 337,
           "skillUrl": "https://skills.sh/sickn33/agentic-awesome-skills/malware-analyst",
           "repoUrl": "https://github.com/sickn33/agentic-awesome-skills",
           "score": 20,
@@ -811,20 +811,20 @@
           "id": "coreyhaines31/cybersecurity-skills/osint-recon",
           "name": "osint-recon",
           "source": "coreyhaines31/cybersecurity-skills",
-          "installs": 31,
+          "installs": 33,
           "skillUrl": "https://skills.sh/coreyhaines31/cybersecurity-skills/osint-recon",
           "repoUrl": "https://github.com/coreyhaines31/cybersecurity-skills",
           "score": 12,
           "status": "UNVERIFIED"
         },
         {
-          "id": "iblai/vibe/iblai-vibe-security-osint-recon",
+          "id": "iblai/base/iblai-vibe-security-osint-recon",
           "name": "iblai-vibe-security-osint-recon",
-          "source": "iblai/vibe",
-          "installs": 30,
-          "skillUrl": "https://skills.sh/iblai/vibe/iblai-vibe-security-osint-recon",
-          "repoUrl": "https://github.com/iblai/vibe",
-          "score": 11,
+          "source": "iblai/base",
+          "installs": 31,
+          "skillUrl": "https://skills.sh/iblai/base/iblai-vibe-security-osint-recon",
+          "repoUrl": "https://github.com/iblai/base",
+          "score": 12,
           "status": "UNVERIFIED"
         }
       ],
@@ -846,14 +846,14 @@
           "id": "mattpocock/skills/research",
           "name": "research",
           "source": "mattpocock/skills",
-          "installs": 806395,
+          "installs": 830992,
           "skillUrl": "https://skills.sh/mattpocock/skills/research",
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 324855,
+            "stars": 330209,
             "archived": false,
-            "pushedAt": "2026-11-13T12:30:31Z"
+            "pushedAt": "2026-11-19T13:35:13Z"
           },
           "audit": {
             "status": "UNVERIFIED",
@@ -866,7 +866,7 @@
           "id": "k-dense-ai/scientific-agent-skills/peer-review",
           "name": "peer-review",
           "source": "k-dense-ai/scientific-agent-skills",
-          "installs": 2402,
+          "installs": 2487,
           "skillUrl": "https://skills.sh/k-dense-ai/scientific-agent-skills/peer-review",
           "repoUrl": "https://github.com/k-dense-ai/scientific-agent-skills",
           "score": 27,
@@ -931,14 +931,14 @@
           "id": "mattpocock/skills/research",
           "name": "research",
           "source": "mattpocock/skills",
-          "installs": 806395,
+          "installs": 830992,
           "skillUrl": "https://skills.sh/mattpocock/skills/research",
           "repoUrl": "https://github.com/mattpocock/skills",
           "repo": {
             "verified": true,
-            "stars": 324855,
+            "stars": 330209,
             "archived": false,
-            "pushedAt": "2026-11-13T12:30:31Z"
+            "pushedAt": "2026-11-19T13:35:13Z"
           },
           "audit": {
             "status": "UNVERIFIED",
@@ -961,10 +961,20 @@
           "id": "curiositech/some_claude_skills/geospatial-data-pipeline",
           "name": "geospatial-data-pipeline",
           "source": "curiositech/some_claude_skills",
-          "installs": 353,
+          "installs": 360,
           "skillUrl": "https://skills.sh/curiositech/some_claude_skills/geospatial-data-pipeline",
           "repoUrl": "https://github.com/curiositech/some_claude_skills",
           "score": 20,
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "itallstartedwithaidea/agent-skills/session-archaeology",
+          "name": "session-archaeology",
+          "source": "itallstartedwithaidea/agent-skills",
+          "installs": 90,
+          "skillUrl": "https://skills.sh/itallstartedwithaidea/agent-skills/session-archaeology",
+          "repoUrl": "https://github.com/itallstartedwithaidea/agent-skills",
+          "score": 15,
           "status": "UNVERIFIED"
         },
         {
@@ -974,16 +984,6 @@
           "installs": 84,
           "skillUrl": "https://skills.sh/dragoon0x/taste-skills/version-archaeology",
           "repoUrl": "https://github.com/dragoon0x/taste-skills",
-          "score": 15,
-          "status": "UNVERIFIED"
-        },
-        {
-          "id": "itallstartedwithaidea/agent-skills/session-archaeology",
-          "name": "session-archaeology",
-          "source": "itallstartedwithaidea/agent-skills",
-          "installs": 84,
-          "skillUrl": "https://skills.sh/itallstartedwithaidea/agent-skills/session-archaeology",
-          "repoUrl": "https://github.com/itallstartedwithaidea/agent-skills",
           "score": 15,
           "status": "UNVERIFIED"
         },
@@ -1001,20 +1001,10 @@
           "id": "leonchaox/qinyan-academic-skills/geopandas",
           "name": "geopandas",
           "source": "leonchaox/qinyan-academic-skills",
-          "installs": 73,
+          "installs": 74,
           "skillUrl": "https://skills.sh/leonchaox/qinyan-academic-skills/geopandas",
           "repoUrl": "https://github.com/leonchaox/qinyan-academic-skills",
-          "score": 14,
-          "status": "UNVERIFIED"
-        },
-        {
-          "id": "alterlab-ieu/alterlab-academic-skills/alterlab-geopandas",
-          "name": "alterlab-geopandas",
-          "source": "alterlab-ieu/alterlab-academic-skills",
-          "installs": 66,
-          "skillUrl": "https://skills.sh/alterlab-ieu/alterlab-academic-skills/alterlab-geopandas",
-          "repoUrl": "https://github.com/alterlab-ieu/alterlab-academic-skills",
-          "score": 14,
+          "score": 15,
           "status": "UNVERIFIED"
         },
         {
@@ -1086,6 +1076,16 @@
           "repoUrl": "https://github.com/avizmarlon/agent-skills",
           "score": 3,
           "status": "UNVERIFIED"
+        },
+        {
+          "id": "ahmadibrahim4geo/gis-development-skills/geospatial-web-mapping",
+          "name": "geospatial-web-mapping",
+          "source": "ahmadibrahim4geo/gis-development-skills",
+          "installs": 1,
+          "skillUrl": "https://skills.sh/ahmadibrahim4geo/gis-development-skills/geospatial-web-mapping",
+          "repoUrl": "https://github.com/ahmadibrahim4geo/gis-development-skills",
+          "score": 2,
+          "status": "UNVERIFIED"
         }
       ],
       "status": "PASS"
@@ -1106,14 +1106,14 @@
           "id": "vercel-labs/agent-browser/agent-browser",
           "name": "agent-browser",
           "source": "vercel-labs/agent-browser",
-          "installs": 1457535,
+          "installs": 1571150,
           "skillUrl": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
           "repoUrl": "https://github.com/vercel-labs/agent-browser",
           "repo": {
             "verified": true,
-            "stars": 51446,
+            "stars": 53336,
             "archived": false,
-            "pushedAt": "2026-11-15T12:43:23Z"
+            "pushedAt": "2026-11-21T17:51:55Z"
           },
           "audit": {
             "status": "CLEAN_STATIC_SCAN",
@@ -1128,7 +1128,7 @@
           "id": "vercel-labs/agent-skills/web-design-guidelines",
           "name": "web-design-guidelines",
           "source": "vercel-labs/agent-skills",
-          "installs": 863828,
+          "installs": 892154,
           "skillUrl": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
           "repoUrl": "https://github.com/vercel-labs/agent-skills",
           "score": 55,
@@ -1138,7 +1138,7 @@
           "id": "affaan-m/ecc/browser-qa",
           "name": "browser-qa",
           "source": "affaan-m/ecc",
-          "installs": 11440,
+          "installs": 11933,
           "skillUrl": "https://skills.sh/affaan-m/ecc/browser-qa",
           "repoUrl": "https://github.com/affaan-m/ecc",
           "score": 32,
@@ -1158,7 +1158,7 @@
           "id": "manutej/luxor-claude-marketplace/playwright-visual-testing",
           "name": "playwright-visual-testing",
           "source": "manutej/luxor-claude-marketplace",
-          "installs": 1402,
+          "installs": 1410,
           "skillUrl": "https://skills.sh/manutej/luxor-claude-marketplace/playwright-visual-testing",
           "repoUrl": "https://github.com/manutej/luxor-claude-marketplace",
           "score": 25,
@@ -1183,12 +1183,12 @@
           "id": "omer-metin/skills-for-antigravity/quantitative-research",
           "name": "quantitative-research",
           "source": "omer-metin/skills-for-antigravity",
-          "installs": 2721,
+          "installs": 2755,
           "skillUrl": "https://skills.sh/omer-metin/skills-for-antigravity/quantitative-research",
           "repoUrl": "https://github.com/omer-metin/skills-for-antigravity",
           "repo": {
             "verified": true,
-            "stars": 212,
+            "stars": 224,
             "archived": false,
             "pushedAt": "2026-01-22T14:24:32Z"
           },
@@ -1205,7 +1205,7 @@
           "id": "koreal6803/finlab-ai/finlab",
           "name": "finlab",
           "source": "koreal6803/finlab-ai",
-          "installs": 2001,
+          "installs": 2012,
           "skillUrl": "https://skills.sh/koreal6803/finlab-ai/finlab",
           "repoUrl": "https://github.com/koreal6803/finlab-ai",
           "score": 26,
@@ -1215,7 +1215,7 @@
           "id": "gauss314/skills/backtesting",
           "name": "backtesting",
           "source": "gauss314/skills",
-          "installs": 338,
+          "installs": 343,
           "skillUrl": "https://skills.sh/gauss314/skills/backtesting",
           "repoUrl": "https://github.com/gauss314/skills",
           "score": 20,
@@ -1225,7 +1225,7 @@
           "id": "nicepkg/ai-workflow/backtest-expert",
           "name": "backtest-expert",
           "source": "nicepkg/ai-workflow",
-          "installs": 100,
+          "installs": 103,
           "skillUrl": "https://skills.sh/nicepkg/ai-workflow/backtest-expert",
           "repoUrl": "https://github.com/nicepkg/ai-workflow",
           "score": 16,
@@ -1260,14 +1260,14 @@
           "id": "vercel-labs/agent-browser/agent-browser",
           "name": "agent-browser",
           "source": "vercel-labs/agent-browser",
-          "installs": 1457535,
+          "installs": 1571150,
           "skillUrl": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
           "repoUrl": "https://github.com/vercel-labs/agent-browser",
           "repo": {
             "verified": true,
-            "stars": 51446,
+            "stars": 53336,
             "archived": false,
-            "pushedAt": "2026-11-15T12:43:23Z"
+            "pushedAt": "2026-11-21T17:51:55Z"
           },
           "audit": {
             "status": "CLEAN_STATIC_SCAN",
@@ -1282,7 +1282,7 @@
           "id": "mattpocock/skills/tdd",
           "name": "tdd",
           "source": "mattpocock/skills",
-          "installs": 1241731,
+          "installs": 1268059,
           "skillUrl": "https://skills.sh/mattpocock/skills/tdd",
           "repoUrl": "https://github.com/mattpocock/skills",
           "score": 35,
@@ -1292,7 +1292,7 @@
           "id": "claude-office-skills/skills/browser-automation",
           "name": "Browser Automation",
           "source": "claude-office-skills/skills",
-          "installs": 5414,
+          "installs": 5473,
           "skillUrl": "https://skills.sh/claude-office-skills/skills/browser-automation",
           "repoUrl": "https://github.com/claude-office-skills/skills",
           "score": 29,
@@ -1302,7 +1302,7 @@
           "id": "czlonkowski/n8n-skills/using-n8n-mcp-skills",
           "name": "using-n8n-mcp-skills",
           "source": "czlonkowski/n8n-skills",
-          "installs": 1976,
+          "installs": 2101,
           "skillUrl": "https://skills.sh/czlonkowski/n8n-skills/using-n8n-mcp-skills",
           "repoUrl": "https://github.com/czlonkowski/n8n-skills",
           "score": 26,
@@ -1312,7 +1312,7 @@
           "id": "proffesor-for-testing/agentic-qe/qe-github-workflow-automation",
           "name": "qe-github-workflow-automation",
           "source": "proffesor-for-testing/agentic-qe",
-          "installs": 81,
+          "installs": 85,
           "skillUrl": "https://skills.sh/proffesor-for-testing/agentic-qe/qe-github-workflow-automation",
           "repoUrl": "https://github.com/proffesor-for-testing/agentic-qe",
           "score": 15,
