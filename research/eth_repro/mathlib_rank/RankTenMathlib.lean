@@ -57,6 +57,24 @@ independent or copied matrix.
 namespace Concrete
 open AstraMath.SpectralRankTen
 
+/-- Match ASTRA's kernel-checked List.range fold to Mathlib's finite sum.
+    Proved once by induction, not by enumerating matrix entries. -/
+private theorem sumN_eq_sum_fin (n : Nat) (f : Nat → Int) :
+    sumN n f = ∑ k : Fin n, f k.val := by
+  have h (m : Nat) : sumN m f = ∑ k ∈ Finset.range m, f k := by
+    induction m with
+    | zero => simp [sumN]
+    | succ m ih =>
+      change (List.range (m+1)).foldl (fun z k => z + f k) 0 =
+        ∑ k ∈ Finset.range (m+1), f k
+      rw [List.range_succ, List.foldl_append]
+      simp only [List.foldl_cons, List.foldl_nil]
+      rw [Finset.sum_range_succ]
+      change sumN m f + f m = (∑ k ∈ Finset.range m, f k) + f m
+      rw [ih]
+  simpa only [Fin.sum_univ_eq_sum_range] using h n
+
+
 def A : Matrix (Fin 64) (Fin 64) ℚ :=
   fun i j => (a i.val j.val : ℚ)
 
@@ -67,26 +85,71 @@ def D : Matrix (Fin 10) (Fin 64) ℚ :=
   fun k i => (dual8 (selected k.val) i.val : ℚ) / 8
 
 def W : Matrix (Fin 10) (Fin 10) ℚ :=
-  Matrix.diagonal (fun k => if k.val = 9 then -4 else 4)
+  Matrix.diagonal (fun k => (spectralValue (selected k.val) : ℚ))
 
 set_option maxRecDepth 32768
 set_option maxHeartbeats 0
 
-/-- Decidable 10×10 rational identity, linked to the verified basis64/dual8. -/
+/-- Rational D·B=I obtained by casting the *proved* integer 8I duality. -/
 theorem dual_left_inverse : D * B = 1 := by
+  classical
   ext k l
-  fin_cases k <;> fin_cases l <;> decide
+  have hInt := ten_modes_independent k l
+  rw [sumN_eq_sum_fin] at hInt
+  have hRat :
+      (∑ i : Fin 64,
+        (dual8 (selected k.val) i.val : ℚ) *
+        (basis64 i.val (selected l.val) : ℚ)) =
+        (if k = l then (8 : ℚ) else 0) := by
+    exact_mod_cast hInt
+  rw [Matrix.mul_apply]
+  have hcalc :
+      (∑ i : Fin 64, D k i * B i l) =
+      (∑ i : Fin 64,
+        (dual8 (selected k.val) i.val : ℚ) *
+        (basis64 i.val (selected l.val) : ℚ)) / 8 := by
+    rw [Finset.sum_div]
+    apply Finset.sum_congr rfl
+    intro i _
+    dsimp [D, B]
+    ring
+  rw [hcalc, hRat]
+  simp [Matrix.one_apply]
 
-/-- Decidable 64×64 rational factorization. No axioms, no approximations. -/
+/-- Rational A=B·W·D from the *proved* integer identity 8A=B·λ·dual8. -/
 theorem exact_factorization : A = B * W * D := by
+  classical
   ext i j
-  fin_cases i <;> fin_cases j <;> decide
+  have hInt := factorization_through_ten i j
+  rw [sumN_eq_sum_fin] at hInt
+  have hRat :
+      8 * (a i.val j.val : ℚ) =
+      ∑ k : Fin 10,
+        (basis64 i.val (selected k.val) : ℚ) *
+        (spectralValue (selected k.val) : ℚ) *
+        (dual8 (selected k.val) j.val : ℚ) := by
+    exact_mod_cast hInt
+  have hmul :
+      (B * W * D) i j =
+      (∑ k : Fin 10,
+        (basis64 i.val (selected k.val) : ℚ) *
+        (spectralValue (selected k.val) : ℚ) *
+        (dual8 (selected k.val) j.val : ℚ)) / 8 := by
+    rw [Matrix.mul_apply, Finset.sum_div]
+    apply Finset.sum_congr rfl
+    intro k _
+    simp only [W, Matrix.mul_diagonal, B, D]
+    ring
+  change (a i.val j.val : ℚ) = (B * W * D) i j
+  rw [hmul]
+  linarith
 
 theorem diagonal_full_rank : W.rank = 10 := by
   classical
   have hnonzero :
-      ∀ k : Fin 10, (if k.val = 9 then (-4 : ℚ) else 4) ≠ 0 := by
+      ∀ k : Fin 10, (spectralValue (selected k.val) : ℚ) ≠ 0 := by
     intro k
+    rw [selected_spectral_values]
     split_ifs <;> norm_num
   simpa [W, Matrix.rank_diagonal, hnonzero]
 
