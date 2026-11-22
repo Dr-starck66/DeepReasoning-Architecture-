@@ -17,7 +17,7 @@ set_option maxHeartbeats 0
 
 namespace AstraMath.SpectralRankTen
 
-private def sumN (n : Nat) (f : Nat → Int) : Int :=
+def sumN (n : Nat) (f : Nat → Int) : Int :=
   (List.range n).foldl (fun acc k => acc + f k) 0
 
 private def pairCoordinate (i axis : Nat) : Nat :=
