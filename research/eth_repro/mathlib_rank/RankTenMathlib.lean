@@ -114,7 +114,7 @@ theorem dual_left_inverse : D * B = 1 := by
     dsimp [D, B]
     ring
   rw [hcalc, hRat]
-  simp [Matrix.one_apply]
+  by_cases hkl : k = l <;> simp [Matrix.one_apply, hkl]
 
 /-- Rational A=B·W·D from the *proved* integer identity 8A=B·λ·dual8. -/
 theorem exact_factorization : A = B * W * D := by
@@ -146,12 +146,25 @@ theorem exact_factorization : A = B * W * D := by
 
 theorem diagonal_full_rank : W.rank = 10 := by
   classical
-  have hnonzero :
-      ∀ k : Fin 10, (spectralValue (selected k.val) : ℚ) ≠ 0 := by
-    intro k
+  have hnonzero (k : Fin 10) :
+      (spectralValue (selected k.val) : ℚ) ≠ 0 := by
     rw [selected_spectral_values]
     split_ifs <;> norm_num
-  simpa [W, Matrix.rank_diagonal, hnonzero]
+  change (Matrix.diagonal
+    (fun k : Fin 10 => (spectralValue (selected k.val) : ℚ))).rank = 10
+  rw [Matrix.rank_diagonal]
+  calc
+    Fintype.card {k : Fin 10 //
+      (spectralValue (selected k.val) : ℚ) ≠ 0} =
+      Fintype.card (Fin 10) := by
+        apply Fintype.card_congr
+        exact {
+          toFun := Subtype.val
+          invFun := fun k => ⟨k, hnonzero k⟩
+          left_inv := by intro x; cases x; rfl
+          right_inv := by intro x; rfl
+        }
+    _ = 10 := by simp
 
 /-- The concrete, actual Mathlib matrix rank theorem requested for ASTRA. -/
 theorem astra_exact_rank_ten : Matrix.rank A = 10 := by
