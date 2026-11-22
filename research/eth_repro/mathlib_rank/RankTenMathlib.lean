@@ -1,6 +1,7 @@
 import Mathlib.LinearAlgebra.Matrix.Rank
 import Mathlib.Data.Matrix.Mul
 import Mathlib.Tactic
+import SpectralRankTen
 
 /-!
 Independent formal rank bridge for ASTRA Ω.
@@ -45,4 +46,60 @@ theorem rank_ten_of_factorization
   omega
 
 #print axioms rank_ten_of_factorization
+
+/-!
+Concrete instantiation for ASTRA's 64×64 exact swap matrix. The matrix A,
+its tensor eigenvectors B, integer duals /8 (D), and the ±4 diagonal W are
+defined by *the previously Lean-verified source functions*, not a new
+independent or copied matrix.
+-/
+
+namespace Concrete
+open AstraMath.SpectralRankTen
+
+def A : Matrix (Fin 64) (Fin 64) ℚ :=
+  fun i j => (a i.val j.val : ℚ)
+
+def B : Matrix (Fin 64) (Fin 10) ℚ :=
+  fun i k => (basis64 i.val (selected k.val) : ℚ)
+
+def D : Matrix (Fin 10) (Fin 64) ℚ :=
+  fun k i => (dual8 (selected k.val) i.val : ℚ) / 8
+
+def W : Matrix (Fin 10) (Fin 10) ℚ :=
+  Matrix.diagonal (fun k => if k.val = 9 then -4 else 4)
+
+set_option maxRecDepth 32768
+set_option maxHeartbeats 0
+
+/-- Decidable 10×10 rational identity, linked to the verified basis64/dual8. -/
+theorem dual_left_inverse : D * B = 1 := by
+  ext k l
+  decide
+
+/-- Decidable 64×64 rational factorization. No axioms, no approximations. -/
+theorem exact_factorization : A = B * W * D := by
+  ext i j
+  decide
+
+theorem diagonal_full_rank : W.rank = 10 := by
+  classical
+  have hnonzero :
+      ∀ k : Fin 10, (if k.val = 9 then (-4 : ℚ) else 4) ≠ 0 := by
+    intro k
+    split_ifs <;> norm_num
+  simpa [W, Matrix.rank_diagonal, hnonzero]
+
+/-- The concrete, actual Mathlib matrix rank theorem requested for ASTRA. -/
+theorem astra_exact_rank_ten : Matrix.rank A = 10 := by
+  exact rank_ten_of_factorization A B D W
+    exact_factorization dual_left_inverse diagonal_full_rank
+
+#print axioms dual_left_inverse
+#print axioms exact_factorization
+#print axioms diagonal_full_rank
+#print axioms astra_exact_rank_ten
+
+end Concrete
+
 end AstraMath.MathlibRank
