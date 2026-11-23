@@ -21,7 +21,7 @@ namespace AstraMath.UniformSpectrumCount
 open AstraMath.UniformProjectorRank
 open Polynomial
 
-def marker (x : Fin 4) : ℕ[X] :=
+noncomputable def marker (x : Fin 4) : ℕ[X] :=
   if x.val = 3 then X else 1
 
 private theorem marker_sum :
@@ -93,7 +93,7 @@ theorem reconstructed_rank_closed (q : Nat) :
         (fun c : Label q => negativeCount c = 3) := by
     apply Set.disjoint_left.mpr
     intro c h2 h3
-    omega
+    exact (show (2 : Nat) ≠ 3 by decide) (h2.symm.trans h3)
   rw [Fintype.card_subtype_or_disjoint
     (fun c : Label q => negativeCount c = 2)
     (fun c : Label q => negativeCount c = 3) hdisjoint]
