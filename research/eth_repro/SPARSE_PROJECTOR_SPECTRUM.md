@@ -3,6 +3,13 @@
 **Objet :** prolonger la matrice exacte q=3 de la PR #15 sans réutiliser
 l'extension q>=4 de la PR #16, qui devient presque de rang plein.
 
+> **Audit confirmé du 23/11/2026 :** l'identité générale E_q = F_q
+> et la formule de rang de E_q sont **PASS dans Mathlib**, sur tout
+> q naturel, et non plus de simples extrapolations de q=3.
+> Preuve : https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/45135520573
+> Limitation persistante : aucun gain de calcul mesuré, aucune
+> nouveauté scientifique ou application quantique validée.
+
 ## Construction mathématique (déduite, pas revendiquée nouvelle)
 
 Sur Q^(4^q), chaque swap S_i permute les bits a_i et d_i.
@@ -32,7 +39,7 @@ Sur une base propre commune, E_q vaut :
 Pour q=3, cette construction satisfait EXACTEMENT E_3 = I-M_3 du modèle
 ASTRA historique, pas seulement une égalité des rangs. Le fichier Lean
 ProjectorSpectrum.lean vérifie la version entière T_3 = 8(I-M_3)
-sur les 4096 entrées (si le CI est PASS).
+sur les 4096 entrées ; sa CI est PASS.
 
 ## Rang (dérivation analytique par diagonalisation tensorielle)
 
@@ -89,9 +96,16 @@ obtenir PASS avant exécution réelle.
 
 ## Frontières scientifiques et risques
 
-- **Non démontré par Lean uniformément :** le théorème Mathlib
-  Matrix.rank(E_q)=r(q) pour tout q. Il faut formaliser la décomposition
-  tensorielle et le comptage binomial général.
+- **PASS — théorème Mathlib général :** pour tout q naturel, la matrice
+  E_q est construite directement des noyaux des swaps locaux
+  (I±S_i)/2 en coordonnées de base. UniformSwapEquality.lean établit
+  symboliquement E_q = F_q, où F_q = B_q·W_q·D_q est la reconstruction
+  spectrale, sans énumérer une taille maximale. UniformSpectrumCount.lean
+  prouve donc Matrix.rank(E_q) =
+  C(q,2)3^(q-2) + C(q,3)3^(q-3).
+  [CI Lean 4.23.0 + Mathlib #45135520573](https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/45135520573),
+  completed/success, #print axioms uniquement propext, Classical.choice,
+  Quot.sound, aucun sorryAx. Exactitude formelle PASS ; nouveauté non démontrée.
 - **Nouvelle implémentation structurée :** \`apply_scaled_dp\` utilise les
   quatre composantes de projection k=0,1,2,3, mises à jour à chaque swap :
 
@@ -102,11 +116,14 @@ obtenir PASS avant exécution réelle.
   développement des 2^q masques et pas de dénominateurs flottants.
   L'implémentation naïve O(8^q) reste une voie indépendante de
   falsification, non le moteur à privilégier.
-- **Non démontré :** une accélération réelle par rapport au moteur
-  original A_q (lui aussi O(q*4^q) en représentation creuse) ou à une
-  implémentation optimisée bas niveau. Il faut un benchmark équitable
-  avec temps, mémoire, précision et charge identiques. Rang faible
-  relatif et complexité linéaire en q n'impliquent pas une avance pratique.
+- **PASS — comparaison réelle, résultat NEGATIF :** le benchmark
+  GitHub #45091535946 a confronté le moteur A_q optimisé par bitmasks
+  au DP projecteur (neuf répétitions). À q=3, même opérateur après
+  renormalisation exacte par 8, A_3 optimisé est 5,70 fois PLUS RAPIDE
+  (15 763 ns contre 89 823 ns) et utilise moins d'allocations tracées
+  (1 112 B contre 5 088 B). Les timings pour q≥4 portent sur des
+  opérateurs différents : ce n'est PAS une comparaison à tâche égale.
+  Le faible rang relatif n'est pas une preuve d'avantage pratique.
 - Cette construction est une manipulation classique de projecteurs
   d'involutions commutatives ; ne pas annoncer une invention ou un brevet.
 - Aucune mesure de matériel quantique, aucun avantage algorithmique
