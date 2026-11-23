@@ -32,7 +32,7 @@ theorem local_dual (c d : Fin 4) :
     (∑ x : Fin 4, localD c x * localB d x) =
       if c = d then (1 : ℚ) else 0 := by
   fin_cases c <;> fin_cases d <;>
-    norm_num [localD, localB, basis1, dual2, Fin.sum_univ_four]
+    norm_num [localD, localB, basis1, dual2, Fin.sum_univ_four] <;> decide
 
 /-- Tensor products of the local 4x4 rational basis and its inverse. -/
 def B (q : Nat) : Matrix (Label q) (Label q) ℚ :=
@@ -65,7 +65,7 @@ theorem tensor_left_inverse (q : Nat) : D q * B q = 1 := by
   simp_rw [local_dual]
   by_cases h : c = d
   · subst d
-    simp [Matrix.one_apply]
+    simp
   · have hex : ∃ i : Fin q, c i ≠ d i := by
       by_contra hn
       apply h
