@@ -10,6 +10,8 @@ on:
       - "research/eth_repro/test_parametric_spectrum.py"
       - "research/eth_repro/projected_spectrum.py"
       - "research/eth_repro/test_projected_spectrum.py"
+      - "research/eth_repro/benchmark_optimized_swaps.py"
+      - "research/eth_repro/test_optimized_swap_benchmark.py"
       - "research/eth_repro/ProjectorSpectrum.lean"
       - "research/eth_repro/math_research_engine.py"
       - ".github/workflows/astra-spectral.yml"
@@ -113,4 +115,33 @@ jobs:
           print("PROJECTED_RANKS_Q1_Q4: 0,1,10,66")
           print("PROJECTED_Q3_4096_ENTRIES_EQUAL: PASS")
           print("PROJECTED_RECEIPT_SHA256:",r["receipt_sha256"])
+          PY
+
+      - name: Optimized original versus projected DP - exact guards and fair microbenchmark
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s research/eth_repro -p 'test_optimized_swap_benchmark.py' -v
+          python3 research/eth_repro/benchmark_optimized_swaps.py --repeats 9 \
+            --q 3 4 5 6 --output /tmp/astra_optimized_benchmark.json \
+            > /tmp/astra_optimized_benchmark_stdout.txt
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/astra_optimized_benchmark.json').read_text())
+          assert r['status']=='PASS'
+          assert all(x['status']=='PASS' for x in r['existing_reference_crosschecks'].values())
+          assert r['benchmark']['3']['same_mathematical_operator'] is True
+          assert r['benchmark']['3']['projector_output_scale_vs_original']==8
+          assert all(r['benchmark'][str(q)]['same_mathematical_operator'] is False for q in (4,5,6))
+          assert r['real_world_speedup']=='UNVERIFIED'
+          for q in (3,4,5,6):
+              x=r['benchmark'][str(q)]
+              print('COMPARISON_Q',q,'old_median_ns',x['old_Aq']['median_ns'],
+                    'projected_dp_median_ns',x['projector_Eq']['median_ns'],
+                    'old_over_projected',x['original_vs_projector_median_ratio'],
+                    'same_task',x['same_mathematical_operator'],
+                    'memory_old_B',x['peak_tracemalloc_bytes']['original_optimized_Aq'],
+                    'memory_dp_B',x['peak_tracemalloc_bytes']['projector_four_state_scaled_Eq'])
+          print('COMPARISON_RECEIPT_SHA256:',r['receipt_sha256'])
           PY
