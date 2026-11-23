@@ -1,0 +1,69 @@
+{
+  "recorded_at": "2026-11-23",
+  "environment": "Python 3 standard library, local session",
+  "research_track": "P vs NP : strict 3-CNF independent decision checker and signed-incidence no-go",
+  "local_tests": {
+    "passed": 20,
+    "failed": 0,
+    "command": "python -m unittest discover -p 'test*.py' -v"
+  },
+  "randomized_oracle": {
+    "seed": 20261123,
+    "instances": 200,
+    "variables_min": 3,
+    "variables_max": 7,
+    "checker_matches_oracle": true
+  },
+  "pr17_baseline": {
+    "sat": "SAT",
+    "sat_search_nodes": 5,
+    "sat_certificate_sha256": "5602aaf29efd986eeed0531b8bb4ab987f200e4f50b868c244d8b0b30af21015",
+    "unsat": "UNSAT",
+    "unsat_search_nodes": 15,
+    "unsat_certificate_sha256": "6245ce6da96e6aa03cc398c043bd1c84e0df75afae619cf765def13024eada7d"
+  },
+  "constructive_no_go": {
+    "n": 5,
+    "m": 13,
+    "strict_three_literal_distinct_variables": true,
+    "no_duplicate_clauses": true,
+    "signed_positive_negative_occurrences": [
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "opposite_sat_statuses_verified": true,
+    "scope": "only classifiers based solely on n,m,signed per-variable incidence counts",
+    "structural_sat_information_not_eliminated": true
+  },
+  "source_git_blob_sha": {
+    "sat_certificate.py": "36ef86802c6c595571dded311fb9d7c91cb5db18",
+    "test_sat_certificate.py": "685385974f1403cea306141b414476c165bd4347",
+    "sat_feature_no_go.py": "386d387f51a2ca4ff34e4b1352dee5bfe1f91300",
+    "test_sat_feature_no_go.py": "cedf01d958c6f47ab4ace5894015de03cd57c770"
+  },
+  "statuses": {
+    "local_test": "PASS",
+    "github_files": "PASS",
+    "github_ci": "UNVERIFIED",
+    "general_p_vs_np": "UNVERIFIED",
+    "prize_claim": "FAIL"
+  }
+}
