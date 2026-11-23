@@ -1,0 +1,298 @@
+{
+  "cases": [
+    {
+      "clauses": 5,
+      "closed_form_value": 12,
+      "induced_width": 1,
+      "instance": "path",
+      "max_factor_rows": 4,
+      "measurements": {
+        "DPLL_moments": {
+          "median_ns": 1097017,
+          "peak_python_bytes": 69848,
+          "value": 12
+        },
+        "bucket_elimination": {
+          "median_ns": 44296,
+          "peak_python_bytes": 2912,
+          "value": 12
+        },
+        "orbit_enumeration": {
+          "median_ns": 74321,
+          "peak_python_bytes": 2016,
+          "value": 12
+        },
+        "original_full_projector": {
+          "median_ns": 19784087,
+          "peak_python_bytes": 437960,
+          "value": 12
+        }
+      },
+      "variables": 6
+    },
+    {
+      "clauses": 9,
+      "closed_form_value": 3904,
+      "induced_width": 1,
+      "instance": "path",
+      "max_factor_rows": 4,
+      "measurements": {
+        "DPLL_moments": {
+          "median_ns": 15119688,
+          "peak_python_bytes": 133464,
+          "value": 3904
+        },
+        "bucket_elimination": {
+          "median_ns": 72898,
+          "peak_python_bytes": 3768,
+          "value": 3904
+        },
+        "orbit_enumeration": {
+          "median_ns": 1567408,
+          "peak_python_bytes": 2048,
+          "value": 3904
+        }
+      },
+      "variables": 10
+    },
+    {
+      "clauses": 13,
+      "closed_form_value": 100068,
+      "induced_width": 1,
+      "instance": "path",
+      "max_factor_rows": 4,
+      "measurements": {
+        "bucket_elimination": {
+          "median_ns": 107380,
+          "peak_python_bytes": 4848,
+          "value": 100068
+        },
+        "orbit_enumeration": {
+          "median_ns": 33190228,
+          "peak_python_bytes": 2048,
+          "value": 100068
+        }
+      },
+      "variables": 14
+    },
+    {
+      "clauses": 31,
+      "closed_form_value": 9355399568,
+      "induced_width": 1,
+      "instance": "path",
+      "max_factor_rows": 4,
+      "measurements": {
+        "bucket_elimination": {
+          "median_ns": 253037,
+          "peak_python_bytes": 9408,
+          "value": 9355399568
+        }
+      },
+      "variables": 32
+    },
+    {
+      "clauses": 63,
+      "closed_form_value": 399906451190036272,
+      "induced_width": 1,
+      "instance": "path",
+      "max_factor_rows": 4,
+      "measurements": {
+        "bucket_elimination": {
+          "median_ns": 482850,
+          "peak_python_bytes": 20496,
+          "value": 399906451190036272
+        }
+      },
+      "variables": 64
+    },
+    {
+      "clauses": 15,
+      "closed_form_value": 260,
+      "induced_width": 5,
+      "instance": "clique",
+      "max_factor_rows": 64,
+      "measurements": {
+        "DPLL_moments": {
+          "median_ns": 2254824,
+          "peak_python_bytes": 157896,
+          "value": 260
+        },
+        "bucket_elimination": {
+          "median_ns": 254450,
+          "peak_python_bytes": 5024,
+          "value": 260
+        },
+        "orbit_enumeration": {
+          "median_ns": 117275,
+          "peak_python_bytes": 2016,
+          "value": 260
+        },
+        "original_full_projector": {
+          "median_ns": 23907569,
+          "peak_python_bytes": 390184,
+          "value": 260
+        }
+      },
+      "variables": 6
+    },
+    {
+      "clauses": 28,
+      "closed_form_value": 1232,
+      "induced_width": 7,
+      "instance": "clique",
+      "max_factor_rows": 256,
+      "measurements": {
+        "DPLL_moments": {
+          "median_ns": 11299438,
+          "peak_python_bytes": 109400,
+          "value": 1232
+        },
+        "bucket_elimination": {
+          "median_ns": 979892,
+          "peak_python_bytes": 8392,
+          "value": 1232
+        },
+        "orbit_enumeration": {
+          "median_ns": 718412,
+          "peak_python_bytes": 2016,
+          "value": 1232
+        }
+      },
+      "variables": 8
+    },
+    {
+      "clauses": 45,
+      "closed_form_value": 3660,
+      "induced_width": 9,
+      "instance": "clique",
+      "max_factor_rows": 1024,
+      "measurements": {
+        "DPLL_moments": {
+          "median_ns": 40431836,
+          "peak_python_bytes": 266198,
+          "value": 3660
+        },
+        "bucket_elimination": {
+          "median_ns": 4927511,
+          "peak_python_bytes": 16372,
+          "value": 3660
+        },
+        "orbit_enumeration": {
+          "median_ns": 2992114,
+          "peak_python_bytes": 2048,
+          "value": 3660
+        }
+      },
+      "variables": 10
+    },
+    {
+      "clauses": 66,
+      "closed_form_value": 8536,
+      "induced_width": 11,
+      "instance": "clique",
+      "max_factor_rows": 4096,
+      "measurements": {
+        "bucket_elimination": {
+          "median_ns": 23822302,
+          "peak_python_bytes": 134380,
+          "value": 8536
+        },
+        "orbit_enumeration": {
+          "median_ns": 15960402,
+          "peak_python_bytes": 2048,
+          "value": 8536
+        }
+      },
+      "variables": 12
+    },
+    {
+      "bucket_elimination_width_guard": "induced width 13 exceeds limit 12",
+      "clauses": 80,
+      "gap_against_false": {
+        "clauses": 645,
+        "coordinate": 536,
+        "independent_model_count": 1,
+        "variables": 268
+      },
+      "independent_model_count": 1,
+      "induced_width": 18,
+      "instance": "aim-50-1_6-yes1-1.cnf",
+      "measurements": {
+        "CaDiCaL_0_or_1_model": {
+          "median_ns": 153970,
+          "peak_python_bytes": 6792,
+          "value": -420
+        },
+        "CaDiCaL_moments": {
+          "median_ns": 3961671,
+          "peak_python_bytes": 7840,
+          "value": -420
+        }
+      },
+      "sha256": "d96f1edb1db3d0e55a3ff0f7707517e41a79374acbb857df051e5441ab27657d",
+      "variables": 50
+    },
+    {
+      "bucket_elimination_width_guard": "induced width 13 exceeds limit 12",
+      "clauses": 80,
+      "gap_against_false": {
+        "clauses": 616,
+        "coordinate": 0,
+        "independent_model_count": 0,
+        "variables": 258
+      },
+      "independent_model_count": 0,
+      "induced_width": 17,
+      "instance": "aim-50-1_6-no-1.cnf",
+      "measurements": {
+        "CaDiCaL_0_or_1_model": {
+          "median_ns": 76544,
+          "peak_python_bytes": 715,
+          "value": 0
+        },
+        "CaDiCaL_moments": {
+          "median_ns": 72789,
+          "peak_python_bytes": 995,
+          "value": 0
+        }
+      },
+      "sha256": "17d42ca0ef48f3a0523a4a9f0a9f683da9acdc9a61f175dc9e143398e6532a86",
+      "variables": 50
+    },
+    {
+      "clauses": 160,
+      "gap_against_false": {
+        "clauses": 1155,
+        "coordinate": 0,
+        "independent_model_count": 0,
+        "variables": 448
+      },
+      "independent_model_count": 0,
+      "induced_width": 3,
+      "instance": "dubois20.cnf",
+      "measurements": {
+        "CaDiCaL_0_or_1_model": {
+          "median_ns": 122233,
+          "peak_python_bytes": 715,
+          "value": 0
+        },
+        "CaDiCaL_moments": {
+          "median_ns": 129043,
+          "peak_python_bytes": 995,
+          "value": 0
+        },
+        "bucket_elimination": {
+          "median_ns": 2031922,
+          "peak_python_bytes": 47504,
+          "value": 0
+        }
+      },
+      "sha256": "82059aba0e5773644b386eb6bcbe53680655390cb041873a3cb3e93f7bd896a7",
+      "variables": 60
+    }
+  ],
+  "measurement": "Median of three untraced runs and a separate Python allocation peak",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "status": "PASS"
+}

@@ -1,0 +1,166 @@
+Lean (version 4.23.0, x86_64-unknown-linux-gnu, commit 50aaf682e9b74ab92880292a25c68baa1cc81c87, Release)
+'AstraMath.SpectralRankTen.local_duality' does not depend on any axioms
+'AstraMath.SpectralRankTen.exactly_ten_nonzero_modes' does not depend on any axioms
+'AstraMath.SpectralRankTen.factorization_through_ten' does not depend on any axioms
+'AstraMath.SpectralRankTen.ten_modes_independent' does not depend on any axioms
+'AstraMath.SpectralRankTen.ten_exact_eigenvectors' does not depend on any axioms
+'AstraMath.SpectralRankTen.exact_rank_ten_certificate' does not depend on any axioms
+'AstraMath.UniformProjectorRank.local_dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformProjectorRank.tensor_left_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformProjectorRank.rank_three_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformProjectorRank.reconstructed_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformProjectorRank.lambda_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+research/eth_repro/mathlib_rank/UniformSpectrumCount.lean:71:10: warning: This simp argument is unused:
+  Polynomial.coeff_sum
+
+Hint: Omit it from the simp argument list.
+  simp [̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵c̵o̵e̵f̵f̵_̵s̵u̵m̵,̵ ̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵c̵o̵e̵f̵f̵_̵X̵_̵p̵o̵w̵,̵[̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲c̲o̲e̲f̲f̲_̲X̲_̲p̲o̲w̲,̲ Fintype.card_subtype, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'AstraMath.UniformSpectrumCount.generating_function' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformSpectrumCount.count_exact_k' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformSpectrumCount.reconstructed_rank_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformSwapEquality.local_numerator_spectral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformSwapEquality.local_projector_spectral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformSwapEquality.tensor_projector_spectral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformSwapEquality.term_product_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformSwapEquality.label_sign_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.UniformSwapEquality.independent_swaps_equal_reconstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'AstraMath.UniformSwapEquality.independent_swap_projector_rank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'AstraMath.SwapCoordinate.moments' depends on axioms: [propext, Quot.sound]
+'AstraMath.SwapCoordinate.padded_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.SwapCoordinate.weighted_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.SwapCoordinate.or_gate_unique' does not depend on any axioms
+'AstraMath.SwapCoordinate.complementary_copy' does not depend on any axioms
+'AstraMath.SwapCoordinate.padding_pins_zero' does not depend on any axioms
+'AstraMath.SwapCoordinate.MatrixBridge.scaled_matrix_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AstraMath.SwapCoordinate.MatrixBridge.scaled_matrix_action' depends on axioms: [propext, Classical.choice, Quot.sound]
+test_all_finite_witnesses_pass (test_clay_sat_bridge_gate.ClaySATBridgeGateTests.test_all_finite_witnesses_pass) ... ok
+test_exponential_table_cost_is_not_hidden (test_clay_sat_bridge_gate.ClaySATBridgeGateTests.test_exponential_table_cost_is_not_hidden) ... ok
+test_invalid_q_or_non3cnf_is_rejected (test_clay_sat_bridge_gate.ClaySATBridgeGateTests.test_invalid_q_or_non3cnf_is_rejected) ... ok
+test_sat_unsat_collision_after_projection (test_clay_sat_bridge_gate.ClaySATBridgeGateTests.test_sat_unsat_collision_after_projection) ... ok
+test_strict_three_distinct_literals_cnf_collision (test_clay_sat_bridge_gate.ClaySATBridgeGateTests.test_strict_three_distinct_literals_cnf_collision) ... ok
+test_tautology_unsat_collision_even_more_basic (test_clay_sat_bridge_gate.ClaySATBridgeGateTests.test_tautology_unsat_collision_even_more_basic) ... ok
+test_true_positive_control_uses_two_antisymmetric_axes (test_clay_sat_bridge_gate.ClaySATBridgeGateTests.test_true_positive_control_uses_two_antisymmetric_axes) ... ok
+test_assignment_by_assignment_unique_extension (test_clay_swap_coordinate.SwapCoordinateTests.test_assignment_by_assignment_unique_extension) ... ok
+test_balanced_weights_and_mutation (test_clay_swap_coordinate.SwapCoordinateTests.test_balanced_weights_and_mutation) ... ok
+test_cancellation_and_adversarial_width (test_clay_swap_coordinate.SwapCoordinateTests.test_cancellation_and_adversarial_width) ... ok
+test_coefficient_against_existing_swap_expansion (test_clay_swap_coordinate.SwapCoordinateTests.test_coefficient_against_existing_swap_expansion) ... ok
+test_elimination_random_formulas_and_orders (test_clay_swap_coordinate.SwapCoordinateTests.test_elimination_random_formulas_and_orders) ... ok
+test_exact_gap_reduction_and_strict_clauses (test_clay_swap_coordinate.SwapCoordinateTests.test_exact_gap_reduction_and_strict_clauses) ... ok
+test_matrix_coordinate_against_existing_dp (test_clay_swap_coordinate.SwapCoordinateTests.test_matrix_coordinate_against_existing_dp) ... ok
+test_random_signed_gap_against_independent_model_counter (test_clay_swap_coordinate.SwapCoordinateTests.test_random_signed_gap_against_independent_model_counter) ... ok
+test_empty_clause (test_eth_lab.FiniteETHIdentityTests.test_empty_clause) ... ok
+test_empty_formula (test_eth_lab.FiniteETHIdentityTests.test_empty_formula) ... ok
+test_errors (test_eth_lab.FiniteETHIdentityTests.test_errors) ... ok
+test_experiment_negative_controls (test_eth_lab.FiniteETHIdentityTests.test_experiment_negative_controls) ... ok
+test_interpolation_and_deformation (test_eth_lab.FiniteETHIdentityTests.test_interpolation_and_deformation) ... ok
+test_known_counts (test_eth_lab.FiniteETHIdentityTests.test_known_counts) ... ok
+test_measurement_special_case (test_eth_lab.FiniteETHIdentityTests.test_measurement_special_case) ... ok
+test_reproducible_corpus (test_eth_lab.FiniteETHIdentityTests.test_reproducible_corpus) ... ok
+test_kernel_of_C_fixed_by_M (test_lowrank_exact.ExactSwapTests.test_kernel_of_C_fixed_by_M) ... ok
+test_localization_at_every_point (test_lowrank_exact.ExactSwapTests.test_localization_at_every_point) ... ok
+test_negative_control_measurement_zeroed (test_lowrank_exact.ExactSwapTests.test_negative_control_measurement_zeroed) ... ok
+test_negative_control_swap_term (test_lowrank_exact.ExactSwapTests.test_negative_control_swap_term) ... ok
+test_non_asymptotic_documentation (test_lowrank_exact.ExactSwapTests.test_non_asymptotic_documentation) ... ok
+test_nonzero_matrix_support (test_lowrank_exact.ExactSwapTests.test_nonzero_matrix_support) ... ok
+test_paper_literal_q2_row (test_lowrank_exact.ExactSwapTests.test_paper_literal_q2_row) ... ok
+test_polynomial_degree_and_identity (test_lowrank_exact.ExactSwapTests.test_polynomial_degree_and_identity) ... ok
+test_spectrum_and_rank (test_lowrank_exact.ExactSwapTests.test_spectrum_and_rank) ... ok
+test_swap_commutes_and_involutive (test_lowrank_exact.ExactSwapTests.test_swap_commutes_and_involutive) ... ok
+test_64_rows_each_64 (test_math_research_engine.ResearchGateTests.test_64_rows_each_64) ... ok
+test_commuting_swaps (test_math_research_engine.ResearchGateTests.test_commuting_swaps) ... ok
+test_empty_matrix (test_math_research_engine.ResearchGateTests.test_empty_matrix) ... ok
+test_exact_rank (test_math_research_engine.ResearchGateTests.test_exact_rank) ... ok
+test_m0_not_low_rank (test_math_research_engine.ResearchGateTests.test_m0_not_low_rank) ... ok
+test_mutation_detected (test_math_research_engine.ResearchGateTests.test_mutation_detected) ... ok
+test_no_existing_source_is_unverified (test_math_research_engine.ResearchGateTests.test_no_existing_source_is_unverified) ... ok
+test_other_false_conjecture_detected (test_math_research_engine.ResearchGateTests.test_other_false_conjecture_detected) ... ok
+test_receipt_determinism_and_limits (test_math_research_engine.ResearchGateTests.test_receipt_determinism_and_limits) ... ok
+test_swap_involution (test_math_research_engine.ResearchGateTests.test_swap_involution) ... ok
+test_two_prime_crosschecks (test_math_research_engine.ResearchGateTests.test_two_prime_crosschecks) ... ok
+test_bad_dimension_rejected (test_optimized_swap_benchmark.OptimizedSwapBenchTests.test_bad_dimension_rejected) ... ok
+test_bitmask_baseline_matches_old_reference_q1_q6 (test_optimized_swap_benchmark.OptimizedSwapBenchTests.test_bitmask_baseline_matches_old_reference_q1_q6) ... ok
+test_q3_exact_same_operator_up_to_8 (test_optimized_swap_benchmark.OptimizedSwapBenchTests.test_q3_exact_same_operator_up_to_8) ... ok
+test_q4_operators_must_not_be_called_equivalent (test_optimized_swap_benchmark.OptimizedSwapBenchTests.test_q4_operators_must_not_be_called_equivalent) ... ok
+test_reproducible_benchmark_metadata_guards (test_optimized_swap_benchmark.OptimizedSwapBenchTests.test_reproducible_benchmark_metadata_guards) ... ok
+test_corrupt_hermite_data_is_rejected (test_paper_exact.ManuscriptFiniteTests.test_corrupt_hermite_data_is_rejected) ... ok
+test_duplicate_literals_and_clauses_match_Lean_finsets (test_paper_exact.ManuscriptFiniteTests.test_duplicate_literals_and_clauses_match_Lean_finsets) ... ok
+test_encoding_deterministic (test_paper_exact.ManuscriptFiniteTests.test_encoding_deterministic) ... ok
+test_exact_boolean_satisfaction_formula (test_paper_exact.ManuscriptFiniteTests.test_exact_boolean_satisfaction_formula) ... ok
+test_exact_hermite_reconstruction (test_paper_exact.ManuscriptFiniteTests.test_exact_hermite_reconstruction) ... ok
+test_invalid_design_fails_closed (test_paper_exact.ManuscriptFiniteTests.test_invalid_design_fails_closed) ... ok
+test_measurement_factorization_at_two_points (test_paper_exact.ManuscriptFiniteTests.test_measurement_factorization_at_two_points) ... ok
+test_negative_wrong_degree_rejected (test_paper_exact.ManuscriptFiniteTests.test_negative_wrong_degree_rejected) ... ok
+test_occurrence_specific_replacement_and_degree (test_paper_exact.ManuscriptFiniteTests.test_occurrence_specific_replacement_and_degree) ... ok
+test_small_random_cnf (test_paper_exact.ManuscriptFiniteTests.test_small_random_cnf) ... ok
+test_adversarial_matrix_mutation_is_detected (test_parametric_spectrum.ParametricSpectrumTests.test_adversarial_matrix_mutation_is_detected) ... ok
+test_bad_rank_rejected_by_independent_modular_rank (test_parametric_spectrum.ParametricSpectrumTests.test_bad_rank_rejected_by_independent_modular_rank) ... ok
+test_eigenvalue_zeros_only_k_0_1 (test_parametric_spectrum.ParametricSpectrumTests.test_eigenvalue_zeros_only_k_0_1) ... ok
+test_exhaustive_tensor_eigenvectors_q1_q4 (test_parametric_spectrum.ParametricSpectrumTests.test_exhaustive_tensor_eigenvectors_q1_q4) ... ok
+test_known_q3_rank_preserved (test_parametric_spectrum.ParametricSpectrumTests.test_known_q3_rank_preserved) ... ok
+test_local_basis_is_explicit (test_parametric_spectrum.ParametricSpectrumTests.test_local_basis_is_explicit) ... ok
+test_modular_rank_q1_q4_independent (test_parametric_spectrum.ParametricSpectrumTests.test_modular_rank_q1_q4_independent) ... ok
+test_q5_is_only_a_sample_not_exhaustive (test_parametric_spectrum.ParametricSpectrumTests.test_q5_is_only_a_sample_not_exhaustive) ... ok
+test_receipt_and_falsifications (test_parametric_spectrum.ParametricSpectrumTests.test_receipt_and_falsifications) ... ok
+test_uniform_arithmetic_counts_up_to_twelve (test_parametric_spectrum.ParametricSpectrumTests.test_uniform_arithmetic_counts_up_to_twelve) ... ok
+test_adversarial_coefficient_mutation_rejected (test_projected_spectrum.ProjectedSpectrumTests.test_adversarial_coefficient_mutation_rejected) ... ok
+test_coefficients_are_integral_and_reusable (test_projected_spectrum.ProjectedSpectrumTests.test_coefficients_are_integral_and_reusable) ... ok
+test_dp_exact_matrix_action_q3 (test_projected_spectrum.ProjectedSpectrumTests.test_dp_exact_matrix_action_q3) ... ok
+test_dp_matches_polynomial_q1_q5_for_three_inputs (test_projected_spectrum.ProjectedSpectrumTests.test_dp_matches_polynomial_q1_q5_for_three_inputs) ... ok
+test_dp_rejects_wrong_dimension (test_projected_spectrum.ProjectedSpectrumTests.test_dp_rejects_wrong_dimension) ... ok
+test_exhaustive_q1_to_q4_eigenvector_equations (test_projected_spectrum.ProjectedSpectrumTests.test_exhaustive_q1_to_q4_eigenvector_equations) ... ok
+test_false_eigenvalue_rejected (test_projected_spectrum.ProjectedSpectrumTests.test_false_eigenvalue_rejected) ... ok
+test_independent_modular_rank_q1_to_q4 (test_projected_spectrum.ProjectedSpectrumTests.test_independent_modular_rank_q1_to_q4) ... ok
+test_original_q4_falsely_identified_rejected (test_projected_spectrum.ProjectedSpectrumTests.test_original_q4_falsely_identified_rejected) ... ok
+test_projector_eigenvalues_all_negative_counts (test_projected_spectrum.ProjectedSpectrumTests.test_projector_eigenvalues_all_negative_counts) ... ok
+test_q2_and_q3_preserved_but_q4_better (test_projected_spectrum.ProjectedSpectrumTests.test_q2_and_q3_preserved_but_q4_better) ... ok
+test_q3_exact_original_matrix_4096_entries (test_projected_spectrum.ProjectedSpectrumTests.test_q3_exact_original_matrix_4096_entries) ... ok
+test_q5_selected_eigenvector_sample_only (test_projected_spectrum.ProjectedSpectrumTests.test_q5_selected_eigenvector_sample_only) ... ok
+test_report_marks_uniform_formal_proof_verified (test_projected_spectrum.ProjectedSpectrumTests.test_report_marks_uniform_formal_proof_verified) ... ok
+test_wrong_rank_prediction_rejected (test_projected_spectrum.ProjectedSpectrumTests.test_wrong_rank_prediction_rejected) ... ok
+test_bad_sha_rejected (test_proof_gate.ContractTests.test_bad_sha_rejected) ... ok
+test_ci_failure_rejected (test_proof_gate.ContractTests.test_ci_failure_rejected) ... ok
+test_ci_sha_mismatch_rejected (test_proof_gate.ContractTests.test_ci_sha_mismatch_rejected) ... ok
+test_html_escaping (test_proof_gate.ContractTests.test_html_escaping) ... ok
+test_immutable_ci_source_mismatch_rejected (test_proof_gate.ContractTests.test_immutable_ci_source_mismatch_rejected) ... ok
+test_invalid_schema (test_proof_gate.ContractTests.test_invalid_schema) ... ok
+test_lean_comment_strip (test_proof_gate.ContractTests.test_lean_comment_strip) ... ok
+test_mismatch_to_formal_statement_rejected (test_proof_gate.ContractTests.test_mismatch_to_formal_statement_rejected) ... ok
+test_network_unavailable_unverified (test_proof_gate.ContractTests.test_network_unavailable_unverified) ... ok
+test_no_ci_unverified (test_proof_gate.ContractTests.test_no_ci_unverified) ... ok
+test_no_immutable_path_is_partial (test_proof_gate.ContractTests.test_no_immutable_path_is_partial) ... ok
+test_path_traversal_fails (test_proof_gate.ContractTests.test_path_traversal_fails) ... ok
+test_proof_escape_rejected (test_proof_gate.ContractTests.test_proof_escape_rejected) ... ok
+test_unrelated_green_workflow_rejected (test_proof_gate.ContractTests.test_unrelated_green_workflow_rejected) ... ok
+test_valid_asymptotic_claim_never_passes (test_proof_gate.ContractTests.test_valid_asymptotic_claim_never_passes) ... ok
+test_valid_verified_claim (test_proof_gate.ContractTests.test_valid_verified_claim) ... ok
+test_without_statement_is_partial (test_proof_gate.ContractTests.test_without_statement_is_partial) ... ok
+test_all_64_spectral_columns (test_spectral_certificate.SpectralCertificateTests.test_all_64_spectral_columns) ... ok
+test_mutation_rejected (test_spectral_certificate.SpectralCertificateTests.test_mutation_rejected) ... ok
+test_nontrivial_basis (test_spectral_certificate.SpectralCertificateTests.test_nontrivial_basis) ... ok
+test_nonzero_local_determinant (test_spectral_certificate.SpectralCertificateTests.test_nonzero_local_determinant) ... ok
+test_rank_10_from_invertible_eigenbasis (test_spectral_certificate.SpectralCertificateTests.test_rank_10_from_invertible_eigenbasis) ... ok
+test_wrong_eigenvalues_rejected (test_spectral_certificate.SpectralCertificateTests.test_wrong_eigenvalues_rejected) ... ok
+test_manifest_valid_and_hash_bound (topoquantum.test_gate_bridge.GateBundleTests.test_manifest_valid_and_hash_bound) ... ok
+test_missing_real_gate_is_unverified (topoquantum.test_gate_bridge.GateBundleTests.test_missing_real_gate_is_unverified) ... ok
+test_tampering_detected_by_sha_contract (topoquantum.test_gate_bridge.GateBundleTests.test_tampering_detected_by_sha_contract) ... ok
+test_assessment_passes_and_rejects_negatives (topoquantum.test_majorana.MajoranaFiniteTests.test_assessment_passes_and_rejects_negatives) ... ok
+test_exact_spectrum_minimal_polynomial (topoquantum.test_majorana.MajoranaFiniteTests.test_exact_spectrum_minimal_polynomial) ... ok
+test_exact_sweetspot_nullity_n2_to_n9 (topoquantum.test_majorana.MajoranaFiniteTests.test_exact_sweetspot_nullity_n2_to_n9) ... ok
+test_general_parameters_do_not_spuriously_assert_two_zero (topoquantum.test_majorana.MajoranaFiniteTests.test_general_parameters_do_not_spuriously_assert_two_zero) ... ok
+test_input_validation (topoquantum.test_majorana.MajoranaFiniteTests.test_input_validation) ... ok
+test_matrix_invariants_unmodified (topoquantum.test_majorana.MajoranaFiniteTests.test_matrix_invariants_unmodified) ... ok
+test_negative_no_edges (topoquantum.test_majorana.MajoranaFiniteTests.test_negative_no_edges) ... ok
+test_negative_sweetspot_perturbation (topoquantum.test_majorana.MajoranaFiniteTests.test_negative_sweetspot_perturbation) ... ok
+test_negative_trivial_phase (topoquantum.test_majorana.MajoranaFiniteTests.test_negative_trivial_phase) ... ok
+test_phs_and_hermiticity (topoquantum.test_majorana.MajoranaFiniteTests.test_phs_and_hermiticity) ... ok
+
+----------------------------------------------------------------------
+Ran 120 tests in 4.251s
+
+OK
