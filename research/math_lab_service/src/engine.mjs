@@ -3,7 +3,7 @@
  * Output deliberately separates a finite check from a general proof.
  * No user inputs are executed, no external dependencies, no paid APIs.
  */
-export const VERSION = '0.4.0';
+export const VERSION = '0.4.1';
 const DAY_RE = /^20\d\d-\d\d-\d\d$/;
 export function validDay(s) {
   return typeof s === 'string' && DAY_RE.test(s) && !Number.isNaN(Date.parse(s+'T00:00:00.000Z')) &&
@@ -72,6 +72,6 @@ export function runResearch(day = new Date().toISOString().slice(0,10)){
    report_type:'recomputed on demand (not a persistent execution log)',date:day,seed,
    domains:reports.map(r=>r.domain),reports,execution_ms:Date.now()-start,
    evidence:{all_four_reports:true,prize_solutions:0,claim:'No prize-eligible solution established',
-    scheduled_execution_verified:false,storage:'none; deterministic replay by date'},
+    scheduled_execution_verified:false,storage:'on-demand report is not persisted; scheduled runs may be saved in Neon'},
    status:'PASS_BOUNDED_DISCOVERY'};
 }
