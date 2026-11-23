@@ -80,7 +80,9 @@ Au sein du workflow existant .github/workflows/astra-spectral.yml :
 - q=5, sondage de vecteurs propres seulement, non exhaustif ;
 - refus des déclarations inventées de rang, de valeur propre, et
   d'identité entre l'ancien A_4 et le nouveau E_4 ;
-- reçu JSON SHA-256 reproductible.
+- reçu JSON SHA-256 reproductible ;
+- **récurrence à 4 états** vs polynôme explicite : trois vecteurs de
+  contrôle par q pour q=1..5 ; action sur la matrice exacte q=3.
 
 Les sorties CI font foi : le code écrit **ne** suffit **pas** à
 obtenir PASS avant exécution réelle.
@@ -90,11 +92,21 @@ obtenir PASS avant exécution réelle.
 - **Non démontré par Lean uniformément :** le théorème Mathlib
   Matrix.rank(E_q)=r(q) pour tout q. Il faut formaliser la décomposition
   tensorielle et le comptage binomial général.
-- **Non démontré :** accélération réelle d'un calcul. L'application naïve
-  de T_q avec 2^q termes de permutation coûte O(8^q), contre O(q*4^q)
-  pour la famille A_q originale. Un rang relatif faible ne signifie donc
-  PAS qu'un calcul concret est plus rapide, ni qu'un stockage dense est évité.
-  Une factorisation matricielle structurée et des benchmarks seraient requis.
+- **Nouvelle implémentation structurée :** \`apply_scaled_dp\` utilise les
+  quatre composantes de projection k=0,1,2,3, mises à jour à chaque swap :
+
+      next[k] = (I+S_i) prev[k] + (I-S_i) prev[k-1].
+
+  Les composantes k>3 ne peuvent plus contribuer à E_q. Calcul exact
+  ENTIER de T_q v en O(q*4^q) additions et O(4^q) mémoire ; pas de
+  développement des 2^q masques et pas de dénominateurs flottants.
+  L'implémentation naïve O(8^q) reste une voie indépendante de
+  falsification, non le moteur à privilégier.
+- **Non démontré :** une accélération réelle par rapport au moteur
+  original A_q (lui aussi O(q*4^q) en représentation creuse) ou à une
+  implémentation optimisée bas niveau. Il faut un benchmark équitable
+  avec temps, mémoire, précision et charge identiques. Rang faible
+  relatif et complexité linéaire en q n'impliquent pas une avance pratique.
 - Cette construction est une manipulation classique de projecteurs
   d'involutions commutatives ; ne pas annoncer une invention ou un brevet.
 - Aucune mesure de matériel quantique, aucun avantage algorithmique
