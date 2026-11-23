@@ -8,6 +8,9 @@ on:
       - "research/eth_repro/ParametricSpectrum.lean"
       - "research/eth_repro/parametric_spectrum.py"
       - "research/eth_repro/test_parametric_spectrum.py"
+      - "research/eth_repro/projected_spectrum.py"
+      - "research/eth_repro/test_projected_spectrum.py"
+      - "research/eth_repro/ProjectorSpectrum.lean"
       - "research/eth_repro/math_research_engine.py"
       - ".github/workflows/astra-spectral.yml"
   workflow_dispatch:
@@ -80,4 +83,34 @@ jobs:
           print("PARAMETRIC_RANKS_Q1_Q4: 0,1,10,67")
           print("PARAMETRIC_Q5_PREDICTION:",r["symbolic_formula_arithmetic_q_1_to_12"]["5"]["rank_formula"])
           print("PARAMETRIC_RECEIPT_SHA256:",r["receipt_sha256"])
+          PY
+
+      - name: Projector Lean - arbitrary-length scalar identity and exact q3 matrix
+        shell: bash
+        run: |
+          set -euo pipefail
+          lean -o research/eth_repro/SpectralRankTen.olean research/eth_repro/SpectralRankTen.lean > /tmp/astra_spectral_dependency.log
+          LEAN_PATH="research/eth_repro:${LEAN_PATH:-}" lean research/eth_repro/ProjectorSpectrum.lean | tee /tmp/astra_projector_lean.log
+          if grep -Eq 'sorryAx|unknown axiom' /tmp/astra_projector_lean.log; then
+            echo "FAIL: Lean output contains an unproved axiom"; exit 1
+          fi
+      - name: Projector sparse matrix preservation and adversarial controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s research/eth_repro -p 'test_projected_spectrum.py' -v
+          python3 research/eth_repro/projected_spectrum.py --output /tmp/astra_projector_receipt.json > /tmp/astra_projector_stdout.txt
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path("/tmp/astra_projector_receipt.json").read_text())
+          assert r["finite_status"]=="PASS",r
+          assert r["uniform_Lean_Matrix_rank_proof"]=="UNVERIFIED"
+          assert r["q3_original_exact_matrix_comparison"]["checked_entries"]==4096
+          assert r["q3_original_exact_matrix_comparison"]["mismatches"]==0
+          assert [r["q1_q4_modular_ranks"][str(q)]["filtered_rank"] for q in range(1,5)]==[0,1,10,66]
+          assert all(r["negative_controls"].values())
+          print("PROJECTED_RANKS_Q1_Q4: 0,1,10,66")
+          print("PROJECTED_Q3_4096_ENTRIES_EQUAL: PASS")
+          print("PROJECTED_RECEIPT_SHA256:",r["receipt_sha256"])
           PY
