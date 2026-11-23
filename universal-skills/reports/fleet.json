@@ -1,7 +1,7 @@
 {
   "schema": "universal-skills/fleet-v1",
-  "timestamp": "2026-11-16T19:38:30.772Z",
-  "sourceCatalogDate": "2026-11-15T14:56:00.358Z",
+  "timestamp": "2026-11-23T21:28:03.626Z",
+  "sourceCatalogDate": "2026-11-22T15:36:47.442Z",
   "status": "PASS",
   "statusScope": "PASS means public source-tree inventory fetched; NEVER site health, skills adoption or success",
   "privacy": "Only existing public GitHub repositories. No private data queried or printed.",
@@ -18,7 +18,7 @@
     {
       "repository": "Dr-starck66/AION-ARC",
       "category": "application-building",
-      "checkedAt": "2026-11-16T19:38:28.966Z",
+      "checkedAt": "2026-11-23T21:28:01.457Z",
       "publicUrl": "https://github.com/Dr-starck66/AION-ARC",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -86,7 +86,7 @@
     {
       "repository": "Dr-starck66/aureus-x",
       "category": "domain-archives",
-      "checkedAt": "2026-11-16T19:38:29.042Z",
+      "checkedAt": "2026-11-23T21:28:01.516Z",
       "publicUrl": "https://github.com/Dr-starck66/aureus-x",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -154,7 +154,7 @@
     {
       "repository": "Dr-starck66/betgpt-railway",
       "category": "sport-analysis",
-      "checkedAt": "2026-11-16T19:38:29.146Z",
+      "checkedAt": "2026-11-23T21:28:01.883Z",
       "publicUrl": "https://github.com/Dr-starck66/betgpt-railway",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -183,7 +183,7 @@
         {
           "name": "source-tree",
           "status": "PASS",
-          "evidence": "Git tree SHA 41cec5df017e, 1316 visible files"
+          "evidence": "Git tree SHA 46650bbc85d7, 1316 visible files"
         },
         {
           "name": "project-files",
@@ -222,7 +222,7 @@
     {
       "repository": "Dr-starck66/bio-mimic-x-discovery-factory",
       "category": "scientific-research",
-      "checkedAt": "2026-11-16T19:38:29.086Z",
+      "checkedAt": "2026-11-23T21:28:01.558Z",
       "publicUrl": "https://github.com/Dr-starck66/bio-mimic-x-discovery-factory",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -251,17 +251,17 @@
         {
           "name": "source-tree",
           "status": "PASS",
-          "evidence": "Git tree SHA 7489d41a28c7, 450 visible files"
+          "evidence": "Git tree SHA 5056f38096ec, 476 visible files"
         },
         {
           "name": "project-files",
           "status": "PASS",
-          "evidence": "450 visible Git files"
+          "evidence": "476 visible Git files"
         },
         {
           "name": "test-files",
           "status": "PASS",
-          "evidence": "49 declarations present; execution NOT checked"
+          "evidence": "51 declarations present; execution NOT checked"
         },
         {
           "name": "ci-workflows",
@@ -271,7 +271,7 @@
         {
           "name": "build-manifest",
           "status": "PASS",
-          "evidence": "index.html, public/index.html"
+          "evidence": "index.html, products/rna-evidence-lab/index.html, public/index.html"
         },
         {
           "name": "real-deployment-health",
@@ -290,7 +290,7 @@
     {
       "repository": "Dr-starck66/DeepReasoning-Architecture-",
       "category": "application-building",
-      "checkedAt": "2026-11-16T19:38:29.205Z",
+      "checkedAt": "2026-11-23T21:28:01.754Z",
       "publicUrl": "https://github.com/Dr-starck66/DeepReasoning-Architecture-",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -319,7 +319,7 @@
         {
           "name": "source-tree",
           "status": "PASS",
-          "evidence": "Git tree SHA 4acc4b770321, 49 visible files"
+          "evidence": "Git tree SHA 71521a92b812, 49 visible files"
         },
         {
           "name": "project-files",
@@ -358,7 +358,7 @@
     {
       "repository": "Dr-starck66/dr--house-diagnostic-ai",
       "category": "future",
-      "checkedAt": "2026-11-16T19:38:29.353Z",
+      "checkedAt": "2026-11-23T21:28:01.856Z",
       "publicUrl": "https://github.com/Dr-starck66/dr--house-diagnostic-ai",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -426,7 +426,7 @@
     {
       "repository": "Dr-starck66/ghost-operator-ai-",
       "category": "lead-generation",
-      "checkedAt": "2026-11-16T19:38:29.307Z",
+      "checkedAt": "2026-11-23T21:28:01.898Z",
       "publicUrl": "https://github.com/Dr-starck66/ghost-operator-ai-",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -494,7 +494,7 @@
     {
       "repository": "Dr-starck66/le-courtisan-v1-1",
       "category": "future",
-      "checkedAt": "2026-11-16T19:38:29.416Z",
+      "checkedAt": "2026-11-23T21:28:02.089Z",
       "publicUrl": "https://github.com/Dr-starck66/le-courtisan-v1-1",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -562,7 +562,7 @@
     {
       "repository": "Dr-starck66/le-harem-prive-fix-images-voix",
       "category": "future",
-      "checkedAt": "2026-11-16T19:38:29.533Z",
+      "checkedAt": "2026-11-23T21:28:02.198Z",
       "publicUrl": "https://github.com/Dr-starck66/le-harem-prive-fix-images-voix",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -630,7 +630,7 @@
     {
       "repository": "Dr-starck66/library",
       "category": "application-building",
-      "checkedAt": "2026-11-16T19:38:29.772Z",
+      "checkedAt": "2026-11-23T21:28:02.252Z",
       "publicUrl": "https://github.com/Dr-starck66/library",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -698,7 +698,7 @@
     {
       "repository": "Dr-starck66/mimic-iii-clinical-database-demo-1-4",
       "category": "scientific-research",
-      "checkedAt": "2026-11-16T19:38:29.620Z",
+      "checkedAt": "2026-11-23T21:28:02.195Z",
       "publicUrl": "https://github.com/Dr-starck66/mimic-iii-clinical-database-demo-1-4",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -766,7 +766,7 @@
     {
       "repository": "Dr-starck66/neuralys-download",
       "category": "future",
-      "checkedAt": "2026-11-16T19:38:29.770Z",
+      "checkedAt": "2026-11-23T21:28:02.408Z",
       "publicUrl": "https://github.com/Dr-starck66/neuralys-download",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -834,7 +834,7 @@
     {
       "repository": "Dr-starck66/Nexus-jailbreack",
       "category": "future",
-      "checkedAt": "2026-11-16T19:38:29.813Z",
+      "checkedAt": "2026-11-23T21:28:02.530Z",
       "publicUrl": "https://github.com/Dr-starck66/Nexus-jailbreack",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -902,7 +902,7 @@
     {
       "repository": "Dr-starck66/opportunityforge",
       "category": "lead-generation",
-      "checkedAt": "2026-11-16T19:38:30.003Z",
+      "checkedAt": "2026-11-23T21:28:02.603Z",
       "publicUrl": "https://github.com/Dr-starck66/opportunityforge",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -970,7 +970,7 @@
     {
       "repository": "Dr-starck66/pantomime-dns-fix",
       "category": "seo-editorial",
-      "checkedAt": "2026-11-16T19:38:30.017Z",
+      "checkedAt": "2026-11-23T21:28:02.578Z",
       "publicUrl": "https://github.com/Dr-starck66/pantomime-dns-fix",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -1038,7 +1038,7 @@
     {
       "repository": "Dr-starck66/QuantFlow---Institutional-Python-Trading-System",
       "category": "quant-analysis",
-      "checkedAt": "2026-11-16T19:38:30.010Z",
+      "checkedAt": "2026-11-23T21:28:02.714Z",
       "publicUrl": "https://github.com/Dr-starck66/QuantFlow---Institutional-Python-Trading-System",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -1106,7 +1106,7 @@
     {
       "repository": "Dr-starck66/regen",
       "category": "seo-editorial",
-      "checkedAt": "2026-11-16T19:38:30.113Z",
+      "checkedAt": "2026-11-23T21:28:02.919Z",
       "publicUrl": "https://github.com/Dr-starck66/regen",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -1174,7 +1174,7 @@
     {
       "repository": "Dr-starck66/site-1082d3b2",
       "category": "seo-editorial",
-      "checkedAt": "2026-11-16T19:38:30.328Z",
+      "checkedAt": "2026-11-23T21:28:03.101Z",
       "publicUrl": "https://github.com/Dr-starck66/site-1082d3b2",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -1242,7 +1242,7 @@
     {
       "repository": "Dr-starck66/site-457f566a",
       "category": "seo-editorial",
-      "checkedAt": "2026-11-16T19:38:30.348Z",
+      "checkedAt": "2026-11-23T21:28:02.955Z",
       "publicUrl": "https://github.com/Dr-starck66/site-457f566a",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -1310,7 +1310,7 @@
     {
       "repository": "Dr-starck66/splatforge-platform",
       "category": "application-building",
-      "checkedAt": "2026-11-16T19:38:30.292Z",
+      "checkedAt": "2026-11-23T21:28:03.168Z",
       "publicUrl": "https://github.com/Dr-starck66/splatforge-platform",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -1378,7 +1378,7 @@
     {
       "repository": "Dr-starck66/wayb",
       "category": "future",
-      "checkedAt": "2026-11-16T19:38:30.772Z",
+      "checkedAt": "2026-11-23T21:28:03.626Z",
       "publicUrl": "https://github.com/Dr-starck66/wayb",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -1446,7 +1446,7 @@
     {
       "repository": "Dr-starck66/zip-github",
       "category": "domain-archives",
-      "checkedAt": "2026-11-16T19:38:30.519Z",
+      "checkedAt": "2026-11-23T21:28:03.383Z",
       "publicUrl": "https://github.com/Dr-starck66/zip-github",
       "categorySelection": "HEURISTIC_REVIEW_REQUIRED",
       "skillCandidates": [
@@ -1475,12 +1475,12 @@
         {
           "name": "source-tree",
           "status": "PASS",
-          "evidence": "Git tree SHA 3c230ad1e91e, 846 visible files"
+          "evidence": "Git tree SHA 13eba507da25, 875 visible files"
         },
         {
           "name": "project-files",
           "status": "PASS",
-          "evidence": "846 visible Git files"
+          "evidence": "875 visible Git files"
         },
         {
           "name": "test-files",
