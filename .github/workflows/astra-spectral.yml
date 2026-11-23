@@ -167,7 +167,10 @@ jobs:
                     "SAT_COUNT",c["truth_table_counts"]["SAT_unit"],
                     "UNSAT_COUNT",c["truth_table_counts"]["UNSAT_contradiction"],
                     "PROJECTED_SAT_NONZERO",c["projection_nonzero_entries"]["SAT_unit"],
-                    "TWO_FACTOR_POSITIVE_NONZERO",c["projection_nonzero_entries"]["SAT_two_factors"])
+                    "TWO_FACTOR_POSITIVE_NONZERO",c["projection_nonzero_entries"]["SAT_two_factors"],
+                    "STRICT_SAT_COUNT",c["truth_table_counts"]["STRICT_SAT"],
+                    "STRICT_UNSAT_COUNT",c["truth_table_counts"]["STRICT_UNSAT"],
+                    "STRICT_SAT_PROJECTED_NONZERO",c["projection_nonzero_entries"]["STRICT_SAT"])
           assert r["complexity_check"]["P_vs_NP_resolution"]=="NOT ESTABLISHED"
           print("CLAY_SAT_GATE_RECEIPT_SHA256:",r["receipt_sha256"])
           print("CLAY_PRIZE_ELIGIBILITY: NOT ESTABLISHED")
