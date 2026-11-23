@@ -1,0 +1,79 @@
+{
+  "as_of": "2026-11-23",
+  "currency": "USD",
+  "note": "Montants annoncés, aucun gain acquis. Les revendications de 2026 ne sont pas des attributions Clay.",
+  "problems": [
+    {
+      "id": "p_vs_np",
+      "name": "P versus NP",
+      "organizer": "Clay Mathematics Institute",
+      "prize_usd": 1000000,
+      "status": "open",
+      "url": "https://www.claymath.org/millennium-problems/",
+      "workstream": "reuse_pr17_sat_bridge"
+    },
+    {
+      "id": "riemann",
+      "name": "Riemann hypothesis",
+      "organizer": "Clay Mathematics Institute",
+      "prize_usd": 1000000,
+      "status": "claim_under_review",
+      "url": "https://www.claymath.org/millennium-problems/",
+      "workstream": "independent_audit_of_public_claims"
+    },
+    {
+      "id": "navier_stokes",
+      "name": "Navier-Stokes existence and smoothness",
+      "organizer": "Clay Mathematics Institute",
+      "prize_usd": 1000000,
+      "status": "claim_under_review",
+      "url": "https://www.claymath.org/news/navier-stokes-announcement/",
+      "workstream": "independent_audit_of_public_claims"
+    },
+    {
+      "id": "birch_swinnerton_dyer",
+      "name": "Birch and Swinnerton-Dyer conjecture",
+      "organizer": "Clay Mathematics Institute",
+      "prize_usd": 1000000,
+      "status": "open",
+      "url": "https://www.claymath.org/millennium-problems/",
+      "workstream": "literature_and_formalization"
+    },
+    {
+      "id": "hodge",
+      "name": "Hodge conjecture",
+      "organizer": "Clay Mathematics Institute",
+      "prize_usd": 1000000,
+      "status": "open",
+      "url": "https://www.claymath.org/millennium-problems/",
+      "workstream": "literature_and_formalization"
+    },
+    {
+      "id": "yang_mills",
+      "name": "Yang-Mills existence and mass gap",
+      "organizer": "Clay Mathematics Institute",
+      "prize_usd": 1000000,
+      "status": "open",
+      "url": "https://www.claymath.org/millennium-problems/",
+      "workstream": "literature_and_formalization"
+    },
+    {
+      "id": "poincare",
+      "name": "Poincare conjecture",
+      "organizer": "Clay Mathematics Institute",
+      "prize_usd": 1000000,
+      "status": "solved",
+      "url": "https://www.claymath.org/millennium-problems/",
+      "workstream": "closed_reference_only"
+    },
+    {
+      "id": "beal",
+      "name": "Beal conjecture",
+      "organizer": "American Mathematical Society",
+      "prize_usd": 1000000,
+      "status": "open",
+      "url": "https://www.bealbank.com/who-we-are/our-founder/the-beal-conjecture/",
+      "workstream": "finite_search_and_number_theory"
+    }
+  ]
+}
