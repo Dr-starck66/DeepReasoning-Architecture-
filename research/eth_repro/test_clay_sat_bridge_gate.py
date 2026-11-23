@@ -2,7 +2,7 @@ import unittest
 
 from clay_sat_bridge_gate import (
     SAT, UNSAT, TAUTOLOGY, TWO_LOCAL_FACTORS,
-    make_case, report, truth_vector,
+    make_case, report, truth_vector, strict_three_literal_witness,
 )
 from eth_lab import count_exhaustive
 from projected_spectrum import apply_scaled_dp
@@ -19,6 +19,22 @@ class ClaySATBridgeGateTests(unittest.TestCase):
                 b = apply_scaled_dp(truth_vector(q, UNSAT), q)
                 self.assertEqual(a, b)
                 self.assertFalse(any(a))
+
+    def test_strict_three_distinct_literals_cnf_collision(self):
+        for q in (2, 3, 4):
+            with self.subTest(q=q):
+                sat, unsat = strict_three_literal_witness(q)
+                for cnf in (sat, unsat):
+                    self.assertTrue(all(len(clause) == 3 and
+                                        len(set(map(abs, clause))) == 3
+                                        for clause in cnf))
+                self.assertGreater(count_exhaustive(2*q, sat), 0)
+                self.assertEqual(count_exhaustive(2*q, unsat), 0)
+                self.assertEqual(
+                    apply_scaled_dp(truth_vector(q, sat), q),
+                    apply_scaled_dp(truth_vector(q, unsat), q))
+                self.assertFalse(any(
+                    apply_scaled_dp(truth_vector(q, sat), q)))
 
     def test_tautology_unsat_collision_even_more_basic(self):
         for q in (2, 3, 4):
