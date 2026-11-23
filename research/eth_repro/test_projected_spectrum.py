@@ -2,7 +2,7 @@ import unittest
 from math import comb
 
 from projected_spectrum import (
-    apply_scaled, compare_original_q3, exhaustive_spectrum,
+    apply_scaled, apply_scaled_dp, dp_vs_polynomial, compare_original_q3, exhaustive_spectrum,
     integer_swap_coefficients, matrix_scaled, rank_filter,
     report, scalar_eigenvalue,
 )
@@ -79,12 +79,33 @@ class ProjectedSpectrumTests(unittest.TestCase):
     def test_wrong_rank_prediction_rejected(self):
         self.assertNotEqual(rank_mod(matrix_scaled(4), 103), 65)
 
+    def test_dp_matches_polynomial_q1_q5_for_three_inputs(self):
+        for q in range(1, 6):
+            with self.subTest(q=q):
+                result = dp_vs_polynomial(q)
+                self.assertEqual(result["status"], "PASS", result)
+                self.assertEqual(result["vectors_checked"], 3)
+
+    def test_dp_exact_matrix_action_q3(self):
+        mat = matrix_scaled(3)
+        for index in (0, 1, 7, 31, 63):
+            v = [0] * 64
+            v[index] = 1
+            expected = tuple(row[index] for row in mat)
+            self.assertEqual(apply_scaled_dp(v, 3), expected)
+
+    def test_dp_rejects_wrong_dimension(self):
+        with self.assertRaises(ValueError):
+            apply_scaled_dp((1, 0), 3)
+
     def test_report_marks_uniform_formal_proof_unverified(self):
         evidence = report()
         self.assertEqual(evidence["finite_status"], "PASS", evidence)
         self.assertEqual(evidence["uniform_Lean_Matrix_rank_proof"], "UNVERIFIED")
         self.assertEqual(evidence["runtime_advantage"], "UNVERIFIED")
         self.assertTrue(all(evidence["negative_controls"].values()))
+        self.assertTrue(all(x["status"]=="PASS" for x in
+                            evidence["dynamic_programming_crosschecks_q1_q5"]))
         self.assertEqual(evidence["q3_original_exact_matrix_comparison"]["mismatches"], 0)
         self.assertEqual(evidence["q5_sample_eigenvectors"]["exhaustive"], False)
 
