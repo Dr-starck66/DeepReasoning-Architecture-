@@ -32,7 +32,11 @@ theorem aEigen_piecewise (k : Nat) :
     aEigen k =
       if k % 2 = 0 then 2 * (k : Int) else 2 - 2 * (k : Int) := by
   unfold aEigen mEigen sign
-  split_ifs <;> ring
+  by_cases h : k % 2 = 0
+  · simp only [if_pos h]
+    omega
+  · simp only [if_neg h]
+    omega
 
 /-- A zero mode occurs at k=0 or k=1, never at larger k. -/
 theorem zero_iff (k : Nat) :
