@@ -74,8 +74,9 @@ theorem local_projector_spectral (negative : Bool) (x y : Fin 4) :
     (∑ c : Fin 4, localTerm negative c x y) =
       localProjector negative x y := by
   cases negative <;> fin_cases x <;> fin_cases y <;>
-    norm_num [localTerm, signOf, localProjector, localIdentity,
-      localSwap, swapCoord, localB, localD, basis1, dual2, Fin.sum_univ_four] <;> decide
+    simp [Fin.ext_iff, localTerm, signOf, localProjector, localIdentity,
+      localSwap, swapCoord, localB, localD, basis1, dual2, Fin.sum_univ_four] <;>
+    norm_num
 
 /-- A global sign-pattern term equals its independent tensor of swap
     kernels, for *any* q. -/
