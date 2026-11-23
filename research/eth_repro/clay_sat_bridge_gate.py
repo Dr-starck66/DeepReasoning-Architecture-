@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 from hashlib import sha256
+from itertools import product
 import json
 from math import comb, log2
 from pathlib import Path
@@ -38,6 +39,29 @@ TAUTOLOGY = ()
 TWO_LOCAL_FACTORS = ((1,), (2,))
 
 
+def strict_three_literal_witness(q: int) -> tuple[CNF, CNF]:
+    """Both formulas use EXACTLY 3 distinct variables per clause.
+
+    SAT = (x1 OR x(q+1) OR x2) AND
+          (x1 OR x(q+1) OR x(q+2)).
+    It is invariant under EVERY local swap: the first local pair
+    appears symmetrically, swapping the second pair exchanges clauses,
+    and further pairs do not occur. Thus all negative-mode projectors
+    annihilate its truth table for any q>=2.
+
+    UNSAT = every one of the 8 possible 3-literal sign clauses
+    over distinct variables x1,x2,x3. Each assignment to those three
+    variables falsifies one clause.
+    """
+    if q < 2:
+        raise ValueError("strict three-literal construction needs q>=2")
+    sat = ((1, q + 1, 2), (1, q + 1, q + 2))
+    unsat = tuple(tuple(var if pos else -var
+                        for var, pos in zip((1, 2, 3), signs))
+                  for signs in product((False, True), repeat=3))
+    return sat, unsat
+
+
 def truth_vector(q: int, cnf: CNF) -> tuple[int, ...]:
     if not 1 <= q <= 4:
         raise ValueError("exhaustive test restricted to q=1..4")
@@ -49,11 +73,14 @@ def truth_vector(q: int, cnf: CNF) -> tuple[int, ...]:
 
 def make_case(q: int) -> dict:
     n = 2*q
+    strict_sat, strict_unsat = strict_three_literal_witness(q)
     formulas = {
         "SAT_unit": SAT,
         "UNSAT_contradiction": UNSAT,
         "SAT_tautology": TAUTOLOGY,
         "SAT_two_factors": TWO_LOCAL_FACTORS,
+        "STRICT_SAT": strict_sat,
+        "STRICT_UNSAT": strict_unsat,
     }
     vectors = {k: truth_vector(q, v) for k, v in formulas.items()}
     oracles = {k: count_exhaustive(n, f) for k, f in formulas.items()}
@@ -72,6 +99,14 @@ def make_case(q: int) -> dict:
         "different_unprojected_truth_tables":
             vectors["SAT_unit"] != vectors["UNSAT_contradiction"],
         "correct_dimension": len(vectors["SAT_unit"]) == 4**q,
+        "STRICT_three_distinct_literals_each_clause": all(
+            len(clause) == 3 and len({abs(lit) for lit in clause}) == 3
+            for cnf in (strict_sat, strict_unsat) for clause in cnf),
+        "STRICT_SAT_positive": oracles["STRICT_SAT"] > 0,
+        "STRICT_UNSAT_zero": oracles["STRICT_UNSAT"] == 0,
+        "STRICT_SAT_UNSAT_same_projection":
+            projections["STRICT_SAT"] == projections["STRICT_UNSAT"],
+        "STRICT_SAT_projection_zero": not any(projections["STRICT_SAT"]),
     }
     # Strictly q>=2 only: E1 is itself zero and gives an even stronger
     # degenerate collision, but would fail the positive control.
