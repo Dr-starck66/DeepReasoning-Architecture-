@@ -98,10 +98,10 @@ class ProjectedSpectrumTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             apply_scaled_dp((1, 0), 3)
 
-    def test_report_marks_uniform_formal_proof_unverified(self):
+    def test_report_marks_uniform_formal_proof_verified(self):
         evidence = report()
         self.assertEqual(evidence["finite_status"], "PASS", evidence)
-        self.assertEqual(evidence["uniform_Lean_Matrix_rank_proof"], "UNVERIFIED")
+        self.assertEqual(evidence["uniform_Lean_Matrix_rank_proof"], "PASS")
         self.assertEqual(evidence["runtime_advantage"], "UNVERIFIED")
         self.assertTrue(all(evidence["negative_controls"].values()))
         self.assertTrue(all(x["status"]=="PASS" for x in
