@@ -19,6 +19,7 @@ namespace AstraMath.UniformSwapEquality
 open Matrix
 open AstraMath.UniformProjectorRank
 open AstraMath.UniformSpectrumCount
+open AstraMath.SpectralRankTen
 
 abbrev Signs (q : Nat) := Fin q → Bool
 
