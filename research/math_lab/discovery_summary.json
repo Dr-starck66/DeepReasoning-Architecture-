@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-23",
+  "research_track": "P versus NP / strict-3CNF CEGIS feature sufficiency audit",
+  "result": "Constructive no-go for <=2-way signed-literal incidence-only SAT classifiers, for all n>=5",
+  "scope": "restricted feature-based decision rules, NOT complexity lower bound and NOT P vs NP resolution",
+  "method": {
+    "enumeration": "4-subsets of 8 signed 3-clauses",
+    "examined_before_first_collision": 42,
+    "total_possible": 70,
+    "forcing_gadget": "12 strict distinct clauses with auxiliary x4,x5"
+  },
+  "finite_witness": {
+    "n": 5,
+    "m": 16,
+    "sat": "PASS",
+    "unsat": "PASS",
+    "equal_signed_order_1": true,
+    "equal_signed_order_2": true,
+    "equal_signed_order_3": false,
+    "oracle": "PASS",
+    "independent_pairwise_audit": "PASS",
+    "sat_certificate": "PASS",
+    "unsat_certificate": "PASS",
+    "sat_search_nodes": 4,
+    "unsat_search_nodes": 39
+  },
+  "universal_proof": "parity split on signs of x1,x2,x3 + 12-clause forcing gadget, unused-variable padding for n>5; see DISCOVERY_CEGIS_THEOREM.md",
+  "reproducibility": {
+    "command": "cd research/math_lab && python3 discovery_engine.py --n 5 --output discovery_receipt.json && python3 -m unittest discover -p 'test*.py' -v",
+    "local_tests": {
+      "passed": 31,
+      "failed": 0
+    },
+    "source_git_blob_sha": "827727687b3da581a4406c94a8741db8d3fbfe47",
+    "test_git_blob_sha": "caa57852640dc1045b59c488e3620fb9f9747eb8",
+    "generated_full_json_sha256": "2a559fc9d8f508098dbecc5201e4390b43818d87ba23d257dde6a9d5d42adb65"
+  },
+  "statuses": {
+    "local": "PASS",
+    "github_files": "PASS",
+    "github_ci": "UNVERIFIED",
+    "lean_formalization": "UNVERIFIED",
+    "prior_art_novelty": "UNVERIFIED",
+    "p_vs_np": "UNVERIFIED",
+    "prize_eligibility": "FAIL"
+  },
+  "expenses_eur": 0
+}
