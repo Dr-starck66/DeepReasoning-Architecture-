@@ -202,3 +202,26 @@ def report() -> dict:
         "runtime_advantage": "UNVERIFIED",
         "novelty": "UNVERIFIED",
     }
+
+
+def main(argv=None) -> int:
+    import argparse
+    import json
+    from hashlib import sha256
+    from pathlib import Path
+
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--output", type=Path)
+    args = p.parse_args(argv)
+    evidence = report()
+    canonical = json.dumps(evidence, sort_keys=True, separators=(",", ":"), ensure_ascii=True)
+    evidence["receipt_sha256"] = sha256(canonical.encode("utf-8")).hexdigest()
+    result = json.dumps(evidence, indent=2, sort_keys=True, ensure_ascii=True) + "\n"
+    if args.output is not None:
+        args.output.write_text(result, encoding="utf-8")
+    print(result)
+    return 0 if evidence["finite_status"] == "PASS" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
