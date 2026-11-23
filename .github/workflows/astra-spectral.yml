@@ -12,6 +12,9 @@ on:
       - "research/eth_repro/test_projected_spectrum.py"
       - "research/eth_repro/benchmark_optimized_swaps.py"
       - "research/eth_repro/test_optimized_swap_benchmark.py"
+      - "research/eth_repro/clay_sat_bridge_gate.py"
+      - "research/eth_repro/test_clay_sat_bridge_gate.py"
+      - "research/eth_repro/CLAY_P_VS_NP_GATE.md"
       - "research/eth_repro/ProjectorSpectrum.lean"
       - "research/eth_repro/math_research_engine.py"
       - ".github/workflows/astra-spectral.yml"
@@ -107,7 +110,7 @@ jobs:
           from pathlib import Path
           r=json.loads(Path("/tmp/astra_projector_receipt.json").read_text())
           assert r["finite_status"]=="PASS",r
-          assert r["uniform_Lean_Matrix_rank_proof"]=="UNVERIFIED"
+          assert r["uniform_Lean_Matrix_rank_proof"]=="PASS"
           assert r["q3_original_exact_matrix_comparison"]["checked_entries"]==4096
           assert r["q3_original_exact_matrix_comparison"]["mismatches"]==0
           assert [r["q1_q4_modular_ranks"][str(q)]["filtered_rank"] for q in range(1,5)]==[0,1,10,66]
@@ -144,4 +147,28 @@ jobs:
                     'memory_old_B',x['peak_tracemalloc_bytes']['original_optimized_Aq'],
                     'memory_dp_B',x['peak_tracemalloc_bytes']['projector_four_state_scaled_Eq'])
           print('COMPARISON_RECEIPT_SHA256:',r['receipt_sha256'])
+          PY
+
+      - name: Clay P-vs-NP gate - SAT-vs-UNSAT collision and nontrivial positive control
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s research/eth_repro -p 'test_clay_sat_bridge_gate.py' -v
+          python3 research/eth_repro/clay_sat_bridge_gate.py --output /tmp/astra_clay_gate.json > /tmp/astra_clay_gate_stdout.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/astra_clay_gate.json').read_text())
+          assert r["status"]=="PASS",r
+          assert r["tested_q"]==[2,3,4]
+          for c in r["cases"]:
+              assert all(c["checks"].values()), c
+              print("CLAY_COLLISION_Q",c["q"],"n",c["declared_variables"],
+                    "SAT_COUNT",c["truth_table_counts"]["SAT_unit"],
+                    "UNSAT_COUNT",c["truth_table_counts"]["UNSAT_contradiction"],
+                    "PROJECTED_SAT_NONZERO",c["projection_nonzero_entries"]["SAT_unit"],
+                    "TWO_FACTOR_POSITIVE_NONZERO",c["projection_nonzero_entries"]["SAT_two_factors"])
+          assert r["complexity_check"]["P_vs_NP_resolution"]=="NOT ESTABLISHED"
+          print("CLAY_SAT_GATE_RECEIPT_SHA256:",r["receipt_sha256"])
+          print("CLAY_PRIZE_ELIGIBILITY: NOT ESTABLISHED")
           PY
