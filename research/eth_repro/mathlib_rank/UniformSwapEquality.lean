@@ -36,9 +36,15 @@ def localSwap (x y : Fin 4) : ℚ :=
 def localIdentity (x y : Fin 4) : ℚ :=
   if x = y then 1 else 0
 
-/-- Genuine local swap projectors (I+S)/2 and (I-S)/2. -/
+/-- Integer numerator of the genuine local swap projector. -/
+def localNumerator (negative : Bool) (x y : Fin 4) : Int :=
+  (if x = y then 1 else 0) +
+    (if negative then -1 else 1) * (if swapCoord x = y then 1 else 0)
+
+/-- Genuine local swap projectors (I+S)/2 and (I-S)/2, with the numerator
+    explicitly computed from identity/swap Kronecker delta matrices. -/
 def localProjector (negative : Bool) (x y : Fin 4) : ℚ :=
-  (localIdentity x y + (if negative then -1 else 1) * localSwap x y) / 2
+  (localNumerator negative x y : ℚ) / 2
 
 /-- Exact local spectral sign of one of the ORIGINAL four eigenvectors. -/
 def signOf (c : Fin 4) : Bool := decide (c.val = 3)
@@ -67,16 +73,43 @@ def E (q : Nat) : Matrix (Label q) (Label q) ℚ :=
 def localTerm (negative : Bool) (c x y : Fin 4) : ℚ :=
   if signOf c = negative then localB c x * localD c y else 0
 
-/-- LOCAL HARD BRIDGE: the independently defined swap projector
-    is *exactly* the sum of the old eigenvector/dual terms.
-    2 × 4 × 4 explicit ℚ equalities; no theorem assumed. -/
+/-- The 32 local numerator identities are verified over INTEGERS,
+    avoiding evaluation of rational decision procedures. -/
+theorem local_numerator_spectral :
+    ∀ (negative : Bool) (x y : Fin 4),
+      (∑ c : Fin 4,
+        if signOf c = negative then
+          basis1 c.val x.val * dual2 c.val y.val else 0) =
+        localNumerator negative x y := by
+  decide
+
+/-- LOCAL HARD BRIDGE: exact rational local swap projectors decompose into
+    the original basis/dual spectral modes. No large rational enumeration. -/
 theorem local_projector_spectral (negative : Bool) (x y : Fin 4) :
     (∑ c : Fin 4, localTerm negative c x y) =
       localProjector negative x y := by
-  cases negative <;> fin_cases x <;> fin_cases y <;>
-    simp [Fin.ext_iff, localTerm, signOf, localProjector, localIdentity,
-      localSwap, swapCoord, localB, localD, basis1, dual2, Fin.sum_univ_four] <;>
-    norm_num
+  have hInt := local_numerator_spectral negative x y
+  have hRat :
+      (∑ c : Fin 4,
+        ((if signOf c = negative then
+          basis1 c.val x.val * dual2 c.val y.val else 0 : Int) : ℚ)) =
+        (localNumerator negative x y : ℚ) := by
+    exact_mod_cast hInt
+  calc
+    (∑ c : Fin 4, localTerm negative c x y) =
+        (∑ c : Fin 4,
+          ((if signOf c = negative then
+            basis1 c.val x.val * dual2 c.val y.val else 0 : Int) : ℚ)) / 2 := by
+            rw [Finset.sum_div]
+            apply Finset.sum_congr rfl
+            intro c _
+            by_cases h : signOf c = negative
+            · simp only [localTerm, if_pos h, localB, localD,
+                Int.cast_mul]
+              ring
+            · simp [localTerm, h]
+    _ = (localNumerator negative x y : ℚ) / 2 := by rw [hRat]
+    _ = localProjector negative x y := rfl
 
 /-- A global sign-pattern term equals its independent tensor of swap
     kernels, for *any* q. -/
@@ -197,6 +230,7 @@ theorem independent_swap_projector_rank (q : Nat) :
   rw [independent_swaps_equal_reconstruction q]
   exact reconstructed_rank_closed q
 
+#print axioms local_numerator_spectral
 #print axioms local_projector_spectral
 #print axioms tensor_projector_spectral
 #print axioms term_product_orthogonal
