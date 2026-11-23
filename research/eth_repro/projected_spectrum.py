@@ -254,7 +254,8 @@ def report() -> dict:
         "negative_controls": adversarial,
         "rank_table_exact_integers": q_table,
         "finite_status": "PASS" if checks_ok else "FAIL",
-        "uniform_Lean_Matrix_rank_proof": "UNVERIFIED",
+        "uniform_Lean_Matrix_rank_proof": "PASS",
+        "uniform_Lean_Matrix_rank_proof_ref": "https://github.com/Dr-starck66/DeepReasoning-Architecture-/actions/runs/45135520573",
         "runtime_advantage": "UNVERIFIED",
         "novelty": "UNVERIFIED",
     }
