@@ -39,4 +39,6 @@ jobs:
           lean --version
           cp ../SpectralRankTen.lean SpectralRankTen.lean
           lake env bash -c 'set -euo pipefail; export LEAN_PATH="$PWD:$LEAN_PATH"; lean -o SpectralRankTen.olean SpectralRankTen.lean; lean RankTenMathlib.lean'
-          lake env bash -c 'set -euo pipefail; export LEAN_PATH="$PWD:$LEAN_PATH"; lean UniformProjectorRank.lean | tee /tmp/astra_uniform_rank_lean.log; ! grep -Eq "sorryAx|unknown axiom" /tmp/astra_uniform_rank_lean.log'
+          lake env bash -c 'set -euo pipefail; export LEAN_PATH="$PWD:$LEAN_PATH"; lean -o UniformProjectorRank.olean UniformProjectorRank.lean | tee /tmp/astra_uniform_rank_lean.log; ! grep -Eq "sorryAx|unknown axiom" /tmp/astra_uniform_rank_lean.log'
+
+          lake env bash -c 'set -euo pipefail; export LEAN_PATH="$PWD:$LEAN_PATH"; lean UniformSpectrumCount.lean | tee /tmp/astra_uniform_count_lean.log; ! grep -Eq "sorryAx|unknown axiom" /tmp/astra_uniform_count_lean.log'
