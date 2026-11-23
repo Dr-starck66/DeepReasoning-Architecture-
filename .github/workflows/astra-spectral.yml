@@ -5,6 +5,9 @@ on:
       - "research/eth_repro/spectral_certificate.py"
       - "research/eth_repro/test_spectral_certificate.py"
       - "research/eth_repro/SpectralRankTen.lean"
+      - "research/eth_repro/ParametricSpectrum.lean"
+      - "research/eth_repro/parametric_spectrum.py"
+      - "research/eth_repro/test_parametric_spectrum.py"
       - "research/eth_repro/math_research_engine.py"
       - ".github/workflows/astra-spectral.yml"
   workflow_dispatch:
@@ -49,4 +52,32 @@ jobs:
           assert report["formal_Lean_kernel_verification"] == "UNVERIFIED"
           print("SOURCE_SHA:", os.environ.get("GITHUB_SHA", "UNVERIFIED"))
           print("CERTIFICATE_SHA256:", report["receipt_sha256"])
+          PY
+
+      - name: Lean - parametric swap eigenvalues and q1-q4 spectral counts
+        shell: bash
+        run: |
+          set -euo pipefail
+          lean research/eth_repro/ParametricSpectrum.lean | tee /tmp/astra_parametric_lean.log
+          if grep -Eq 'sorryAx|unknown axiom' /tmp/astra_parametric_lean.log; then
+            echo "Unverified Lean axiom found"; exit 1
+          fi
+      - name: Parametric exact sparse spectrum and adversarial tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s research/eth_repro -p 'test_parametric_spectrum.py' -v
+          python3 research/eth_repro/parametric_spectrum.py --output /tmp/astra_parametric_receipt.json > /tmp/astra_parametric_stdout.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          r=json.loads(Path("/tmp/astra_parametric_receipt.json").read_text())
+          assert r["finite_computational_status"] == "PASS", r
+          assert r["uniform_Lean_matrix_rank_proof"] == "UNVERIFIED"
+          assert r["existing_ASTRA_q3_crosscheck"]["status"] == "PASS"
+          assert all(r["negative_controls"].values())
+          assert [r["finite_exhaustive_q_1_to_4"][str(q)]["predicted_rank"] for q in range(1,5)] == [0,1,10,67]
+          print("PARAMETRIC_RANKS_Q1_Q4: 0,1,10,67")
+          print("PARAMETRIC_Q5_PREDICTION:",r["symbolic_formula_arithmetic_q_1_to_12"]["5"]["rank_formula"])
+          print("PARAMETRIC_RECEIPT_SHA256:",r["receipt_sha256"])
           PY
