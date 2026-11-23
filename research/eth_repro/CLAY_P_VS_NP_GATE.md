@@ -22,6 +22,13 @@ Pourtant E_q v_sat = E_q v_unsat = E_q v_true = 0.
 
 **Pourquoi, pour tout q ?** E_q ne garde que les modes antisymétriques sur exactement deux ou trois swaps locaux. La table de vérité de x1 ne dépend que d'une variable : elle est symétrique sur les autres axes locaux, et contient au maximum un mode antisymétrique. Celle de la tautologie est symétrique sur **tous** les axes, et celle de la contradiction est nulle. Les trois sont donc projetées sur zéro. Un post-traitement qui n'utilise **que** E_q v ne peut pas distinguer satisfaisable et insatisfaisable. Il s'agit d'une obstruction à cet encodage, **pas** d'une preuve P≠NP ni d'une impossibilité pour un encodage plus riche.
 
+**Contrôle renforcé : clauses de longueur EXACTEMENT trois, avec trois variables distinctes.** Pour tout q≥2, choisir
+
+- G_sat = (x1 ∨ x_(q+1) ∨ x2) ∧ (x1 ∨ x_(q+1) ∨ x_(q+2)). Cette fonction reste invariante sous TOUS les swaps locaux : échanger x1 et x_(q+1) ne change rien, échanger x2 et x_(q+2) permute les deux clauses, les autres variables n'apparaissent pas. Elle est satisfaisable, mais E_q v_Gsat = 0.
+- G_unsat = conjonction des huit clauses possibles sur x1,x2,x3 en choisissant chaque signe indépendamment. Toutes les clauses ont exactement trois variables distinctes, G_unsat est contradictoire et E_q v_Gunsat = 0.
+
+L'obstruction demeure donc valable même si une définition de **3-CNF exige strictement trois littéraux distincts par clause**, sans clause unitaire ni conjonction vide. Les essais exacts q=2,3,4 donnent respectivement 13, 52 et 208 affectations satisfaisantes pour G_sat, contre zéro pour G_unsat, tout en obtenant la même projection nulle.
+
 **Contrôle positif :** F=(x1)∧(x2) possède un mode antisymétrique sur deux swaps, donc E_q v_F ≠ 0. L'expérience ne produit pas artificiellement zéro pour tout.
 
 La batterie reproductible utilise les oracles indépendants de `eth_lab.py`, l'application exacte `apply_scaled_dp`, les dimensions q=2,3,4, des sommes de vérité et des empreintes SHA-256, avec tests de rejet.
