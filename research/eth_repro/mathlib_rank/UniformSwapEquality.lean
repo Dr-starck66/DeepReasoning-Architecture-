@@ -75,7 +75,7 @@ theorem local_projector_spectral (negative : Bool) (x y : Fin 4) :
       localProjector negative x y := by
   cases negative <;> fin_cases x <;> fin_cases y <;>
     norm_num [localTerm, signOf, localProjector, localIdentity,
-      localSwap, swapCoord, localB, localD, basis1, dual2, Fin.sum_univ_four]
+      localSwap, swapCoord, localB, localD, basis1, dual2, Fin.sum_univ_four] <;> decide
 
 /-- A global sign-pattern term equals its independent tensor of swap
     kernels, for *any* q. -/
@@ -117,7 +117,10 @@ theorem term_product_orthogonal (q : Nat)
       exact hn ⟨i, heq⟩
     obtain ⟨i, hi⟩ := hmismatch
     apply Finset.prod_eq_zero (Finset.mem_univ i)
-    simp [localTerm, labelSigns, hi]
+    have hs : signOf (c i) ≠ p i := by
+      intro heq
+      exact hi heq.symm
+    simp [localTerm, hs]
 
 /-- The sign filter equals the previous certified tensor-label filter. -/
 theorem label_sign_weight {q : Nat} (c : Label q) :
@@ -139,7 +142,7 @@ theorem reconstructed_entry (q : Nat) (x y : Label q) :
   apply Finset.sum_congr rfl
   intro c _
   simp only [W, Matrix.mul_diagonal, B, D]
-  rw [← Finset.prod_mul_distrib]
+  rw [Finset.prod_mul_distrib]
   ring
 
 /-- THE MISSING q-UNIFORM BRIDGE:
