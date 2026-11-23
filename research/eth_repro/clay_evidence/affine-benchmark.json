@@ -1,0 +1,439 @@
+{
+  "cases": [
+    {
+      "affine": {
+        "affine_dimension": 7,
+        "coordinate": -1365504,
+        "models": 128,
+        "parity_equations": 2667,
+        "quotient_points": 1,
+        "residual_clauses": 0,
+        "residual_rank": 0
+      },
+      "bucket_elimination": "induced width 126 exceeds limit 18",
+      "clauses": 10668,
+      "independent_generator": {
+        "coordinate": -1365504,
+        "models": 128
+      },
+      "instance": "dense parity",
+      "median_ns": 78425878,
+      "peak_python_bytes": 991544,
+      "variables": 127
+    },
+    {
+      "affine": {
+        "affine_dimension": 7,
+        "coordinate": -44352,
+        "models": 88,
+        "parity_equations": 2667,
+        "quotient_points": 16,
+        "residual_clauses": 3,
+        "residual_rank": 4
+      },
+      "bucket_elimination": "induced width 126 exceeds limit 18",
+      "clauses": 10671,
+      "independent_generator": {
+        "coordinate": -44352,
+        "models": 88
+      },
+      "instance": "dense parity with residual clauses",
+      "median_ns": 83754086,
+      "peak_python_bytes": 992832,
+      "variables": 127
+    },
+    {
+      "affine": {
+        "affine_dimension": 75,
+        "coordinate": -3116761878693965841039360,
+        "models": 25973015655783048675328,
+        "parity_equations": 155,
+        "quotient_points": 16,
+        "residual_clauses": 3,
+        "residual_rank": 4
+      },
+      "bucket_elimination": "induced width 30 exceeds limit 18",
+      "clauses": 623,
+      "independent_generator": {
+        "coordinate": -3116761878693965841039360,
+        "models": 25973015655783048675328
+      },
+      "instance": "dense parity with free variables",
+      "median_ns": 33129794,
+      "peak_python_bytes": 55980,
+      "variables": 101
+    },
+    {
+      "affine": {
+        "affine_dimension": null,
+        "coordinate": 0,
+        "models": 0,
+        "parity_equations": 40,
+        "quotient_points": 0,
+        "residual_clauses": 0,
+        "residual_rank": null
+      },
+      "bucket_elimination_coordinate": 0,
+      "clauses": 160,
+      "independent_CaDiCaL": {
+        "coordinate": 0,
+        "models": 0
+      },
+      "instance": "dubois20.cnf",
+      "median_ns": 255951,
+      "min_fill_width": 3,
+      "parity_certificate": [
+        {
+          "rhs": 1,
+          "variables": [
+            1,
+            39,
+            40
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            1,
+            2,
+            41
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            2,
+            3,
+            42
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            3,
+            4,
+            43
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            4,
+            5,
+            44
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            5,
+            6,
+            45
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            6,
+            7,
+            46
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            7,
+            8,
+            47
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            8,
+            9,
+            48
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            9,
+            10,
+            49
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            10,
+            11,
+            50
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            11,
+            12,
+            51
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            12,
+            13,
+            52
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            13,
+            14,
+            53
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            14,
+            15,
+            54
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            15,
+            16,
+            55
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            16,
+            17,
+            56
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            17,
+            18,
+            57
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            18,
+            19,
+            58
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            19,
+            59,
+            60
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            20,
+            59,
+            60
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            20,
+            21,
+            58
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            21,
+            22,
+            57
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            22,
+            23,
+            56
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            23,
+            24,
+            55
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            24,
+            25,
+            54
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            25,
+            26,
+            53
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            26,
+            27,
+            52
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            27,
+            28,
+            51
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            28,
+            29,
+            50
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            29,
+            30,
+            49
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            30,
+            31,
+            48
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            31,
+            32,
+            47
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            32,
+            33,
+            46
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            33,
+            34,
+            45
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            34,
+            35,
+            44
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            35,
+            36,
+            43
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            36,
+            37,
+            42
+          ]
+        },
+        {
+          "rhs": 1,
+          "variables": [
+            37,
+            38,
+            41
+          ]
+        },
+        {
+          "rhs": 0,
+          "variables": [
+            38,
+            39,
+            40
+          ]
+        }
+      ],
+      "peak_python_bytes": 15020,
+      "sha256": "82059aba0e5773644b386eb6bcbe53680655390cb041873a3cb3e93f7bd896a7",
+      "variables": 60
+    },
+    {
+      "affine": "residual affine rank 50 exceeds limit 16",
+      "clauses": 80,
+      "independent_CaDiCaL": {
+        "coordinate": -420,
+        "models": 1
+      },
+      "instance": "aim-50-1_6-yes1-1.cnf",
+      "min_fill_width": 18,
+      "sha256": "d96f1edb1db3d0e55a3ff0f7707517e41a79374acbb857df051e5441ab27657d",
+      "variables": 50
+    },
+    {
+      "affine": "residual affine rank 50 exceeds limit 16",
+      "clauses": 80,
+      "independent_CaDiCaL": {
+        "coordinate": 0,
+        "models": 0
+      },
+      "instance": "aim-50-1_6-no-1.cnf",
+      "min_fill_width": 17,
+      "sha256": "17d42ca0ef48f3a0523a4a9f0a9f683da9acdc9a61f175dc9e143398e6532a86",
+      "variables": 50
+    }
+  ],
+  "method": "five untraced runs followed by a separate Python allocation profile",
+  "python": "3.12.14",
+  "status": "PASS"
+}
