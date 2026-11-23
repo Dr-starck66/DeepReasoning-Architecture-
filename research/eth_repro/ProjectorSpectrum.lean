@@ -61,8 +61,8 @@ theorem tensorFactor_eq (pattern actual : List Bool)
       · subst a
         by_cases ht : ps = as_
         · subst as_
-          change (2 : Int) * 2 ^ ps.length = 2 ^ ps.length * 2
-          omega
+          simp only [if_pos rfl, List.length_cons]
+          exact (Int.pow_succ' (2 : Int) ps.length).symm
         · simp [ht]
       · simp [hp]
 
