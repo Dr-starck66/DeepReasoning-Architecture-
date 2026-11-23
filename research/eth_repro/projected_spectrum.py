@@ -79,6 +79,58 @@ def apply_scaled(vec: Sequence[int], q: int, mutate_entry: bool = False) -> tupl
     return tuple(out)
 
 
+
+def apply_scaled_dp(vec: Sequence[int], q: int) -> tuple[int, ...]:
+    """Linear-in-q matrix-free exact implementation of T_q = 2^q E_q.
+
+    Let states[k] represent 2^i times the projection onto exactly k
+    antisymmetric signs among the first i factors. Under the next swap S_i,
+
+        next[k] = (I+S_i)states[k] + (I-S_i)states[k-1].
+
+    Keep only k=0..3 because higher counts can never decrease. No division,
+    floating point, dense matrices or 2^q summation. Complexity
+    O(4*q*4^q) integer additions, storage O(4*4^q) integers.
+    """
+    if q < 1:
+        raise ValueError("q must be positive")
+    n = 4 ** q
+    if len(vec) != n:
+        raise ValueError("incompatible vector dimension")
+    states = [[0] * n for _ in range(4)]
+    states[0] = list(vec)
+    for axis in range(q):
+        nxt = [[0] * n for _ in range(4)]
+        for k in range(min(axis + 1, 3) + 1):
+            for pos in range(n):
+                swapped = swap_axis(pos, axis, q)
+                if k <= axis:
+                    nxt[k][pos] += states[k][pos] + states[k][swapped]
+                if k >= 1:
+                    nxt[k][pos] += states[k-1][pos] - states[k-1][swapped]
+        states = nxt
+    return tuple(4 * (states[2][pos] - states[3][pos]) for pos in range(n))
+
+
+def dp_vs_polynomial(q: int) -> dict:
+    """Three independent, deterministic input vectors per finite q."""
+    n = 4 ** q
+    vectors = []
+    for at in (0, n // 2):
+        v = [0] * n
+        v[at] = 1
+        vectors.append(v)
+    vectors.append([((7 * i + 3) % 11) - 5 for i in range(n)])
+    failures = []
+    for vid, v in enumerate(vectors):
+        if apply_scaled_dp(v, q) != apply_scaled(v, q):
+            failures.append(vid)
+    return {
+        "q": q, "vectors_checked": len(vectors),
+        "status": "PASS" if not failures else "FAIL",
+        "failures": failures,
+    }
+
 def matrix_scaled(q: int) -> tuple[tuple[int, ...], ...]:
     if not 1 <= q <= 4:
         raise ValueError("full matrix bounded to q<=4")
@@ -176,7 +228,9 @@ def report() -> dict:
         for q in (2, 3, 4, 5, 6, 10, 20, 30, 40)
     }
     comparison = compare_original_q3()
+    dp_crosschecks = [dp_vs_polynomial(q) for q in range(1, 6)]
     checks_ok = (
+        all(z["status"] == "PASS" for z in dp_crosschecks) and
         all(e["status"] == "PASS" for e in exhaustive) and
         all(x["status"] == "PASS" for x in finite.values()) and
         all(q5_checks) and comparison["status"] == "PASS" and
@@ -195,6 +249,8 @@ def report() -> dict:
             "count": len(q5_checks), "exhaustive": False,
         },
         "q3_original_exact_matrix_comparison": comparison,
+        "dynamic_programming_crosschecks_q1_q5": dp_crosschecks,
+        "dynamic_programming_complexity": "O(q*4^q) integer operations, O(4^q) memory; no measured speedup claim",
         "negative_controls": adversarial,
         "rank_table_exact_integers": q_table,
         "finite_status": "PASS" if checks_ok else "FAIL",
