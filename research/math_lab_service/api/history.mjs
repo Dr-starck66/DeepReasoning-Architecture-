@@ -6,7 +6,9 @@ export default async function handler(req,res){
     const {neon}=await import('@neondatabase/serverless');
     const sql=neon(process.env.DATABASE_URL);
     const rows=await sql`SELECT run_day::text AS day, version,source,status,created_at,
-    report->'domains' AS domains,report->'evidence' AS evidence
+    report->'domains' AS domains,report->'evidence' AS evidence,
+    report->'research_cycle'->'candidate_ids' AS candidate_ids,
+    report->'research_cycle'->'counts' AS discovery_counts
     FROM public.astra_math_lab_runs ORDER BY run_day DESC LIMIT 14`;
     res.setHeader('Cache-Control','public,max-age=30,s-maxage=60');
     return res.status(200).json({service:'ASTRA MATH LAB Ω',storage:'Neon PostgreSQL persistent',rows});
