@@ -1,1 +1,1 @@
-{"version":2,"crons":[{"path":"/api/run","schedule":"0 8 * * *"}],"functions":{"api/run.mjs":{"maxDuration":10},"api/health.mjs":{"maxDuration":10}}}
+{"version":2,"crons":[{"path":"/api/run","schedule":"0 8 * * *"}],"functions":{"api/run.mjs":{"maxDuration":10},"api/health.mjs":{"maxDuration":10},"api/research.mjs":{"maxDuration":10},"api/history.mjs":{"maxDuration":10}}}
