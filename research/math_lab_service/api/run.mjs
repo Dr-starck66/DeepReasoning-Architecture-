@@ -1,5 +1,6 @@
 import {runResearch} from '../src/engine.mjs';
 import {discoverCycle} from '../src/conjecture-engine.mjs';
+import {prizeCycle} from '../src/prize-engine.mjs';
 import {timingSafeEqual} from 'node:crypto';
 
 function equalSecret(header, secret) {
@@ -20,16 +21,18 @@ export default async function handler(req,res){
     const {neon}=await import('@neondatabase/serverless');
     const sql=neon(process.env.DATABASE_URL);
     // Memory across autonomous cycles: avoid regenerating already saved candidates.
-    const prior=await sql`SELECT report->'research_cycle'->'candidate_ids' AS ids
-      FROM public.astra_math_lab_runs WHERE report ? 'research_cycle' ORDER BY created_at DESC LIMIT 90`;
+    const prior=await sql`SELECT report->'research_cycle'->'candidate_ids' AS ids, report->'prize_cycle'->'candidate_ids' AS prize_ids
+      FROM public.astra_math_lab_runs ORDER BY created_at DESC LIMIT 90`;
     const seenIds=prior.flatMap(x=>Array.isArray(x.ids)?x.ids:[]);
+    const seenPrizeIds=prior.flatMap(x=>Array.isArray(x.prize_ids)?x.prize_ids:[]);
     const research_cycle=discoverCycle(day,{seenIds});
-    const report={...runResearch(day),research_cycle};
+    const prize_cycle=prizeCycle(day,{seenIds:seenPrizeIds});
+    const report={...runResearch(day),research_cycle,prize_cycle};
     const inserted = await sql`INSERT INTO public.astra_math_lab_runs (run_day,version,source,status,report)
     VALUES (${day}::date, ${report.version}, 'vercel_cron', ${report.status}, ${JSON.stringify(report)}::jsonb)
     ON CONFLICT (run_day,version) DO NOTHING RETURNING run_day`;
-    console.log(JSON.stringify({event:'astra_math_cron',day,inserted:inserted.length,domain_count:report.domains.length,new_candidates:research_cycle.candidate_ids.length}));
-    return res.status(200).json({status:'PASS_PERSISTED',day,inserted:inserted.length,domains:report.domains.length,new_candidates:research_cycle.candidate_ids.length});
+    console.log(JSON.stringify({event:'astra_math_cron',day,inserted:inserted.length,domain_count:report.domains.length,new_candidates:research_cycle.candidate_ids.length,beal_triples_checked:prize_cycle.exact_triples_checked}));
+    return res.status(200).json({status:'PASS_PERSISTED',day,inserted:inserted.length,domains:report.domains.length,new_candidates:research_cycle.candidate_ids.length,beal_triples_checked:prize_cycle.exact_triples_checked});
   } catch (e) {
     console.error('ASTRA_MATH_CRON_FAILURE',String(e?.message||e));
     return res.status(500).json({status:'FAIL',error:'CRON_PERSISTENCE_FAILED'});
