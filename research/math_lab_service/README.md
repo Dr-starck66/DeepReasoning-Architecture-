@@ -46,3 +46,7 @@ The existing production cron at 08:00 UTC (`/api/run`, authenticated) reads IDs 
 **Proof boundary:** `PROVED_ELEMENTARY` applies only to identities with exact universal algebraic/finite-difference certificates. A graph finding with one exact counterexample can disprove a general conjecture. A conjecture that survives graphs with 4–5 vertices has `UNVERIFIED`, not `PROVED`. All academic originality and prize claims are `UNVERIFIED` or ineligible. These are grammar-based algorithms, not an unrestricted AI mathematician; no LLM is installed server-side and no general reward is guaranteed. Vercel Cron is scheduled but actual future platform invocation requires a separate receipt to mark `PASS`.
 
 Run `npm test` before deploying and verify `/api/discover`, `/api/health`, `/api/research`, and `/api/history` against public HTTPS.
+
+## v0.6 — recherche Beal orientée vers les prix (24/11/2026)
+L'API GET /api/prizes génère six études exactes distinctes de triplets d'exposants par cycle. Parmi 216 triplets d'exposants 3..8, 18 ont un diviseur commun d'exposants >=3 et sont exclus grâce au dernier théorème de Fermat, résultat classique externe. Pour les 198 autres cas, cette réduction ne suffit pas.
+Les recherches finies utilisent les entiers exacts BigInt sur A,B,C <=40 ; aucune absence de témoin fini ne devient preuve globale. Les identifiants déjà explorés sont conservés en mémoire Neon entre les cycles planifiés, sans ajouter de tâche. Tests : npm test. Nouveauté, généralité de Beal et admissibilité au prix : UNVERIFIED / non établies.

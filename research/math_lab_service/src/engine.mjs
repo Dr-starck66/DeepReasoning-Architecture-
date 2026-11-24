@@ -3,7 +3,7 @@
  * Output deliberately separates a finite check from a general proof.
  * No user inputs are executed, no external dependencies, no paid APIs.
  */
-export const VERSION = '0.5.0';
+export const VERSION = '0.6.0';
 const DAY_RE = /^20\d\d-\d\d-\d\d$/;
 export function validDay(s) {
   return typeof s === 'string' && DAY_RE.test(s) && !Number.isNaN(Date.parse(s+'T00:00:00.000Z')) &&
